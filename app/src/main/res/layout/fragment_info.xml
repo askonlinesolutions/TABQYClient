@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragments.InfoFragment">
+
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+
+          android:orientation="vertical">
+
+
+          <android.support.v7.widget.RecyclerView
+              android:id="@+id/info_recycler"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_margin="5dp">
+
+          </android.support.v7.widget.RecyclerView>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="35dp"
+              android:background="@color/mix_color"
+              android:layout_marginTop="7dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Cuisines"
+                  android:textSize="12sp"
+                  android:layout_centerVertical="true"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:text="International food,soup,fastfood etc"
+                  android:textSize="12sp"
+                  android:layout_marginRight="4dp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Minimum Order Amount"
+                  android:textSize="17sp"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="45SR"
+                  android:textSize="15sp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Working Hours"
+                  android:textSize="17sp"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="11:00pm to 01:00am"
+                  android:textSize="15sp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Delivery time"
+                  android:textSize="17sp"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="20 mints"
+                  android:textSize="15sp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Pre-Order (Yes/on)"
+                  android:textSize="17sp"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="No"
+                  android:textSize="15sp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dp">
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Type of payments"
+                  android:textSize="17sp"
+                  android:textColor="@color/silver_gery"/>
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Cash,Credit card,Sadad"
+                  android:textSize="15sp"
+                  android:layout_alignParentEnd="true"/>
+
+          </RelativeLayout>
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:src="@drawable/ic_location_on"/>
+
+
+        <!--  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:map="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/map"
+              android:name="com.google.android.gms.maps.SupportMapFragment"
+              android:layout_width="match_parent"
+              android:layout_height="300dp"
+              />-->
+
+
+      </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>

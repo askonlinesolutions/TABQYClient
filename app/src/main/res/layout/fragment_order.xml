@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".Fragments.OrderFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:id="@+id/check_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="83dp"
+            android:layout_marginTop="31dp"
+            android:src="@drawable/ic_check_orderstatus" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/check_one"
+            android:layout_marginEnd="-104dp"
+            android:layout_toStartOf="@+id/cone_image"
+            android:background="@color/colorPrimary"
+            android:scaleY="1.1"></View>
+
+
+        <ImageView
+            android:id="@+id/cone_image"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="110dp"
+            android:layout_marginTop="19dp"
+            android:elevation="7dp"
+            android:rotation="180"
+            android:src="@drawable/traingle_backgrund" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/first_cardview"
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/check_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/check_one"
+            android:layout_marginTop="125dp"
+            android:src="@drawable/ic_check_orderstatus" />
+
+        <ImageView
+            android:id="@+id/cone_image_two"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/cone_image"
+            android:layout_marginTop="116dp"
+            android:elevation="7dp"
+            android:rotation="180"
+            android:src="@drawable/traingle_backgrund" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/check_two"
+            android:layout_marginEnd="-104dp"
+            android:layout_toStartOf="@+id/cone_image"
+            android:background="@color/colorPrimary"
+            android:scaleY="1.1"></View>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/sec_cardview"
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/first_cardview"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/check_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/check_one"
+            android:layout_marginTop="228dp"
+            android:src="@drawable/ic_check_orderstatus" />
+
+        <ImageView
+            android:id="@+id/cone_image_three"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/cone_image"
+            android:layout_marginTop="217dp"
+            android:elevation="7dp"
+            android:rotation="180"
+            android:src="@drawable/traingle_backgrund" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/check_three"
+            android:layout_marginEnd="-104dp"
+            android:layout_toStartOf="@+id/cone_image"
+            android:background="@color/colorPrimary"
+            android:scaleY="1.2"></View>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/th_cardview"
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/sec_cardview"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+        <ImageView
+            android:id="@+id/check_four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBottom="@+id/for_cardview"
+            android:layout_alignStart="@+id/check_one"
+            android:src="@drawable/ic_check_orderstatus" />
+
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/check_four"
+            android:layout_marginEnd="-104dp"
+            android:layout_toStartOf="@+id/cone_image"
+            android:background="@color/colorPrimary"
+            android:scaleY="1.1"></View>
+
+
+        <ImageView
+            android:id="@+id/cone_image_four"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_alignBottom="@+id/for_cardview"
+            android:layout_toEndOf="@+id/check_one"
+            android:elevation="7dp"
+            android:rotation="180"
+            android:src="@drawable/traingle_backgrund" />
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/for_cardview"
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/th_cardview"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/check_five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/check_one"
+            android:layout_alignTop="@+id/cone_image_five"
+            android:src="@drawable/ic_check_orderstatus" />
+
+        <ImageView
+            android:id="@+id/cone_image_five"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="275dp"
+            android:layout_toEndOf="@+id/check_one"
+            android:elevation="7dp"
+            android:rotation="180"
+            android:src="@drawable/traingle_backgrund" />
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/fifth_card"
+            android:layout_width="270dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/for_cardview"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
