@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_color"
+    android:orientation="vertical"
+    tools:context=".Commons.ThankYouSignup">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/activity_thank_you_signup_title"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="@dimen/title_padding"
+        android:paddingLeft="@dimen/title_padding"
+        android:background="@color/theme_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white_color">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="205dp"
+            android:src="@drawable/thankyou_signup_image"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Thank_you_signup"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:textColor="@color/theme_color"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="25dp"/>
+
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:id="@+id/activity_thank_you_signup_next"
+            android:text="@string/next"
+            android:textColor="@color/white_color"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@drawable/shape_background_button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

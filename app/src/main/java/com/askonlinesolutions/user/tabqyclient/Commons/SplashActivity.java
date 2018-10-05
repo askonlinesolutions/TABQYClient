@@ -1,4 +1,4 @@
-package com.askonlinesolutions.user.tabqyclient;
+package com.askonlinesolutions.user.tabqyclient.Commons;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.askonlinesolutions.user.tabqyclient.Activities.HomeActivity;
+import com.askonlinesolutions.user.tabqyclient.R;
 
 public class SplashActivity extends AppCompatActivity
 {

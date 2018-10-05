@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="anim_duration_long">500</integer>
+    <dimen name="smallsize">14sp</dimen>
+    <dimen name="largesize">16sp</dimen>
+    <dimen name="extra_largesize">20sp</dimen>
+    <dimen name="extra_smallsize">12sp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="title_size">16sp</dimen>
+    <dimen name="title_padding">15sp</dimen>
+</resources>

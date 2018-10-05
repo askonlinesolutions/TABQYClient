@@ -1,4 +1,4 @@
-package com.askonlinesolutions.user.tabqyclient.Activities;
+package com.askonlinesolutions.user.tabqyclient.Commons;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,9 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SelectAreaActivity;
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SelectCountryActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ChooseCuisine;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.vstechlab.easyfonts.EasyFonts;
 
@@ -21,10 +24,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.reserve_layout)RelativeLayout mReserveTable;
     @BindView(R.id.login_layout)RelativeLayout mLogin;
     @BindView(R.id.online_layout)RelativeLayout mOnlineButton;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.AppTheme1);
         setContentView(R.layout.activity_home);
 
         ButterKnife.bind(this);
@@ -39,29 +43,24 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     @Override
-    public void onBackPressed()
-    {
+    public void onBackPressed() {
         super.onBackPressed();
+
         this.finishAffinity();
+
     }
 
     @Override
-    public void onClick(View v)
-    {
-        if (v==mReserveTable)
-        {
-            /*startActivity(new Intent(HomeActivity.this,MainActivity.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);*/
-        }
-        if (v==mLogin)
-        {
-            startActivity(new Intent(HomeActivity.this,LoginActivity.class));
+    public void onClick(View v) {
+        if (v==mReserveTable) {
+            startActivity(new Intent(HomeActivity.this,SelectAreaActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
-        }
-        if (v==mOnlineButton)
-        {
-            startActivity(new Intent(HomeActivity.this,MainActivity.class));
+        } else if (v==mLogin) {
+            startActivity(new Intent(HomeActivity.this, ChooseCuisine.class));
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+        } else if (v==mOnlineButton) {
+            startActivity(new Intent(HomeActivity.this,SelectCountryActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
-        }
+        } else {}
     }
 }

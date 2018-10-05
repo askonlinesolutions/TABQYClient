@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_img"
-    tools:context=".Activities.HomeActivity">
+    tools:context=".Commons.HomeActivity">
 
-<ScrollView
+
+    <ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -17,7 +18,6 @@
         android:layout_centerInParent="true"
         android:orientation="vertical"
         android:layout_margin="20dp">
-
 
         <ImageView
             android:layout_width="200dp"
@@ -46,7 +46,7 @@
                 <ImageView
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                   android:layout_centerInParent="true"
+                    android:layout_centerInParent="true"
                     android:src="@drawable/ic_online_order"/>
 
 
@@ -56,7 +56,7 @@
                 android:id="@+id/online_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Online Order"
+                android:text="@string/online_order"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:textSize="15sp"/>
@@ -87,14 +87,13 @@
                     android:layout_gravity="center"
                     android:src="@drawable/ic_reserved"/>
 
-
             </RelativeLayout>
 
             <TextView
                 android:id="@+id/reserve_text"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Reservation"
+                android:text="@string/reservation"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:textSize="15sp"/>
@@ -102,14 +101,13 @@
 
         </RelativeLayout>
 
-
-
         <TextView
-
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Table Code"
+            android:text="@string/table_code"
             android:layout_marginTop="18dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:textSize="13sp"/>
@@ -118,7 +116,6 @@
             android:layout_width="152dp"
             android:layout_height="1.7dp"
             android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
             android:layout_gravity="center_horizontal"
             android:background="@android:color/white"></View>
 
@@ -127,7 +124,8 @@
             android:layout_width="150dp"
             android:layout_height="40dp"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/all_layout_background">
 
@@ -138,17 +136,12 @@
                 android:textSize="15sp"
                 android:textColor="@android:color/white"
                 android:layout_centerInParent="true"
-                android:text="Login"/>
-
+                android:text="@string/login"/>
 
         </RelativeLayout>
 
-
     </LinearLayout>
 
-
-</ScrollView>
-
-
+    </ScrollView>
 
 </RelativeLayout>

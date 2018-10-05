@@ -11,8 +11,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/activity_select_area_title"
-        android:text="@string/select_area"
+        android:id="@+id/activity_choose_cuisine_title"
+        android:text="@string/choose_cuisine"
         android:textColor="@color/white_color"
         android:textSize="@dimen/title_size"
         android:gravity="center_vertical"
@@ -33,7 +33,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/search_area"
+            android:text="@string/search_cuisine"
             android:textColor="@color/hint_color"
             android:drawableLeft="@drawable/ic_search"
             android:drawablePadding="20dp"
@@ -46,7 +46,7 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/activity_select_area_rv"
+        android:id="@+id/activity_choose_cuisine_rv"
         android:background="@color/white_color" />
 
 </LinearLayout>

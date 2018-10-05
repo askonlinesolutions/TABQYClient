@@ -5,41 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.SelectCountryActivity">
+    tools:context=".Commons.Activity.SelectCountryActivity">
 
-    <RelativeLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary">
+        android:id="@+id/activity_select_country_title"
+        android:text="@string/select_country"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/title_size"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="15dp"
+        android:paddingLeft="15dp"
+        android:background="@color/theme_color"/>
 
-        <ImageView
-            android:id="@+id/toolbar_back"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:scaleY="1.5"
-            android:scaleX="1.5"
-            android:layout_marginLeft="3dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_left"/>
 
-        <TextView
-            android:id="@+id/toolbar_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Select Country"
-            android:textSize="20sp"
-            android:layout_toRightOf="@id/toolbar_back"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/white"/>
-
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/search_listview_country"
+    <View
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></ListView>
+        android:layout_height="2dp"
+        android:background="@color/bg_color_2"/>
 
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_select_country_rv"
+            android:background="@color/white_color" />
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

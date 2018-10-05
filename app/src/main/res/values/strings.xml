@@ -4,4 +4,43 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+
+    <!--HomeActivity-->
+    <string name="online_order">Online Order</string>
+    <string name="reservation">Reservation</string>
+    <string name="table_code">Table Code</string>
+    <string name="login">Login</string>
+
+    <!--LoginActivity-->
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="register_by">Register by</string>
+
+    <!--SignUp-->
+    <string name="phone">Phone</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender_optional">Gender(Optional)</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+
+    <!--SearchTexts-->
+    <string name="search_area">Search area</string>
+    <string name="search_cuisine">Search cuisine</string>
+
+    <!--Titles-->
+    <string name="title_login">Log In</string>
+    <string name="title_signup">Create Account</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_area">Select Area</string>
+    <string name="choose_cuisine">Choose Cuisine</string>
+
+    <!--ThankYou-->
+    <string name="Thank_you_signup">Thank you\nfor signing up!</string>
+    <string name="next">Next</string>
+
 </resources>
