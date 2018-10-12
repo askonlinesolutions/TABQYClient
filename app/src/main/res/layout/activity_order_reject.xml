@@ -4,123 +4,89 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.OrderRejectActivity">
+    android:background="@color/white_color"
+    tools:context=".OnlineOrder.Activity.OrderRejectActivity">
 
-    <RelativeLayout
-        android:id="@+id/first_layout"
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary">
+        android:id="@+id/activity_order_reject_title"
+        android:text="@string/order_rejected"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/title_size"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="15dp"
+        android:paddingLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/theme_color"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/bg_color_2"
+        android:layout_below="@+id/activity_order_reject_title"/>
 
-        <ImageView
-            android:id="@+id/toolbar_back"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:scaleY="1.5"
-            android:scaleX="1.5"
-            android:layout_marginLeft="3dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_left"/>
-
-        <TextView
-            android:id="@+id/header_reject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order Rejected"
-            android:textSize="20sp"
-            android:layout_toRightOf="@id/toolbar_back"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/white"/>
-
-    </RelativeLayout>
     <LinearLayout
-        android:id="@+id/subroot_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/first_layout"
-        android:layout_margin="20dp"
-        android:orientation="vertical">
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white_color"
+        android:orientation="vertical"
+        android:layout_below="@+id/activity_order_reject_title"
+        android:layout_above="@+id/activity_order_reject_bottom">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Generally, this happens if:"
-            android:textSize="22sp"
+            android:textSize="18sp"
+            android:textColor="@color/text_color_2"
             android:textStyle="bold"/>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="20dp"
-           android:orientation="horizontal">
-
-         <ImageView
-             android:layout_width="25dp"
-             android:layout_height="25dp"
-             android:src="@drawable/ic_order_rejected"/>
-
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:layout_marginLeft="10dp"
-               android:text="you are outside of our delivery area"
-               android:textSize="19sp"/>
-
-       </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/arrow_image"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_order_rejected"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/arrow_image"
-                android:text="we ran out of the respectional food item you ordered  "
-                android:textSize="19sp"/>
-
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_order_rejected"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:text="we had other operational issues"
-                android:textSize="19sp"/>
-
-        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:text="you are outside our delivery area"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_2"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_order_rejected"
+            android:drawablePadding="15dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="we ran out of the respectional food item you ordered"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_2"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_order_rejected"
+            android:drawablePadding="15dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="we had other operational issues"
+            android:textSize="14sp"
+            android:textColor="@color/text_color_2"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_order_rejected"
+            android:drawablePadding="15dp"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="We suggest you call Taj Mahal Restaurant to see what happened with your order."
+            android:textSize="18sp"
+            android:textColor="@color/text_color_2"
             android:textStyle="bold"
-            android:text="we suggest you call Taj Mahal Restaurant to see what happened with your order."
-            android:textSize="22sp"/>
-
-
+            android:layout_marginTop="15dp"/>
 
     </LinearLayout>
 
@@ -128,6 +94,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="20dp"
+        android:id="@+id/activity_order_reject_bottom"
         android:layout_alignParentBottom="true"
         android:background="@drawable/curve_background">
 

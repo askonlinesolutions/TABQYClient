@@ -1,595 +1,1394 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    >
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <LinearLayout
-        android:id="@+id/main_layout"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-        <View
-            android:id="@+id/divider_root"
-            android:layout_width="match_parent"
-            android:layout_height="0.6dp"
-            android:layout_marginTop="3dp"
-            android:background="@color/silver_gery"
-            android:layout_below="@+id/rating_text"></View>
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:background="@color/white_color">
 
         <TextView
-            android:id="@+id/rating_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="7dp"
-
-            android:layout_marginLeft="12dp"
-            android:textSize="11sp"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            android:textColor="@color/text_color_2"
             android:text="(21334 Reviews)"/>
 
         <View
-            android:id="@+id/divider"
             android:layout_width="match_parent"
-            android:layout_height="0.6dp"
-            android:layout_marginTop="7dp"
-            android:background="@color/silver_gery"></View>
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
 
-
-
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:id="@+id/root_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/main_layout"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"
-
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_marginTop="8dp"
-            android:layout_marginLeft="10dp"
+        <android.support.v7.widget.CardView
+           android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                >
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal">
 
-
-                <TextView
-                    android:id="@+id/no_text"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:text="4"
-                    android:textSize="11sp"/>
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+                        <TextView
+                            android:id="@+id/no_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star_b"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quality of food"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_color_1"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ic_quality_of_food"
+                        android:drawablePadding="10dp"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/view_color"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:id="@+id/no_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star_b"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer service"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_color_1"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ic_customer_service"
+                        android:drawablePadding="10dp"/>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/view_color"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:id="@+id/no_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star"/>
+
+
+                        <ImageView
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginLeft="2dp"
+                            android:src="@drawable/ic_star_b"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery time"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_color_1"
+                        android:layout_marginTop="5dp"
+                        android:drawableLeft="@drawable/ic_delivery_time_two"
+                        android:drawablePadding="10dp"/>
+
+
+                </LinearLayout>
+
+                <!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
 
 
 
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_star"/>
 
 
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:src="@drawable/ic_star_b"/>
-
-
-
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:id="@+id/no1_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                >
-
-                <TextView
-                    android:id="@+id/no1_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4"
-
-                    android:textSize="11sp"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star_b"/>
-
-
-
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:id="@+id/final_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                >
-
-                <TextView
-                    android:id="@+id/no2_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4"
-                    android:textSize="11sp"/>
-
-
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star"/>
-
-
-                <ImageView
-                    android:layout_width="9dp"
-                    android:layout_height="9dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginTop="2dp"
-                    android:src="@drawable/ic_star_b"/>
-
-
-
-            </LinearLayout>
-
-
-
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-           >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                >
-
-
-                <ImageView
-                    android:id="@+id/quality1_image"
+                <LinearLayout
+                    android:id="@+id/no1_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:src="@drawable/ic_quality_of_food"/>
+                    >
 
-                <TextView
+                    <TextView
+                        android:id="@+id/no1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textSize="11sp"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star_b"/>
+
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/final_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Quality of food"
-                    android:textSize="11sp"/>
+                    android:layout_alignParentEnd="true"
+                    >
+
+                    <TextView
+                        android:id="@+id/no2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"
+                        android:textSize="11sp"/>
+
+
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star"/>
+
+
+                    <ImageView
+                        android:layout_width="9dp"
+                        android:layout_height="9dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="2dp"
+                        android:src="@drawable/ic_star_b"/>
+
+
+
+                </LinearLayout>
 
 
 
 
-            </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="8dp"
                 >
 
-
-                <ImageView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/ic_quality_of_food"/>
 
-                <TextView
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/quality1_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_quality_of_food"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quality of food"
+                        android:textSize="11sp"/>
+
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Customer Service"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toRightOf="@+id/quality1_image"
-                    android:textSize="11sp"/>
+                    android:layout_centerHorizontal="true"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_quality_of_food"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Customer Service"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/quality1_image"
+                        android:textSize="11sp"/>
 
 
 
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    >
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:src="@drawable/ic_quality_of_food"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery Time"
+                        android:textSize="11sp"/>
+
+
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+    -->
 
             </LinearLayout>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                >
-
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:src="@drawable/ic_quality_of_food"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Delivery Time"
-                    android:textSize="11sp"/>
-
-
-
-
-            </LinearLayout>
-
-
-
-        </RelativeLayout>
-
-
-    </LinearLayout>
-
-
-    <de.hdodenhof.circleimageview.CircleImageView
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/profile_image"
-        android:layout_below="@+id/root_layout"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_margin="10dp"
-        android:src="@drawable/person_pic"
-        app:civ_border_color="#FF000000"/>
-    
-    <LinearLayout
-        android:id="@+id/profile_linear"
-        android:layout_width="140dp"
-        android:layout_margin="10dp"
-        android:layout_below="@+id/root_layout"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/profile_image"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="11sp"
-            android:textStyle="bold"
-            android:text="Fatma Bramly"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="11sp"
-            android:text="Abu Dhabi, Al Ain"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="11sp"
-            android:layout_marginTop="5dp"
-            android:text="Very Tasty Food and Delivered on time"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/root_layout"
-        android:layout_toRightOf="@+id/profile_linear"
-        android:layout_marginLeft="5dp"
-        android:orientation="vertical"
-        android:layout_marginTop="30dp">
+        </android.support.v7.widget.CardView>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:padding="10dp"
+            android:background="@color/white_color">
 
-
-            <ImageView
-                android:id="@+id/rate_image1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_quality_of_food"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Quality of food"
-                android:textSize="11sp"
-               android:layout_marginLeft="7dp"
-                android:layout_toRightOf="@+id/rate_image1"
-               />
-
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/item_reviews_profile_image"
+                android:src="@drawable/person_pic"
+                android:layout_alignParentLeft="true"
+                app:civ_border_color="#FF000000"/>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                >
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/item_reviews_profile_image">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4.5"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_reviews_layout_name"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Fatma Bramly"
+                        android:textColor="@color/text_color_6"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_color_4"
+                        android:text="Abu Dhabi, Al Ain"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_color_5"
+                        android:text="Very Tasty Food and Delivered on time"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5.5"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_reviews_layout_reviews"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/item_reviews_layout_name">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality of food"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_quality_of_food"
+                            android:drawablePadding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_1"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
 
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Service"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_customer_service"
+                            android:drawablePadding="10dp"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_2"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
 
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star_b"/>
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery time"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_delivery_time_two"
+                            android:drawablePadding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_3"
+                            android:layout_marginRight="10dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_3"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
 
 
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality of food"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/rate_image1"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
+
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:id="@+id/rate_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_customer_service"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Service"
+                            android:layout_toRightOf="@+id/rate_image2"
+                            android:layout_marginLeft="7dp"
+                            android:textSize="11sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="7dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
+
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rate_image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_delivery_time_two"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery time"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/rate_image3"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+        -->
+
+                </LinearLayout>
 
             </LinearLayout>
 
-
         </RelativeLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            android:padding="10dp"
+            android:background="@color/white_color">
 
-
-
-            <ImageView
-                android:id="@+id/rate_image2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_customer_service"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Customer Service"
-                android:layout_toRightOf="@+id/rate_image2"
-                android:layout_marginLeft="7dp"
-                android:textSize="11sp"
-
-               />
-
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:id="@+id/item_reviews_profile_image"
+                android:src="@drawable/person_pic"
+                android:layout_alignParentLeft="true"
+                app:civ_border_color="#FF000000"/>
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true">
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/item_reviews_profile_image">
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_marginLeft="7dp"
-                    android:src="@drawable/ic_star"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="4.5"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_reviews_layout_name"
+                    android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Fatma Bramly"
+                        android:textColor="@color/text_color_6"/>
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_color_4"
+                        android:text="Abu Dhabi, Al Ain"/>
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="@color/text_color_5"
+                        android:text="Very Tasty Food and Delivered on time"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="5.5"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/item_reviews_layout_reviews"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/item_reviews_layout_name">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality of food"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_quality_of_food"
+                            android:drawablePadding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_1" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_1"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Service"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_customer_service"
+                            android:drawablePadding="10dp"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginRight="10dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_2"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery time"
+                            android:textSize="9dp"
+                            android:textColor="@color/text_color_1"
+                            android:layout_gravity="center_vertical"
+                            android:drawableLeft="@drawable/ic_delivery_time_two"
+                            android:drawablePadding="10dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_3"
+                            android:layout_marginRight="10dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/item_reviews_layout_review_layout_3"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true">
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="5dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginLeft="2dp"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Quality of food"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/rate_image1"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
+
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+
+
+                        <ImageView
+                            android:id="@+id/rate_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_customer_service"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Customer Service"
+                            android:layout_toRightOf="@+id/rate_image2"
+                            android:layout_marginLeft="7dp"
+                            android:textSize="11sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true">
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_marginLeft="7dp"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
 
 
 
 
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star_b"/>
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
 
 
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rate_image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_delivery_time_two"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Delivery time"
+                            android:textSize="11sp"
+                            android:layout_marginLeft="7dp"
+                            android:layout_toRightOf="@+id/rate_image3"/>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            >
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star"/>
+
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_star_b"/>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+        -->
+
+                </LinearLayout>
 
             </LinearLayout>
 
-
         </RelativeLayout>
-
-        <RelativeLayout
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:id="@+id/rate_image3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_delivery_time_two"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Delivery time"
-                android:textSize="11sp"
-                android:layout_marginLeft="7dp"
-                android:layout_toRightOf="@+id/rate_image3"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                >
-
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star"/>
-
-
-                <ImageView
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:layout_alignParentEnd="true"
-                    android:src="@drawable/ic_star_b"/>
-
-
-
-            </LinearLayout>
-
-
-        </RelativeLayout>
-
-
-
-
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
 
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>

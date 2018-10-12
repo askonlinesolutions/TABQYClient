@@ -28,7 +28,7 @@
             android:id="@+id/item_country_list_name"
             android:textAllCaps="true"
             android:textSize="14dp"
-            android:textColor="@color/text_color"
+            android:textColor="@color/text_color_1"
             android:layout_toRightOf="@+id/item_country_list_icon"
             android:layout_centerVertical="true"/>
 

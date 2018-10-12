@@ -58,7 +58,7 @@ public class AdapterChooseCuisine extends RecyclerView.Adapter<AdapterChooseCuis
         if(arr_check.get(position).equals("1")){
             holder.tv.setTextColor(context.getResources().getColor(R.color.theme_color));
         } else {
-            holder.tv.setTextColor(context.getResources().getColor(R.color.text_color));
+            holder.tv.setTextColor(context.getResources().getColor(R.color.text_color_1));
         }
     }
 

@@ -5,7 +5,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -59,7 +58,7 @@ public class AdapterAreaList extends RecyclerView.Adapter<AdapterAreaList.MyView
         if(arr_check.get(position).equals("1")){
             holder.tv.setTextColor(context.getResources().getColor(R.color.theme_color));
         } else {
-            holder.tv.setTextColor(context.getResources().getColor(R.color.text_color));
+            holder.tv.setTextColor(context.getResources().getColor(R.color.text_color_1));
         }
     }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/reservation_items_second_lin"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:id="@+id/tv_numbers_second"
+        android:text="0"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/sketch_black"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginRight="5dp"
+        android:layout_width="55dp"
+        android:layout_height="55dp" />
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/white_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Thankyou">
+
+    <RelativeLayout
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/iv_back_thankyou"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:layout_width="23dp"
+            android:layout_height="23dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:src="@drawable/thnakyou"
+        android:layout_gravity="center"
+        android:layout_marginTop="110dp"
+        android:layout_width="160dp"
+        android:layout_height="160dp" />
+    <com.askonlinesolutions.user.tabqyclient.customText.Customtext2
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Thank You"
+        android:textColor="@color/theme_color"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:layout_gravity="center"
+        android:text="You will get confirmation"
+        android:textColor="@color/sketch_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:layout_gravity="center"
+        android:text="from restaurant soon"
+        android:textColor="@color/sketch_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

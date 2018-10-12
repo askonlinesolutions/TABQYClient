@@ -28,19 +28,71 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
 
+    <!--ContactDetails-->
+    <string name="save">Save</string>
+    <string name="name">Name</string>
+
+    <!--PlaceYourOrderActivity-->
+    <string name="thank_you_for_ordering">Thank You\nFor Ordering</string>
+
+    <!--PaymentMethod-->
+    <string name="cash">Cash</string>
+    <string name="card_to_delivery_person">Card to delivery person</string>
+    <string name="save_and_go_back">Save &amp; go back</string>
+
+    <!--Location-->
+    <string name="current_location">Current Location</string>
+    <string name="saved_address_list">Saved Address list</string>
+    <string name="save_address">Save Address</string>
+
+    <!--OrderMethod-->
+    <string name="pickup">Pickup</string>
+    <string name="delivery">Delivery</string>
+
+    <!--MainActivity-->
+    <string name="filter">Filter</string>
+    <string name="cuisines">Cuisines</string>
+    <string name="search">Search</string>
+
+    <!--RstaurantDetails-->
+    <string name="menu">Menu</string>
+    <string name="reviews">Reviews</string>
+    <string name="info">Info</string>
+
     <!--SearchTexts-->
     <string name="search_area">Search area</string>
     <string name="search_cuisine">Search cuisine</string>
 
     <!--Titles-->
-    <string name="title_login">Log In</string>
-    <string name="title_signup">Create Account</string>
-    <string name="select_country">Select Country</string>
-    <string name="select_area">Select Area</string>
-    <string name="choose_cuisine">Choose Cuisine</string>
+    <string name="title_login">Log in</string>
+    <string name="title_signup">Create account</string>
+    <string name="select_country">Select country</string>
+    <string name="select_area">Select area</string>
+    <string name="choose_cuisine">Choose cuisine</string>
+    <string name="contact_details">Contact details</string>
+    <string name="placing_your_order">Placing your order</string>
+    <string name="payment_method">Payment method</string>
+    <string name="order_rejected">Order rejected</string>
+    <string name="order_method">Order method</string>
+    <string name="guest_login">Guest login</string>
+    <string name="location">Location</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="offer">Offer</string>
+    <string name="restaurant_details">Restaurant details</string>
+    <string name="my_cart">My Cart</string>
+    <string name="order_status">Order Status</string>
+    <string name="account">Account</string>
 
     <!--ThankYou-->
     <string name="Thank_you_signup">Thank you\nfor signing up!</string>
     <string name="next">Next</string>
+
+
+
+    <string name="loren">Loren lipsum is simple dummy text Loren lipsum is simple dummy text Loren lipsum is simple dummy text</string>
+    <string name="khamis">Khamis-Abha-Road,Al-Rajhi Building Flat 22,4th Floor,near Kahraba(SEC)</string>
+    <string name="pending">Pending</string>
+
+
 
 </resources>

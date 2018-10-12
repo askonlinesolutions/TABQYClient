@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:layout_marginBottom="3dp">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:background="@color/white_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/placeholder"
+            android:id="@+id/iv_restaurant"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/iv_restaurant"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+            android:textSize="16sp"
+            android:textColor="@color/sketch_black"
+            android:text="Dao Xiang Restaurant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                android:text="International,Asian,Chinese"
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:text="20-08-2018"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:layout_below="@id/tv_tables"
+                    android:layout_toRightOf="@id/table"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_pink_round"
+                    android:layout_marginLeft="5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_color"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="1dp"
+                    android:paddingBottom="1dp"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp" />
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:text="20:30PM"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="12sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white_color"
+        android:layout_marginTop="2dp"
+        android:paddingBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:paddingTop="5dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                android:id="@+id/noOfTables"
+                android:layout_centerHorizontal="true"
+                android:textSize="10sp"
+                android:textColor="@color/sketch_black"
+                android:text="No of tables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                android:layout_below="@id/noOfTables"
+                android:textSize="10sp"
+                android:background="@drawable/button_pink_round"
+                android:text="4"
+                android:textColor="@color/white_color"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="3dp"
+                android:paddingBottom="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_alignParentRight="true"
+                android:background="@color/colorPrimary"
+                android:layout_width="1dp"
+                android:layout_height="40dp"></View>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+                android:text="No of guest"
+                android:id="@+id/tv_guest"
+                android:textSize="10sp"
+                android:layout_gravity="center"
+                android:textColor="@color/sketch_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:id="@+id/tv_adult"
+                    android:text="Adult"
+                    android:layout_centerVertical="true"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:layout_below="@id/tv_tables"
+                    android:layout_toRightOf="@id/tv_adult"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_pink_round"
+                    android:text="4"
+                    android:id="@+id/tv_quantity"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white_color"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:text="Child"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_quantity"
+                    android:id="@+id/tv_child"
+                    android:layout_centerVertical="true"
+                    android:textSize="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:layout_toRightOf="@id/tv_child"
+                    android:textSize="10sp"
+                    android:background="@drawable/button_pink_round"
+                    android:text="3"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white_color"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@color/white_color"
+        android:layout_marginTop="2dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:id="@+id/food"
+        android:text="Food menu"
+        android:textColor="@color/sketch_black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/food_rel"
+        android:layout_below="@+id/food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/iv_res"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="6dp"
+        android:src="@drawable/tablereservationrestaurant"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+        android:id="@+id/fooditem"
+        android:layout_toRightOf="@id/iv_res"
+        android:text="Spring Roll"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/sketch_black"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:id="@+id/loren"
+        android:layout_below="@id/fooditem"
+        android:layout_toRightOf="@id/iv_res"
+        android:layout_marginTop="5dp"
+        android:text="Loren lipsum Loren lipsum"
+        android:textSize="8sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+        android:id="@+id/loren2"
+        android:layout_below="@id/loren"
+        android:layout_toRightOf="@id/iv_res"
+        android:text="Loren lipsum Loren lipsum"
+        android:textSize="8sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/loren2"
+        android:layout_toRightOf="@id/iv_res"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+            android:id="@+id/itemprice"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:text="Item price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+            android:layout_toRightOf="@id/itemprice"
+            android:textSize="12sp"
+            android:layout_marginLeft="3dp"
+            android:textColor="@color/colorPrimary"
+            android:text="SAR.44.00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    </RelativeLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_below="@id/food_rel"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                android:id="@+id/tv_accepted"
+                android:text="Accepted"
+                android:textColor="@color/white_color"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_gray_solid_square"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                android:id="@+id/tv_cancel"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/button_pink_square_solid"
+                android:textColor="@color/white_color"
+                android:text="Cancel booking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

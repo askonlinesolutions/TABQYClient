@@ -10,6 +10,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ContactDetailActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.OrderMethodActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.PaymentMethodActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.vstechlab.easyfonts.EasyFonts;
 

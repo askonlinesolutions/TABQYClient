@@ -7,10 +7,11 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SelectAreaActivity;
-import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SelectCountryActivity;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ChooseCuisine;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.LocationActivity;
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.GuestActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.OrderMethodActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.FindRestaurants;
 import com.vstechlab.easyfonts.EasyFonts;
 
 import butterknife.BindView;
@@ -53,13 +54,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         if (v==mReserveTable) {
-            startActivity(new Intent(HomeActivity.this,SelectAreaActivity.class));
+            startActivity(new Intent(HomeActivity.this, FindRestaurants.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else if (v==mLogin) {
-            startActivity(new Intent(HomeActivity.this, ChooseCuisine.class));
+            startActivity(new Intent(HomeActivity.this, OrderMethodActivity.class));
             overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
         } else if (v==mOnlineButton) {
-            startActivity(new Intent(HomeActivity.this,SelectCountryActivity.class));
+            startActivity(new Intent(HomeActivity.this, GuestActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else {}
     }

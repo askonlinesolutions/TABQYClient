@@ -5,142 +5,129 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Activities.ContactDetailActivity">
+    tools:context=".OnlineOrder.Activity.ContactDetailActivity">
 
-
-    <RelativeLayout
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary">
+        android:id="@+id/activity_choose_cuisine_title"
+        android:text="@string/contact_details"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/title_size"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="15dp"
+        android:paddingLeft="15dp"
+        android:background="@color/theme_color"/>
 
-        <ImageView
-            android:id="@+id/toolbar_back_contact"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:scaleY="1.5"
-            android:scaleX="1.5"
-            android:layout_marginLeft="3dp"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_chevron_left"/>
-
-        <TextView
-            android:id="@+id/toolbar_header_contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact Detail"
-            android:textSize="20sp"
-            android:layout_toRightOf="@id/toolbar_back_contact"
-            android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@android:color/white"/>
-
-    </RelativeLayout>
-
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/bg_color_2"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/bg_color_4">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:background="@color/white_color"
+        android:paddingTop="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/activity_contact_detail_name"
+            android:hint="@string/name"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/size_12"
+            android:inputType="text"
+            android:background="@android:color/transparent"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/activity_contact_detail_email"
+            android:hint="@string/email"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/size_12"
+            android:inputType="textEmailAddress"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/activity_contact_detail_phone"
+            android:hint="@string/phone"
+            android:textColorHint="@color/hint_color"
+            android:textSize="@dimen/size_12"
+            android:background="@android:color/transparent"
+            android:inputType="phone"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/view_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/parent_layout"
+        android:layout_alignParentBottom="true"
+        android:padding="20dp">
 
 
-        <LinearLayout
-            android:id="@+id/parents_layout"
+        <android.support.v7.widget.CardView
+            android:id="@+id/login_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:cardCornerRadius="5dp" >
 
-            <android.support.design.widget.TextInputLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:hintTextAppearance="@style/TextAppearance.AppCompat">
+                android:layout_height="50dp"
+                android:id="@+id/activity_contact_detail_save"
+                android:background="@drawable/curve_background">
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/guest_name"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="Name"
-                    android:background="@null"/>
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@android:color/white"
+                    android:text="@string/save"/>
 
-            </android.support.design.widget.TextInputLayout>
+            </RelativeLayout>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:hintTextAppearance="@style/TextAppearance.AppCompat">
+        </android.support.v7.widget.CardView>
 
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/email_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email"
-                    android:inputType="number"
-                    android:background="@null"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:hintTextAppearance="@style/TextAppearance.AppCompat">
-
-                <android.support.design.widget.TextInputEditText
-                    android:id="@+id/phone_text"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Phone"
-                    android:inputType="number"
-                    android:background="@null"/>
-
-            </android.support.design.widget.TextInputLayout>
-
-
-
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/parent_layout"
-            android:layout_alignParentBottom="true">
-
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/login_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="5dp"
-                >
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:background="@drawable/curve_background">
-
-                    <TextView
-                        android:id="@+id/contact_save_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="20sp"
-                        android:layout_centerInParent="true"
-                        android:textColor="@android:color/white"
-                        android:text="Save"/>
-
-                </RelativeLayout>
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-
-
+    </LinearLayout>
 
     </RelativeLayout>
+
 
 </LinearLayout>
