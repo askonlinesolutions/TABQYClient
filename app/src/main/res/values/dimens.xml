@@ -7,7 +7,17 @@
     <dimen name="extra_smallsize">12sp</dimen>
     <!-- Default screen margins, per the Android Design guidelines. -->
 
-    <dimen name="size_12">12sp</dimen>
     <dimen name="title_size">16sp</dimen>
     <dimen name="title_padding">15sp</dimen>
+    <dimen name="button_text_size">14sp</dimen>
+    <dimen name="button_height">50sp</dimen>
+    <dimen name="search_text_size">12sp</dimen>
+
+    <dimen name="size_5">5sp</dimen>
+    <dimen name="size_8">8sp</dimen>
+    <dimen name="size_10">10sp</dimen>
+    <dimen name="size_12">12sp</dimen>
+    <dimen name="size_14">14sp</dimen>
+    <dimen name="size_15">15sp</dimen>
+    <dimen name="size_20">20sp</dimen>
 </resources>

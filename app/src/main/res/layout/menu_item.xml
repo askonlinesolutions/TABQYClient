@@ -36,7 +36,7 @@
                    android:layout_height="wrap_content"
                    android:orientation="horizontal">
 
-                   <TextView
+                   <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                        android:id="@+id/menu_food"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
                        />
 
 
-                   <TextView
+                   <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                        android:id="@+id/menu_time"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                    android:layout_marginTop="7dp">
 
 
-                   <TextView
+                   <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                        android:id="@+id/menu_desc"
                        android:layout_width="130dp"
                        android:layout_height="wrap_content"
@@ -84,6 +84,7 @@
                    <ImageView
                        android:layout_width="19dp"
                        android:layout_height="19dp"
+                       android:id="@+id/item_my_cart_plus_icon"
                        android:layout_marginRight="10dp"
                        android:src="@drawable/ic_add_circle"
                        android:layout_alignParentEnd="true"/>
@@ -93,16 +94,10 @@
 
            </LinearLayout>
 
-
-
-
        </LinearLayout>
-
-
        <View
            android:layout_width="match_parent"
            android:layout_height="0.5dp"
            android:background="@color/view_color"></View>
 
-
-   </LinearLayout>
+</LinearLayout>

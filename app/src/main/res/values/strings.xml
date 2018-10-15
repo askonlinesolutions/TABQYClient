@@ -6,7 +6,7 @@
     <string name="title_activity_maps">Map</string>
 
     <!--HomeActivity-->
-    <string name="online_order">Online Order</string>
+    <string name="online_order">Online order</string>
     <string name="reservation">Reservation</string>
     <string name="table_code">Table Code</string>
     <string name="login">Login</string>
@@ -59,9 +59,30 @@
     <string name="reviews">Reviews</string>
     <string name="info">Info</string>
 
+    <!--ItemDetail-->
+
+    <!--Filter-->
+    <string name="star">Star</string>
+    <string name="distance">Distance</string>
+    <string name="min">MIN</string>
+    <string name="max">MAX</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <!--MyCart-->
+    <string name="subtotal">Subtotal : </string>
+    <string name="vat">VAT : </string>
+    <string name="grand_total">Grand Total :</string>
+    <string name="redeem">Redeem</string>
+    <string name="enter_coupon_code_here">Enter coupon code here</string>
+    <string name="add_more">Add More</string>
+    <string name="checkout">Checkout</string>
+    <string name="checkout_as_guest">Checkout as Guest</string>
+
     <!--SearchTexts-->
     <string name="search_area">Search area</string>
     <string name="search_cuisine">Search cuisine</string>
+    <string name="search_by_food_restaurants">Search by food and restaurants name</string>
 
     <!--Titles-->
     <string name="title_login">Log in</string>
@@ -79,20 +100,20 @@
     <string name="restaurants">Restaurants</string>
     <string name="offer">Offer</string>
     <string name="restaurant_details">Restaurant details</string>
+    <string name="item_details">Item details</string>
     <string name="my_cart">My Cart</string>
     <string name="order_status">Order Status</string>
     <string name="account">Account</string>
+    <string name="filter_by">Filter by</string>
 
     <!--ThankYou-->
     <string name="Thank_you_signup">Thank you\nfor signing up!</string>
     <string name="next">Next</string>
 
 
-
     <string name="loren">Loren lipsum is simple dummy text Loren lipsum is simple dummy text Loren lipsum is simple dummy text</string>
     <string name="khamis">Khamis-Abha-Road,Al-Rajhi Building Flat 22,4th Floor,near Kahraba(SEC)</string>
     <string name="pending">Pending</string>
-
 
 
 </resources>

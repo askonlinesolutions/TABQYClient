@@ -18,7 +18,7 @@
             android:src="@drawable/countryplaceholder"
             android:layout_alignParentStart="true"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:id="@+id/nation_text"
             android:layout_toRightOf="@+id/nation_image"
             android:layout_width="wrap_content"

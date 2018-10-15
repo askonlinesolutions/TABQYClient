@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
     android:orientation="vertical"
-    tools:context=".Commons.LoginActivity">
+    tools:context=".Commons.Activity.LoginActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_login_title"
@@ -40,7 +40,7 @@
                android:src="@drawable/ic_login_user"
                android:layout_gravity="center_horizontal"/>
 
-           <TextView
+           <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
                android:text="@string/already_have_an_account"
@@ -61,7 +61,7 @@
                    android:src="@drawable/ic_login"
                    android:layout_alignParentLeft="true"/>
 
-               <EditText
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_edt_email"
@@ -100,7 +100,7 @@
                    android:src="@drawable/ic_lock"
                    android:layout_alignParentLeft="true"/>
 
-               <EditText
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_edt_password"
@@ -127,7 +127,7 @@
 
            </RelativeLayout>
 
-           <TextView
+           <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                android:layout_width="match_parent"
                android:layout_height="50dp"
                android:id="@+id/activity_login_btn"
@@ -145,7 +145,7 @@
                android:layout_width="match_parent"
                android:layout_height="wrap_content">
 
-               <TextView
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_forgot_password"
@@ -153,7 +153,7 @@
                    android:textSize="12sp"
                    android:text="@string/forgot_password"/>
 
-               <TextView
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_signup"
@@ -166,7 +166,7 @@
            </RelativeLayout>
 
 
-           <TextView
+           <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="@string/register_by"

@@ -50,7 +50,7 @@
                 android:textColor="@color/textgray"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />-->
-            <EditText
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
                 android:id="@+id/et_find_restaurants"
                 android:background="@null"
                 android:hint="Restaurant Search"
@@ -60,7 +60,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </LinearLayout>
-        <TextView
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:text="FILTER"
             android:textColor="@color/theme_color"
             android:background="@drawable/button_whit"

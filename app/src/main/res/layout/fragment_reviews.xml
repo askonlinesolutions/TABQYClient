@@ -7,7 +7,7 @@
     tools:context=".OnlineOrder.Fragments.ReviewsFragment">
 
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -31,7 +31,7 @@
            android:layout_alignParentStart="true"
            android:orientation="horizontal">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="17sp"
@@ -72,7 +72,7 @@
             android:layout_centerHorizontal="true"
             android:orientation="horizontal">
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
@@ -115,7 +115,7 @@
             android:layout_marginRight="7dp"
             android:orientation="horizontal">
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="17sp"
@@ -162,7 +162,7 @@
                android:src="@drawable/ic_quality_of_food"
                />
 
-           <TextView
+           <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_marginLeft="3dp"
@@ -185,7 +185,7 @@
                 android:src="@drawable/ic_customer_service"
                 />
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
@@ -208,7 +208,7 @@
                 android:src="@drawable/ic_delivery_time_two"
                 />
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"

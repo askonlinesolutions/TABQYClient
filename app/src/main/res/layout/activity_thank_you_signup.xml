@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:background="@color/theme_color"
     android:orientation="vertical"
-    tools:context=".Commons.ThankYouSignup">
+    tools:context=".Commons.Activity.ThankYouSignup">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_thank_you_signup_title"
@@ -41,7 +41,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginBottom="25dp"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:layout_width="140dp"
             android:layout_height="50dp"
             android:id="@+id/activity_thank_you_signup_next"

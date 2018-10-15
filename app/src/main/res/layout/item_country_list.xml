@@ -22,7 +22,7 @@
             android:src="@drawable/countryplaceholder"
             android:layout_marginRight="20dp"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/item_country_list_name"

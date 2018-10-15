@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".OnlineOrder.Activity.ContactDetailActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_choose_cuisine_title"
@@ -37,7 +37,7 @@
         android:background="@color/white_color"
         android:paddingTop="20dp">
 
-        <EditText
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:id="@+id/activity_guest_login_name"
@@ -54,7 +54,7 @@
             android:layout_height=".5dp"
             android:background="@color/view_color"/>
 
-        <EditText
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:id="@+id/activity_guest_login_email"
@@ -72,7 +72,7 @@
             android:layout_height=".5dp"
             android:background="@color/view_color"/>
 
-        <EditText
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:id="@+id/activity_guest_login_phone"
@@ -110,7 +110,7 @@
                     android:id="@+id/activity_guest_login_btn"
                     android:background="@drawable/curve_background">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="20sp"

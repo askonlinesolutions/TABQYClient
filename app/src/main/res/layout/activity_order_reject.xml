@@ -7,7 +7,7 @@
     android:background="@color/white_color"
     tools:context=".OnlineOrder.Activity.OrderRejectActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_order_reject_title"
@@ -37,7 +37,7 @@
         android:layout_below="@+id/activity_order_reject_title"
         android:layout_above="@+id/activity_order_reject_bottom">
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Generally, this happens if:"
@@ -45,7 +45,7 @@
             android:textColor="@color/text_color_2"
             android:textStyle="bold"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="you are outside our delivery area"
@@ -56,7 +56,7 @@
             android:drawablePadding="15dp"
             android:layout_marginTop="15dp"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="we ran out of the respectional food item you ordered"
@@ -68,7 +68,7 @@
             android:drawablePadding="15dp"
             android:layout_marginTop="15dp"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="we had other operational issues"
@@ -79,7 +79,7 @@
             android:drawablePadding="15dp"
             android:layout_marginTop="15dp"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="We suggest you call Taj Mahal Restaurant to see what happened with your order."
@@ -106,7 +106,7 @@
             android:layout_centerInParent="true"
             android:src="@drawable/ic_call"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:id="@+id/order_reject_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -116,6 +116,5 @@
             android:text="12345556"/>
 
     </RelativeLayout>
-
 
 </RelativeLayout>

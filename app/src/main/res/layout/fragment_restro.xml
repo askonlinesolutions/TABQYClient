@@ -33,7 +33,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_filter"/>
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
@@ -60,7 +60,7 @@
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_cuisines"/>
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
@@ -89,7 +89,7 @@
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/ic_search_glass"/>
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="7dp"
@@ -117,7 +117,7 @@
             android:background="@drawable/oval_background"
             android:layout_marginLeft="10dp">
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/white"

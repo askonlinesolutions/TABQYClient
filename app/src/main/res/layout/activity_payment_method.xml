@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".OnlineOrder.Activity.PaymentMethodActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_choose_cuisine_title"
@@ -87,7 +87,7 @@
             android:layout_alignParentBottom="true"
             android:background="@drawable/curve_background">
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"

@@ -1,23 +1,14 @@
-package com.askonlinesolutions.user.tabqyclient.Commons;
+package com.askonlinesolutions.user.tabqyclient.Commons.Activity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.Helper.Utils;
 import com.askonlinesolutions.user.tabqyclient.R;
-import com.vstechlab.easyfonts.EasyFonts;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener
 {

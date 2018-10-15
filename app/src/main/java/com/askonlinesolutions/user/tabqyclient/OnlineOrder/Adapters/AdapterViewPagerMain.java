@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.OfferFragment;
 import com.askonlinesolutions.user.tabqyclient.Fragments.OrderFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragment;
@@ -29,7 +30,7 @@ public class AdapterViewPagerMain extends FragmentPagerAdapter
             case 1:
                 return new OfferFragment();
             case 2:
-                return new OrderFragment();
+                return new MyCartFragment();
             case 3:
                 return new OrderFragment();
             case 4:

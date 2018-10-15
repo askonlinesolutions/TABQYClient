@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.askonlinesolutions.user.tabqyclient.Commons.HomeActivity;
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.HomeActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 
 public class Thankyou extends AppCompatActivity implements View.OnClickListener {

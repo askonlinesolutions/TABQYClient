@@ -10,7 +10,7 @@
         android:orientation="vertical"
         android:background="@color/white_color">
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="7dp"
@@ -50,7 +50,7 @@
                         android:gravity="center">
 
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:id="@+id/no_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
                             android:src="@drawable/ic_star_b"/>
 
                     </LinearLayout>
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Quality of food"
@@ -125,7 +125,7 @@
                         android:gravity="center_vertical">
 
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:id="@+id/no_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
                             android:src="@drawable/ic_star_b"/>
 
                     </LinearLayout>
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Customer service"
@@ -200,7 +200,7 @@
                         android:gravity="center_vertical">
 
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:id="@+id/no_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -245,7 +245,7 @@
                             android:src="@drawable/ic_star_b"/>
 
                     </LinearLayout>
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Delivery time"
@@ -506,21 +506,21 @@
                     android:id="@+id/item_reviews_layout_name"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
                         android:text="Fatma Bramly"
                         android:textColor="@color/text_color_6"/>
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="@color/text_color_4"
                         android:text="Abu Dhabi, Al Ain"/>
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="11sp"
@@ -543,7 +543,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Quality of food"
@@ -605,7 +605,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Customer Service"
@@ -668,7 +668,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Delivery time"
@@ -961,21 +961,21 @@
                     android:id="@+id/item_reviews_layout_name"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"
                         android:text="Fatma Bramly"
                         android:textColor="@color/text_color_6"/>
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="10sp"
                         android:textColor="@color/text_color_4"
                         android:text="Abu Dhabi, Al Ain"/>
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textSize="11sp"
@@ -998,7 +998,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Quality of food"
@@ -1060,7 +1060,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Customer Service"
@@ -1123,7 +1123,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Delivery time"

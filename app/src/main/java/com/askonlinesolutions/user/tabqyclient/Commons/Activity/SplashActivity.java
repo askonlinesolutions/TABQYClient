@@ -1,4 +1,4 @@
-package com.askonlinesolutions.user.tabqyclient.Commons;
+package com.askonlinesolutions.user.tabqyclient.Commons.Activity;
 
 import android.content.Intent;
 import android.os.Handler;

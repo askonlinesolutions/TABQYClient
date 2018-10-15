@@ -8,7 +8,7 @@
     android:background="@color/white_color"
     tools:context=".Commons.Activity.SelectCountryActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_select_area_title"
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/search_area"

@@ -19,7 +19,6 @@
     <meta-data
         android:name="com.google.android.gms.version"
         android:value="@integer/google_play_services_version" />
-
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyDAbdXJirRKf03JMcS7hdQqq17WTLJyajY" />
@@ -31,51 +30,52 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-
         <activity
-            android:name=".Commons.SplashActivity"
+            android:name=".Commons.Activity.SplashActivity"
             android:noHistory="true"
             android:screenOrientation="portrait">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".Commons.Activity.GuestActivity" />
+        <activity android:name=".Commons.Activity.GuestActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".Commons.RegisterActivity"
+            android:name=".Commons.Activity.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Commons.LoginActivity"
+            android:name=".Commons.Activity.LoginActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".OnlineOrder.Activity.ContactDetailActivity" />
+        <activity android:name=".OnlineOrder.Activity.ContactDetailActivity"
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Commons.HomeActivity"
+            android:name=".Commons.Activity.HomeActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".OnlineOrder.Activity.LocationActivity" />
-        <activity android:name=".OnlineOrder.Activity.OrderMethodActivity" />
-        <activity android:name=".OnlineOrder.Activity.PaymentMethodActivity" />
-        <activity android:name=".OnlineOrder.Activity.PlacingOrderActivity" />
-        <activity android:name=".OnlineOrder.Activity.OrderRejectActivity" />
+        <activity android:name=".OnlineOrder.Activity.LocationActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnlineOrder.Activity.OrderMethodActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnlineOrder.Activity.PaymentMethodActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnlineOrder.Activity.PlacingOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnlineOrder.Activity.OrderRejectActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".OnlineOrder.Activity.DetailActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Commons.Activity.SelectAreaActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".Commons.Activity.SelectCountryActivity" />
+        <activity android:name=".Commons.Activity.SelectCountryActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Activities.MainActivity"
-            android:screenOrientation="portrait">
-
-        </activity>
+            android:screenOrientation="portrait" />
         <activity
-            android:name=".Activities.ItemsDetailActivity"
+            android:name=".OnlineOrder.Activity.ItemsDetailActivity"
             android:screenOrientation="portrait" />
 
         <uses-library android:name="com.google.android.maps" />
@@ -91,26 +91,36 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity android:name=".Activities.CheckoutActivity" />
-        <activity android:name=".Commons.ThankYouSignup" />
-        <activity android:name=".OnlineOrder.Activity.ChooseCuisine"></activity>
-
+        <activity android:name=".Activities.CheckoutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Commons.Activity.ThankYouSignup"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OnlineOrder.Activity.ChooseCuisine"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Reservation.Activity.Reservation"
-            android:windowSoftInputMode="adjustPan" />
-
+            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Reservation.Activity.FindRestaurants"
-            android:windowSoftInputMode="stateHidden|adjustPan" />
-        <activity android:name=".Reservation.Activity.ReserveTable" />
-
-        <activity android:name=".Reservation.Activity.Thankyou" />
-        <activity android:name=".Reservation.Activity.TableReservation" />
-        <activity android:name=".Reservation.Activity.MyReservation" />
-
-        <activity android:name=".Reservation.Activity.ChooseLocation"
-            android:windowSoftInputMode="adjustPan|stateHidden"></activity>
-
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Reservation.Activity.ReserveTable"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Reservation.Activity.Thankyou"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Reservation.Activity.TableReservation"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Reservation.Activity.MyReservation"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Reservation.Activity.ChooseLocation"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name=".OnlineOrder.Activity.FilterActvity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Commons.Activity.SearchActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

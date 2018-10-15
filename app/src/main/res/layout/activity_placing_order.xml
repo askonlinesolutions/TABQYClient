@@ -8,7 +8,7 @@
     android:background="@drawable/back_layout"
     tools:context=".OnlineOrder.Activity.PlacingOrderActivity">
 
-    <TextView
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:id="@+id/activity_choose_cuisine_title"
@@ -42,7 +42,7 @@
 
         </RelativeLayout>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:id="@+id/pickup_order"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:layout_marginLeft="7dp"
             android:textColor="@android:color/white"/>
 
-        <TextView
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/pickup_order"

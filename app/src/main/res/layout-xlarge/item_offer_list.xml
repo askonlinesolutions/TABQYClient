@@ -8,9 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingLeft="20dp"
-        android:paddingTop="15dp">
+        android:layout_height="120dp">
 
         <LinearLayout
             android:id="@+id/image_layout"
@@ -40,30 +38,30 @@
             android:layout_marginLeft="15dp"
             android:layout_toLeftOf="@+id/imageLayout">
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:id="@+id/offer_food_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Spring Roll"
                 android:textColor="@color/text_color_1"
-                android:textSize="12sp"/>
+                android:textSize="14sp"/>
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:textColor="@color/text_color_2"
                 android:text="This is the complete description of thr above define food."
-                android:textSize="10sp"/>
+                android:textSize="12sp"/>
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:text="20% off"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimary"
-                android:textSize="16sp"/>
+                android:textSize="18sp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -71,19 +69,19 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp">
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Coupons: "
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="24TAB"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="14sp"/>
+                    android:textSize="16sp"/>
 
             </LinearLayout>
 
