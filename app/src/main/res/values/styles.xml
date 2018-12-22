@@ -18,6 +18,18 @@
         <item name="colorControlActivated">@color/orange</item>
     </style>
 
+    <style name="userRatingBar">
+        <item name="android:stepSize">0.4</item>
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/orange</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_rating_bar</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">18dp</item>
+    </style>
+
     <style name="TextLabel" parent="TextAppearance.AppCompat">
         <!-- Hint color and label color in FALSE state -->
         <item name="android:textColorHint"></item>

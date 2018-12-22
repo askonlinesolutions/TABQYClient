@@ -26,7 +26,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder>
         this.click = click;
     }
 
-
     class MenuHolder extends RecyclerView.ViewHolder {
 
         TextView menu_food,menu_time,menu_desc;
