@@ -35,9 +35,9 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder>
         public MenuHolder(View itemView) {
             super(itemView);
 
-            menu_food = itemView.findViewById(R.id.menu_food);
-            menu_time = itemView.findViewById(R.id.menu_time);
-            menu_desc = itemView.findViewById(R.id.menu_desc);
+            menu_food = itemView.findViewById(R.id.fooditem);
+           // menu_time = itemView.findViewById(R.id.fooditem);
+           //menu_desc = itemView.findViewById(R.id.menu_desc);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
