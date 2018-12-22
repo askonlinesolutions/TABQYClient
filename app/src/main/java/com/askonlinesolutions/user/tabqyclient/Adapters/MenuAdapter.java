@@ -47,12 +47,12 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder>
                 }
             });
 
-            iv_plus.setOnClickListener(new View.OnClickListener() {
+          /*  iv_plus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     click.click_AdapterMenu_Plus(getAdapterPosition());
                 }
-            });
+            });*/
         }
     }
 
