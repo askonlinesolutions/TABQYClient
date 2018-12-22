@@ -10,8 +10,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.CheckoutActivity;
 import com.askonlinesolutions.user.tabqyclient.Adapters.MenuAdapter;
+import com.askonlinesolutions.user.tabqyclient.Checkout_cardActivity;
 import com.askonlinesolutions.user.tabqyclient.Model.MenuModel;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -23,7 +26,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class MyCartFragment extends Fragment implements MenuAdapter.Interface_AdapterMenu{
-
+ TextView checkout;
 
     public MyCartFragment() {
         // Required empty public constructor
@@ -46,7 +49,7 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
 
     private RecyclerView rv_cart;
     private List<MenuModel> mAllMenuList = new ArrayList<>();
-    private String food_name[] = {"Spring Roll","Veg Roll","Chicken Roll"};
+    private String food_name[] = {"Spring Roll","Spring Roll"};
     private MenuAdapter mMenuAdapter;
 
     private void init(){
@@ -55,6 +58,15 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         }
 
         rv_cart = getView().findViewById(R.id.activity_my_cart_recycler);
+        checkout =getView().findViewById(R.id.checkout_btn);
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getActivity(),Checkout_cardActivity.class);
+                startActivity(intent);
+
+            }
+        });
         rv_cart.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_cart.setAdapter(new MenuAdapter(getContext(), mAllMenuList, this));
 
@@ -75,4 +87,6 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
 
         }
     }
+
+
 }
