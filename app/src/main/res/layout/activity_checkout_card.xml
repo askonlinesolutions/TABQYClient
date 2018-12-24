@@ -1,127 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".Checkout_cardActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <RelativeLayout
-        android:id="@+id/linear_login"
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary">
-
-        <ImageView
-            android:id="@+id/back_checkout"
-            android:layout_width="23dp"
-            android:layout_height="23dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="3dp"
-            android:scaleX="1.5"
-            android:scaleY="1.5"
-            android:src="@drawable/ic_chevron_left" />
-
-        <TextView
-            android:id="@+id/header_checkout_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/back_checkout"
-            android:text="Checkout"
-            android:textColor="@android:color/white"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
-
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Checkout_cardActivity">
 
         <RelativeLayout
+            android:id="@+id/linear_login"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
 
-            <LinearLayout
-                android:id="@+id/next_layout"
-                android:layout_width="match_parent"
+            <ImageView
+                android:id="@+id/back_checkout"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/ic_chevron_left" />
+
+            <TextView
+                android:id="@+id/header_checkout_text"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/back_checkout"
+                android:text="Checkout"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
 
 
-                <RelativeLayout
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/next_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
+                    android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/person_image"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/ic_login_pro" />
 
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/person_image"
+                        android:layout_margin="10dp">
+
+                        <ImageView
+                            android:id="@+id/person_image"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_login_pro" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/person_image"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/person_image"
+                                android:text="Contact details"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="7dp"
+                                android:layout_toRightOf="@+id/person_image"
+                                android:text="Azeem Anwar"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_toRightOf="@+id/person_image"
+                                android:text="bestforsale@gmail.com"
+                                android:textSize="13sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_toRightOf="@+id/person_image"
+                                android:text="3004643443"
+                                android:textSize="13sp" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/edit_image"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_edit" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="#DCDCDC"
+                        android:padding="4dp">
+
+                        <ImageView
+                            android:id="@+id/order_image"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_order_method" />
+
+                        <LinearLayout
+                            android:id="@+id/ordering"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/order_image"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_toRightOf="@+id/person_image"
+                                android:layout_weight="1"
+                                android:text="Ordering Method"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/edit_image_order"
+                                android:layout_width="25dp"
+                                android:layout_height="20dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_expand_more_black_24dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/aayu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ordering"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_toRightOf="@+id/order_image"
+                        android:background="@drawable/rounded_corner_border_primary"
                         android:orientation="vertical">
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <RadioGroup
+                            android:id="@+id/radio"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_toRightOf="@+id/person_image"
-                            android:text="Contact details"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
+                            android:gravity="center"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="7dp"
-                            android:layout_toRightOf="@+id/person_image"
-                            android:text="Azeem Anwar"
-                            android:textSize="13sp" />
+                            <RadioButton
+                                android:id="@+id/table_order_RB"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/light_prime"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="@dimen/size_10"
+                                android:text="Pick up"
+                                android:textColor="@color/white_color" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_toRightOf="@+id/person_image"
-                            android:text="bestforsale@gmail.com"
-                            android:textSize="13sp" />
+                            <RadioButton
+                                android:id="@+id/online_order_rb"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@null"
+                                android:gravity="center"
+                                android:padding="@dimen/size_10"
+                                android:text="Delivery"
+                                android:textColor="@color/light_prime" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="15dp"
-                            android:layout_marginTop="3dp"
-                            android:layout_toRightOf="@+id/person_image"
-                            android:text="3004643443"
-                            android:textSize="13sp" />
 
+                        </RadioGroup>
 
                     </LinearLayout>
 
-                    <ImageView
-                        android:id="@+id/edit_image"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginRight="10dp"
-                        android:src="@drawable/ic_edit" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/next_layout"
+                        android:layout_margin="10dp"
+                        android:visibility="visible" />
+
+                    <Button
+                        android:id="@+id/addNew"
+                        android:background="@color/colorPrimary"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/pay"
+                        android:text="Add new address" />
 
 
-                </RelativeLayout>
 
                 <RelativeLayout
+                    android:id="@+id/pay"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -129,17 +243,16 @@
                     android:padding="4dp">
 
                     <ImageView
-                        android:id="@+id/order_image"
+                        android:id="@+id/payment_image"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:src="@drawable/ic_order_method" />
 
                     <LinearLayout
-                        android:id="@+id/ordering"
-
+                        android:id="@+id/paymentMethod"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/order_image"
+                        android:layout_toRightOf="@+id/payment_image"
                         android:orientation="horizontal">
 
 
@@ -149,70 +262,95 @@
                             android:layout_marginLeft="15dp"
                             android:layout_toRightOf="@+id/person_image"
                             android:layout_weight="1"
-                            android:text="Ordering Method"
+                            android:text="Payment Method"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
                         <ImageView
-                            android:id="@+id/edit_image_order"
+                            android:id="@+id/payment"
                             android:layout_width="25dp"
                             android:layout_height="20dp"
                             android:layout_alignParentEnd="true"
-                            android:layout_marginRight="10dp" />
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_expand_more_black_24dp" />
 
                     </LinearLayout>
                 </RelativeLayout>
 
                 <LinearLayout
+                    android:id="@+id/cashing"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/ordering"
-                    android:layout_toRightOf="@+id/order_image"
-                    android:orientation="vertical">
-
+                    android:layout_below="@+id/pay"
+                    android:orientation="vertical"
+                    android:padding="@dimen/size_20">
 
                     <RadioGroup
-                        android:id="@+id/salling_radioGroup"
+                        android:id="@+id/radioGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checkedButton="@null"
+                        android:background="@drawable/rounded_corner_border_primary"
                         android:gravity="center"
-
-                        android:orientation="horizontal"
-                        android:padding="4dp">
+                        android:orientation="horizontal">
 
                         <RadioButton
-                            android:id="@+id/salling_product_RB"
-                            style="@style/AppThemeMyLight"
+                            android:id="@+id/card"
                             android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/light_prime"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:padding="@dimen/size_10"
+                            android:text="Card"
+                            android:textColor="@color/white_color" />
+
+                        <RadioButton
+                            android:id="@+id/cash"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:button="@null"
                             android:gravity="center"
-                            android:text="Pick up"
-                            android:textColor="@color/colorPrimary" />
+                            android:padding="@dimen/size_10"
+                            android:text="Cash"
+
+                            android:textColor="@color/light_prime" />
 
                         <RadioButton
-                            android:id="@+id/salling_order_RB"
-                            style="@style/AppThemeMyLight"
-                            android:layout_width="0dp"
+                            android:id="@+id/cash_on_delivery"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
                             android:button="@null"
                             android:gravity="center"
-                            android:text="Delivery"
-                            android:textColor="@color/colorPrimary" />
+                            android:padding="@dimen/size_10"
+                            android:text="Cash on delivery"
+                            android:textColor="@color/light_prime" />
+
                     </RadioGroup>
                 </LinearLayout>
-            </LinearLayout>
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/next_layout"
-                android:layout_margin="10dp" />
-        </RelativeLayout>
-    </ScrollView>
+                <RadioButton
+                    android:id="@+id/cashDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/cashing"
+                    android:layout_margin="14dp"
+                    android:text="Cash on delivery" />
 
-</LinearLayout>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cashDelivery"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Review  Order"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>
