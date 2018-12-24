@@ -1,253 +1,412 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/transparent"
-    tools:context=".Fragments.OrderFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible"
-        android:layout_marginTop="20dp">
+        android:orientation="vertical"
+        tools:context=".Fragments.OrderStatusFragment">
 
-        <ImageView
-            android:id="@+id/check_one"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="83dp"
-            android:layout_marginTop="31dp"
-            android:src="@drawable/ic_check_orderstatus" />
-
-        <View
-            android:layout_width="10dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/check_one"
-            android:layout_marginEnd="-104dp"
-            android:layout_toStartOf="@+id/cone_image"
-            android:background="@color/colorPrimary"
-            android:scaleY="1.1"></View>
-
-
-        <ImageView
-            android:id="@+id/cone_image"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="110dp"
-            android:layout_marginTop="19dp"
-            android:elevation="7dp"
-            android:rotation="180"
-            android:src="@drawable/traingle_backgrund" />
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/first_cardview"
-            android:layout_width="270dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="10dp"
-            android:elevation="3dp">
+            android:background="@color/white_color"
+            android:orientation="horizontal"
+            android:padding="@dimen/size_20">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="2dp"
+                android:background="@drawable/rounded_corner_border_primary">
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/table_order_RB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/light_prime"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/size_10"
+                        android:text="Table Order"
+                        android:textColor="@color/white_color" />
+
+                    <RadioButton
+                        android:id="@+id/online_order_rb"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="@dimen/size_10"
+                        android:text="Online Order"
+                        android:textColor="@color/light_prime" />
 
 
-        </android.support.v7.widget.CardView>
+                </RadioGroup>
+            </LinearLayout>
 
+        </LinearLayout>
 
-        <ImageView
-            android:id="@+id/check_two"
-            android:layout_width="wrap_content"
+        <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/check_one"
-            android:layout_marginTop="125dp"
-            android:src="@drawable/ic_check_orderstatus" />
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/cone_image_two"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/cone_image"
-            android:layout_marginTop="116dp"
-            android:elevation="7dp"
-            android:rotation="180"
-            android:src="@drawable/traingle_backgrund" />
-
-        <View
-            android:layout_width="10dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/check_two"
-            android:layout_marginEnd="-104dp"
-            android:layout_toStartOf="@+id/cone_image"
-            android:background="@color/colorPrimary"
-            android:scaleY="1.1"></View>
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/sec_cardview"
-            android:layout_width="270dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/first_cardview"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:elevation="3dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="@dimen/size_15">
 
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/activity_main_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/new_order"
+                    android:textColor="@color/sketch_black"
+                    android:textSize="@dimen/title_size"
 
-        </android.support.v7.widget.CardView>
+                    />
 
+                <ImageView
+                    android:id="@+id/show_new_order_iv"
+                    android:layout_width="@dimen/size_20"
+                    android:layout_height="@dimen/size_20"
+                    android:src="@drawable/ic_down_arrow_prime" />
 
-        <ImageView
-            android:id="@+id/check_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/check_one"
-            android:layout_marginTop="228dp"
-            android:src="@drawable/ic_check_orderstatus" />
+            </LinearLayout>
 
-        <ImageView
-            android:id="@+id/cone_image_three"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/cone_image"
-            android:layout_marginTop="217dp"
-            android:elevation="7dp"
-            android:rotation="180"
-            android:src="@drawable/traingle_backgrund" />
-
-        <View
-            android:layout_width="10dp"
-            android:layout_height="80dp"
-            android:layout_below="@+id/check_three"
-            android:layout_marginEnd="-104dp"
-            android:layout_toStartOf="@+id/cone_image"
-            android:background="@color/colorPrimary"
-            android:scaleY="1.2"></View>
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/th_cardview"
-            android:layout_width="270dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/sec_cardview"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:elevation="3dp">
-
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
 
-        </android.support.v7.widget.CardView>
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/new_order_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white_color"
+                        android:visibility="visible">
 
-        <ImageView
-            android:id="@+id/check_four"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+                    </android.support.v7.widget.RecyclerView>
 
-            android:layout_alignBottom="@+id/for_cardview"
-            android:layout_alignStart="@+id/check_one"
-            android:src="@drawable/ic_check_orderstatus" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/bg_color_2" />
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="@dimen/size_15">
 
-        <View
-            android:layout_width="10dp"
-            android:layout_height="70dp"
-            android:layout_below="@+id/check_four"
-            android:layout_marginEnd="-104dp"
-            android:layout_toStartOf="@+id/cone_image"
-            android:background="@color/colorPrimary"
-            android:scaleY="1.1"></View>
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:text="@string/old_order"
+                            android:textColor="@color/sketch_black"
+                            android:textSize="@dimen/title_size"
 
+                            />
 
-        <ImageView
-            android:id="@+id/cone_image_four"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+                        <ImageView
+                            android:id="@+id/show_old_order_iv"
+                            android:layout_width="@dimen/size_20"
+                            android:layout_height="@dimen/size_20"
+                            android:src="@drawable/ic_down_arrow_prime" />
 
-            android:layout_alignBottom="@+id/for_cardview"
-            android:layout_toEndOf="@+id/check_one"
-            android:elevation="7dp"
-            android:rotation="180"
-            android:src="@drawable/traingle_backgrund" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
 
-
-
-        <android.support.v7.widget.CardView
-            android:id="@+id/for_cardview"
-            android:layout_width="270dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/th_cardview"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:elevation="3dp">
-
-            <LinearLayout
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/old_order_rv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+                android:layout_height="wrap_content"
+                android:background="@color/white_color"
+                android:visibility="visible">
+
+            </android.support.v7.widget.RecyclerView>
 
 
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
+        <!--</ScrollView>-->
+
+    </LinearLayout>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:visibility="visible"-->
+    <!--android:layout_marginTop="20dp">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/check_one"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginStart="83dp"-->
+    <!--android:layout_marginTop="31dp"-->
+    <!--android:src="@drawable/ic_check_orderstatus" />-->
+
+    <!--<View-->
+    <!--android:layout_width="10dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_below="@+id/check_one"-->
+    <!--android:layout_marginEnd="-104dp"-->
+    <!--android:layout_toStartOf="@+id/cone_image"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:scaleY="1.1"></View>-->
 
 
-        <ImageView
-            android:id="@+id/check_five"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_alignStart="@+id/check_one"
-            android:layout_alignTop="@+id/cone_image_five"
-            android:src="@drawable/ic_check_orderstatus" />
-
-        <ImageView
-            android:id="@+id/cone_image_five"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="275dp"
-            android:layout_toEndOf="@+id/check_one"
-            android:elevation="7dp"
-            android:rotation="180"
-            android:src="@drawable/traingle_backgrund" />
+    <!--<ImageView-->
+    <!--android:id="@+id/cone_image"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginStart="110dp"-->
+    <!--android:layout_marginTop="19dp"-->
+    <!--android:elevation="7dp"-->
+    <!--android:rotation="180"-->
+    <!--android:src="@drawable/traingle_backgrund" />-->
 
 
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/first_cardview"-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:elevation="3dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></LinearLayout>-->
 
 
-        <android.support.v7.widget.CardView
-            android:id="@+id/fifth_card"
-            android:layout_width="270dp"
-            android:layout_height="70dp"
-            android:layout_alignParentEnd="true"
-            android:layout_below="@+id/for_cardview"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="30dp"
-            android:elevation="3dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"></LinearLayout>
+    <!--</android.support.v7.widget.CardView>-->
 
 
-        </android.support.v7.widget.CardView>
+    <!--<ImageView-->
+    <!--android:id="@+id/check_two"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignStart="@+id/check_one"-->
+    <!--android:layout_marginTop="125dp"-->
+    <!--android:src="@drawable/ic_check_orderstatus" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cone_image_two"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignStart="@+id/cone_image"-->
+    <!--android:layout_marginTop="116dp"-->
+    <!--android:elevation="7dp"-->
+    <!--android:rotation="180"-->
+    <!--android:src="@drawable/traingle_backgrund" />-->
+
+    <!--<View-->
+    <!--android:layout_width="10dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_below="@+id/check_two"-->
+    <!--android:layout_marginEnd="-104dp"-->
+    <!--android:layout_toStartOf="@+id/cone_image"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:scaleY="1.1"></View>-->
 
 
-    </RelativeLayout>
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/sec_cardview"-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/first_cardview"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:elevation="3dp">-->
 
-</RelativeLayout>
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/check_three"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignStart="@+id/check_one"-->
+    <!--android:layout_marginTop="228dp"-->
+    <!--android:src="@drawable/ic_check_orderstatus" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cone_image_three"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_alignStart="@+id/cone_image"-->
+    <!--android:layout_marginTop="217dp"-->
+    <!--android:elevation="7dp"-->
+    <!--android:rotation="180"-->
+    <!--android:src="@drawable/traingle_backgrund" />-->
+
+    <!--<View-->
+    <!--android:layout_width="10dp"-->
+    <!--android:layout_height="80dp"-->
+    <!--android:layout_below="@+id/check_three"-->
+    <!--android:layout_marginEnd="-104dp"-->
+    <!--android:layout_toStartOf="@+id/cone_image"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:scaleY="1.2"></View>-->
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/th_cardview"-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/sec_cardview"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:elevation="3dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/check_four"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_alignBottom="@+id/for_cardview"-->
+    <!--android:layout_alignStart="@+id/check_one"-->
+    <!--android:src="@drawable/ic_check_orderstatus" />-->
+
+
+    <!--<View-->
+    <!--android:layout_width="10dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_below="@+id/check_four"-->
+    <!--android:layout_marginEnd="-104dp"-->
+    <!--android:layout_toStartOf="@+id/cone_image"-->
+    <!--android:background="@color/colorPrimary"-->
+    <!--android:scaleY="1.1"></View>-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cone_image_four"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+
+    <!--android:layout_alignBottom="@+id/for_cardview"-->
+    <!--android:layout_toEndOf="@+id/check_one"-->
+    <!--android:elevation="7dp"-->
+    <!--android:rotation="180"-->
+    <!--android:src="@drawable/traingle_backgrund" />-->
+
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/for_cardview"-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/th_cardview"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:elevation="3dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--<ImageView-->
+    <!--android:id="@+id/check_five"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_alignStart="@+id/check_one"-->
+    <!--android:layout_alignTop="@+id/cone_image_five"-->
+    <!--android:src="@drawable/ic_check_orderstatus" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/cone_image_five"-->
+    <!--android:layout_width="40dp"-->
+    <!--android:layout_height="40dp"-->
+
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:layout_marginBottom="275dp"-->
+    <!--android:layout_toEndOf="@+id/check_one"-->
+    <!--android:elevation="7dp"-->
+    <!--android:rotation="180"-->
+    <!--android:src="@drawable/traingle_backgrund" />-->
+
+
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:id="@+id/fifth_card"-->
+    <!--android:layout_width="270dp"-->
+    <!--android:layout_height="70dp"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/for_cardview"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:elevation="3dp">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></LinearLayout>-->
+
+
+    <!--</android.support.v7.widget.CardView>-->
+
+
+    <!--</RelativeLayout>-->
+
+</layout>

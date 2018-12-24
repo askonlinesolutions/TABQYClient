@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
               } else if (position==2) {
                     tv_title.setText("My Cart");
               } else if (position==3) {
-                  tv_title.setText("My Order");
+                  tv_title.setText("Order Status");
               } else   if (position==4) {
                     tv_title.setText("Account");
                 }
