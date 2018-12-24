@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/white_color"
+    android:orientation="vertical"
     tools:context=".Commons.Activity.SelectCountryActivity">
 
     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+        android:id="@+id/activity_choose_cuisine_title"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/activity_choose_cuisine_title"
-        android:text="@string/choose_cuisine"
-        android:textColor="@color/white_color"
-        android:textSize="@dimen/title_size"
-        android:gravity="center_vertical"
+        android:background="@color/theme_color"
         android:drawableLeft="@drawable/ic_back"
         android:drawablePadding="15dp"
+        android:gravity="center_vertical"
         android:paddingLeft="15dp"
-        android:background="@color/theme_color"/>
+        android:text="@string/choose_cuisine"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/title_size" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        android:background="@color/bg_color_2"/>
+        android:background="@color/bg_color_2" />
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
@@ -33,20 +33,20 @@
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/search_cuisine"
-            android:textColor="@color/hint_color"
             android:drawableLeft="@drawable/ic_search"
             android:drawablePadding="20dp"
-            android:paddingTop="20dp"
             android:paddingBottom="20dp"
-            android:paddingLeft="15dp"/>
+            android:paddingLeft="15dp"
+            android:paddingTop="20dp"
+            android:text="@string/search_cuisine"
+            android:textColor="@color/hint_color" />
 
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_choose_cuisine_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/activity_choose_cuisine_rv"
         android:background="@color/white_color" />
 
 </LinearLayout>

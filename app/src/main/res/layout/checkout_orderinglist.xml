@@ -13,7 +13,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/circle" />
+            android:src="@drawable/thumb" />
 
         <LinearLayout
             android:layout_width="wrap_content"

@@ -89,6 +89,7 @@ public class RestroFragment extends Fragment implements View.OnClickListener,
             public void onClick(View view) {
                 Intent filterIntent = new Intent(getActivity(), FilterActivity.class);
                 startActivity(filterIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
             }
         });
 
@@ -97,6 +98,7 @@ public class RestroFragment extends Fragment implements View.OnClickListener,
             public void onClick(View view) {
                 Intent filterIntent = new Intent(getActivity(), ChooseCuisine.class);
                 startActivity(filterIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
             }
         });
 
@@ -105,6 +107,7 @@ public class RestroFragment extends Fragment implements View.OnClickListener,
             public void onClick(View view) {
                 Intent filterIntent = new Intent(getActivity(), SearchActivity.class);
                 startActivity(filterIntent);
+                getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
             }
         });
     }

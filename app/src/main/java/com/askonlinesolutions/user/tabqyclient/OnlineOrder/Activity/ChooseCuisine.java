@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -85,6 +86,9 @@ public class ChooseCuisine extends AppCompatActivity implements AdapterChooseCui
                 }
                 arr_check.set(pos, "1");
             }
+            onBackPressed();
+            this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
             setMyAdapter();
         }
     }

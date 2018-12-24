@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.askonlinesolutions.user.tabqyclient">
 
     <!--
@@ -123,7 +124,7 @@
             android:name=".Reservation.Activity.Thankyou"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Reservation.Activity.TableReservation"
+            android:name=".Reservation.Activity.TableReservation"/>
 
         <activity
             android:name=".Reservation.Activity.MyReservation"
@@ -147,12 +148,7 @@
             android:name=".Commons.Activity.SearchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-        <activity
-            android:name=".OnlineOrder.Activity.FilterActvity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Commons.Activity.SearchActivity"
-            android:screenOrientation="portrait" />
+
         <activity android:name=".Checkout_cardActivity"></activity>
 
     </application>
