@@ -116,6 +116,7 @@
     <string name="pending">Pending</string>
     <string name="old_order">Old Order</string>
     <string name="new_order">New Order</string>
+    <string name="repeat">Repeat</string>
 
 
 </resources>

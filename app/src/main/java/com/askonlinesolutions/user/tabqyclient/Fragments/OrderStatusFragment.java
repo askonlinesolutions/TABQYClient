@@ -1,6 +1,7 @@
 package com.askonlinesolutions.user.tabqyclient.Fragments;
 
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,7 +13,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.trackOrder.TrackOrderActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.ReviewAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.FragmentOrderBinding;
@@ -20,10 +23,11 @@ import com.askonlinesolutions.user.tabqyclient.databinding.FragmentOrderBinding;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class OrderStatusFragment extends Fragment implements View.OnClickListener {
+public class OrderStatusFragment extends Fragment implements View.OnClickListener, OrderStatusAdapter.OnItemClickLister, OldOrderStatusAdapter.OnItemClickLister {
 
     FragmentOrderBinding binding;
     private OrderStatusAdapter orderStatusAdapter;
+    OldOrderStatusAdapter oldOrderStatusAdapter;
 
     private boolean isVisible = true;
     private boolean isShow = true;
@@ -85,8 +89,8 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
     private void setOldOrderRecyclerView() {
         LinearLayoutManager gridLayoutManager = new LinearLayoutManager(getContext(), GridLayoutManager.VERTICAL, false);
         binding.oldOrderRv.setLayoutManager(gridLayoutManager);
-        orderStatusAdapter = new OrderStatusAdapter(getActivity());
-        binding.oldOrderRv.setAdapter(orderStatusAdapter);
+        oldOrderStatusAdapter = new OldOrderStatusAdapter(getActivity(), this);
+        binding.oldOrderRv.setAdapter(oldOrderStatusAdapter);
 
     }
 
@@ -94,7 +98,7 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
 
         LinearLayoutManager gridLayoutManager = new LinearLayoutManager(getContext(), GridLayoutManager.VERTICAL, false);
         binding.newOrderRv.setLayoutManager(gridLayoutManager);
-        orderStatusAdapter = new OrderStatusAdapter(getActivity());
+        orderStatusAdapter = new OrderStatusAdapter(getActivity(), this);
         binding.newOrderRv.setAdapter(orderStatusAdapter);
 
     }
@@ -110,7 +114,7 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
                     isVisible = false;
                 } else {
                     binding.newOrderRv.setVisibility(View.VISIBLE);
-                        binding.showNewOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
+                    binding.showNewOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
                     isVisible = true;
                 }
                 break;
@@ -119,7 +123,8 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
                 if (isShow) {
                     binding.oldOrderRv.setVisibility(View.GONE);
                     binding.showOldOrderIv.setImageResource(R.drawable.ic_down_arrow_prime);
-//                    binding.newOrderRv.setVisibility(View.VISIBLE);
+                    binding.newOrderRv.setVisibility(View.VISIBLE);
+
                     isShow = false;
                 } else {
                     binding.oldOrderRv.setVisibility(View.VISIBLE);
@@ -128,7 +133,20 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
                     isShow = true;
                 }
                 break;
+        }
+    }
 
+    @Override
+    public void onItemClick(int Pos, String type) {
+
+        if (type.equals("CANCELE")) {
+            Toast.makeText(getActivity(), type, Toast.LENGTH_SHORT).show();
+        } else if (type.equals("TRACK")) {
+            Intent intent=new Intent(getContext(), TrackOrderActivity.class);
+            startActivity(intent);
+            Toast.makeText(getActivity(), type, Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getActivity(), "somthing went wrong", Toast.LENGTH_SHORT).show();
         }
     }
 }
