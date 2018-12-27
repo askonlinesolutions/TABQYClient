@@ -55,6 +55,7 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
         binding.showNewOrderIv.setOnClickListener(this);
         binding.showOldOrderIv.setOnClickListener(this);
 
+
     }
 
     private void setupTabs() {
@@ -144,6 +145,7 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
         } else if (type.equals("TRACK")) {
             Intent intent=new Intent(getContext(), TrackOrderActivity.class);
             startActivity(intent);
+            getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
             Toast.makeText(getActivity(), type, Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(getActivity(), "somthing went wrong", Toast.LENGTH_SHORT).show();

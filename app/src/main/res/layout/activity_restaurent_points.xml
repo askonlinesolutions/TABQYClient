@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color_3"
+        android:orientation="vertical"
+        tools:context=".OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity">
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:id="@+id/restro_back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme_color"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="Restaurent Point"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal">
+
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Restaurent Name"
+                android:textColor="@color/sketch_black"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Points"
+                android:textColor="@color/sketch_black"
+                android:textSize="@dimen/_13sdp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/view_color" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/restaurent_point_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+</layout>

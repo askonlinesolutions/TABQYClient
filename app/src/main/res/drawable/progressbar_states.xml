@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<item android:id="@android:id/secondaryProgress">-->
+        <!--<shape-->
+            <!--android:innerRadiusRatio="6"-->
+            <!--android:shape="ring"-->
+            <!--android:thicknessRatio="20.0"-->
+            <!--android:useLevel="true">-->
+
+
+            <!--<gradient-->
+                <!--android:centerColor="#999999"-->
+                <!--android:endColor="#999999"-->
+                <!--android:startColor="#999999"-->
+                <!--android:type="sweep" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/progress">-->
+        <!--<rotate-->
+            <!--android:fromDegrees="270"-->
+            <!--android:pivotX="50%"-->
+            <!--android:pivotY="50%"-->
+            <!--android:toDegrees="270">-->
+
+            <!--<shape-->
+                <!--android:innerRadiusRatio="6"-->
+                <!--android:shape="ring"-->
+                <!--android:thicknessRatio="20.0"-->
+                <!--android:useLevel="true">-->
+
+
+                <!--<rotate-->
+                    <!--android:fromDegrees="0"-->
+                    <!--android:pivotX="50%"-->
+                    <!--android:pivotY="50%"-->
+                    <!--android:toDegrees="360" />-->
+
+                <!--<gradient-->
+                    <!--android:centerColor="#00FF00"-->
+                    <!--android:endColor="#00FF00"-->
+                    <!--android:startColor="#00FF00"-->
+                    <!--android:type="sweep" />-->
+
+            <!--</shape>-->
+        <!--</rotate>-->
+    <!--</item>-->
+<!--</layer-list>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<item android:id="@android:id/progress">-->
+        <!--<shape-->
+            <!--android:innerRadiusRatio="2.5"-->
+            <!--android:shape="ring"-->
+            <!--android:thicknessRatio="25.0" >-->
+            <!--<gradient-->
+                <!--android:centerColor="@color/dark_green"-->
+                <!--android:endColor="@color/dark_green"-->
+                <!--android:startColor="@color/dark_green"-->
+                <!--android:type="sweep" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:id="@android:id/secondaryProgress">-->
+        <!--<shape-->
+            <!--android:innerRadiusRatio="2.5"-->
+            <!--android:shape="ring"-->
+            <!--android:thicknessRatio="25.0" >-->
+            <!--<gradient-->
+                <!--android:centerColor="@color/sky_blue"-->
+                <!--android:endColor="@color/sky_blue"-->
+                <!--android:startColor="@color/sky_blue"-->
+                <!--android:type="sweep" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:id="@android:id/background">-->
+        <!--<shape-->
+            <!--android:innerRadiusRatio="2.5"-->
+            <!--android:shape="ring"-->
+            <!--android:thickness="10dp"-->
+            <!--android:useLevel="false"-->
+            <!--&gt;-->
+            <!--<solid android:color="@color/sky_blue" />-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:id="@android:id/progress">-->
+        <!--<clip android:clipOrientation="vertical" android:gravity="center">-->
+            <!--<shape-->
+                <!--android:innerRadiusRatio="3"-->
+                <!--android:shape="ring"-->
+                <!--android:thickness="10dp"-->
+                <!--android:useLevel="false"-->
+                <!--&gt;-->
+                <!--<solid android:color="@color/dark_green" />-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+<!--</layer-list>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--<item android:id="@android:id/secondaryProgress">-->
+        <!--<shape-->
+            <!--android:innerRadiusRatio="6"-->
+            <!--android:shape="ring"-->
+            <!--android:thicknessRatio="20.0"-->
+            <!--android:useLevel="true">-->
+
+
+            <!--<gradient-->
+                <!--android:centerColor="#999999"-->
+                <!--android:endColor="#999999"-->
+                <!--android:startColor="#999999"-->
+                <!--android:type="sweep" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/progress">-->
+        <!--<rotate-->
+            <!--android:fromDegrees="270"-->
+            <!--android:pivotX="50%"-->
+            <!--android:pivotY="50%"-->
+            <!--android:toDegrees="270">-->
+
+            <!--<shape-->
+                <!--android:innerRadiusRatio="6"-->
+                <!--android:shape="ring"-->
+                <!--android:thicknessRatio="20.0"-->
+                <!--android:useLevel="true">-->
+
+
+                <!--<rotate-->
+                    <!--android:fromDegrees="0"-->
+                    <!--android:pivotX="50%"-->
+                    <!--android:pivotY="50%"-->
+                    <!--android:toDegrees="360" />-->
+
+                <!--<gradient-->
+                    <!--android:centerColor="#00FF00"-->
+                    <!--android:endColor="#00FF00"-->
+                    <!--android:startColor="#00FF00"-->
+                    <!--android:type="sweep" />-->
+
+            <!--</shape>-->
+        <!--</rotate>-->
+    <!--</item>-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item android:id="@android:id/background">-->
+        <!--<shape-->
+            <!--android:shape="ring"-->
+            <!--android:innerRadius="64dp"-->
+            <!--android:thickness="8dp"-->
+            <!--android:useLevel="false">-->
+
+            <!--<solid android:color="@color/sky_blue" />-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item android:id="@android:id/progress">-->
+        <!--<clip>-->
+            <!--<shape-->
+                <!--android:shape="ring"-->
+                <!--android:innerRadius="64dp"-->
+                <!--android:thickness="8dp"-->
+                <!--android:useLevel="false">-->
+
+                <!--<solid android:color="@color/dark_green" />-->
+            <!--</shape>-->
+        <!--</clip>-->
+    <!--</item>-->
+    <item android:id="@android:id/progress">
+        <shape
+            android:innerRadiusRatio="2.5"
+            android:shape="ring"
+            android:thicknessRatio="25.0" >
+            <gradient
+                android:centerColor="@color/sky_blue"
+                android:endColor="@color/sky_blue"
+                android:startColor="@color/sky_blue"
+                android:type="sweep" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <shape
+            android:innerRadiusRatio="2.5"
+            android:shape="ring"
+            android:thicknessRatio="25.0" >
+            <gradient
+                android:centerColor="@color/dark_green"
+                android:endColor="@color/dark_green"
+                android:startColor="@color/dark_green"
+                android:type="sweep" />
+        </shape>
+    </item>
+</layer-list>
