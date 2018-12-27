@@ -147,7 +147,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
         <activity android:name=".Checkout_cardActivity" />
-        <activity android:name=".OnlineOrder.Activity.trackOrder.TrackOrderActivity"></activity>
+        <activity android:name=".ContactDetailActivity"></activity>
     </application>
 
 </manifest>
