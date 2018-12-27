@@ -9,6 +9,7 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragm
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.OfferFragment;
 import com.askonlinesolutions.user.tabqyclient.Fragments.OrderStatusFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragment;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.AccountFragment;
 
 public class AdapterViewPagerMain extends FragmentPagerAdapter
 {
@@ -34,7 +35,7 @@ public class AdapterViewPagerMain extends FragmentPagerAdapter
             case 3:
                 return new OrderStatusFragment();
             case 4:
-                return new OrderStatusFragment();
+                return new AccountFragment();
                 default:
                  return    new RestroFragment();
 

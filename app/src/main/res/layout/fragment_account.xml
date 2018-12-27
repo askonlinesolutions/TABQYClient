@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".OnlineOrder.Fragments.account.AccountFragment">
+
+            <LinearLayout
+                android:id="@+id/profile_layour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_5sdp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/prfile_setting_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@color/bg_color_3"
+                        android:drawablePadding="15dp"
+                        android:elevation="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:text="Profile Setting"
+                        android:textColor="@color/sketch_black"
+                        android:textSize="@dimen/_13sdp" />
+
+                </android.support.v7.widget.CardView>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/black_trans"
+                    android:gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/profile_edit_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:padding="@dimen/_15sdp"
+                        android:src="@drawable/ic_edit_white" />
+                    <!--<FrameLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="@dimen/_50sdp"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/cover_image_iv"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:scaleType="centerCrop"-->
+                    <!--android:src="@drawable/com_vstechlab_lib_ic_launcher" />-->
+
+                    <!--<include layout="@layout/toolbar_transparent" />-->
+
+                    <!--</FrameLayout>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+                        <!--<FrameLayout-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/profile_circular_iv"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_gravity="center"
+                            android:src="@color/white_color"
+                            app:civ_border_width="1dp" />
+
+
+                        <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                        <!--android:layout_width="@dimen/_50sdp"-->
+                        <!--android:layout_height="@dimen/_50sdp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:src="@color/white_color"-->
+                        <!--app:civ_border_width="1dp" />-->
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/name_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Akhilesh kumar"
+                            android:textColor="@color/white_color"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/email_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_message"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="akhileshkumar@gmail.com"
+                            android:textColor="@color/white_color"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/mobile_no_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:drawableLeft="@drawable/ic_call_answer"
+                            android:drawablePadding="@dimen/_10sdp"
+                            android:gravity="center"
+                            android:text="+91 9458706191"
+                            android:textColor="@color/white_color"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <!--</FrameLayout>-->
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="@dimen/_5sdp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/my_points_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:background="@color/bg_color_3"
+                        android:drawablePadding="15dp"
+                        android:elevation="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:text="My Points"
+                        android:textColor="@color/sketch_black"
+                        android:textSize="@dimen/_13sdp" />
+                </android.support.v7.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Tabyq"
+                            android:textColor="@color/sketch_black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_10sdp"
+                                android:src="@color/sky_blue"
+                                app:civ_border_color="@color/white_color"
+                                app:civ_border_width="1dp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="Remaining : 200"
+                                android:textColor="@color/sky_blue"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_10sdp"
+                                android:src="@color/dark_green"
+                                app:civ_border_color="@color/white_color"
+                                app:civ_border_width="1dp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="Remaining : 200"
+                                android:textColor="@color/dark_green"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/tabyq_point_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <ProgressBar
+                                android:id="@+id/tabyq_progress_bar"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_100sdp"
+                                android:layout_marginBottom="10dp"
+                                android:max="400"
+                                android:progress="400"
+                                android:progressDrawable="@drawable/progressbar_states"
+                                android:secondaryProgress="300" />
+
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="35dp"
+                                android:gravity="center"
+                                android:text="@string/life_time_point"
+                                android:textColor="@color/light_prime"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+                                android:id="@+id/life_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="70dp"
+                                android:gravity="center"
+                                android:text="400"
+                                android:textColor="@color/light_prime"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+
+                        >
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="Restaurent"
+                            android:textColor="@color/sketch_black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_10sdp"
+                                android:src="@color/sky_blue"
+                                app:civ_border_color="@color/white_color"
+                                app:civ_border_width="1dp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="Remaining : 200"
+                                android:textColor="@color/sky_blue"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_gravity="center"
+                                android:elevation="@dimen/_10sdp"
+                                android:src="@color/dark_green"
+                                app:civ_border_color="@color/white_color"
+                                app:civ_border_width="1dp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:gravity="center"
+                                android:text="Remaining : 200"
+                                android:textColor="@color/dark_green"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/restaurent_points_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+
+                            <ProgressBar
+                                android:id="@+id/restaurent_pb"
+                                style="@android:style/Widget.ProgressBar.Horizontal"
+                                android:layout_width="@dimen/_100sdp"
+                                android:layout_height="@dimen/_100sdp"
+                                android:layout_marginBottom="10dp"
+                                android:max="400"
+                                android:progress="400"
+                                android:progressDrawable="@drawable/progressbar_states"
+                                android:secondaryProgress="300" />
+
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                                android:id="@+id/resto_life_point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="35dp"
+                                android:gravity="center"
+                                android:text="@string/life_time_point"
+                                android:textColor="@color/light_prime"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
+                                android:id="@+id/restaurent_point_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentTop="true"
+                                android:layout_below="@+id/resto_life_point"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="70dp"
+                                android:gravity="center"
+                                android:text="400"
+                                android:textColor="@color/light_prime"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_5sdp">
+
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/my_order_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/bg_color_3"
+                    android:drawablePadding="15dp"
+                    android:elevation="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="My Order"
+                    android:textColor="@color/sketch_black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/my_order_list_item"></include>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color_3"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/_15sdp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/my_address_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:drawablePadding="15dp"
+                        android:elevation="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:text="My Address"
+                        android:textColor="@color/sketch_black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/add_new_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Add New"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_12" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <include layout="@layout/address_list_item_layout"></include>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:elevation="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_color_3"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/_15sdp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/payment_method_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:drawablePadding="15dp"
+                        android:elevation="@dimen/_15sdp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:text="Payment Method"
+                        android:textColor="@color/sketch_black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/add_new_payment_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_background_button"
+                        android:gravity="center"
+                        android:padding="@dimen/_8sdp"
+                        android:text="Add New"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_12" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <include layout="@layout/payment_method_layout"></include>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/_5sdp">
+
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@color/bg_color_3"
+                    android:drawablePadding="15dp"
+                    android:elevation="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textColor="@color/sketch_black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</layout>

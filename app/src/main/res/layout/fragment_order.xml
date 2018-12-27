@@ -18,9 +18,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corner_border_primary"
                 android:orientation="vertical"
-                android:padding="2dp"
-                android:background="@drawable/rounded_corner_border_primary">
+                android:padding="1dp">
 
                 <RadioGroup
                     android:id="@+id/radioGroup"
@@ -69,10 +69,11 @@
 
 
             <LinearLayout
+                android:id="@+id/new_order_layout"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="@color/transparent"
+                android:background="@color/bg_color_3"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingLeft="15dp"
@@ -94,7 +95,7 @@
                     android:id="@+id/show_new_order_iv"
                     android:layout_width="@dimen/size_20"
                     android:layout_height="@dimen/size_20"
-                    android:src="@drawable/ic_down_arrow_prime" />
+                    android:src="@drawable/ic_up_arrow_prime" />
 
             </LinearLayout>
 
@@ -117,16 +118,18 @@
 
                     </android.support.v7.widget.RecyclerView>
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:background="@color/bg_color_2" />
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="2dp"-->
+                        <!--android:background="@color/bg_color_2" />-->
 
                     <LinearLayout
+                        android:id="@+id/old_order_layout"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_gravity="center"
-                        android:background="@color/transparent"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/bg_color_3"
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingLeft="15dp"
@@ -147,7 +150,7 @@
                             android:id="@+id/show_old_order_iv"
                             android:layout_width="@dimen/size_20"
                             android:layout_height="@dimen/size_20"
-                            android:src="@drawable/ic_down_arrow_prime" />
+                            android:src="@drawable/ic_up_arrow_prime" />
 
                     </LinearLayout>
                 </LinearLayout>
