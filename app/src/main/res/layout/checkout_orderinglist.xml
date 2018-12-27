@@ -11,8 +11,8 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@drawable/thumb" />
 
         <LinearLayout
@@ -25,17 +25,20 @@
                 android:id="@+id/text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textSize="10dp"
                 android:text="Riyadh,Sulimania Dabbab" />
 
 
             <TextView
                 android:id="@+id/text2"
+                android:textSize="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" Street 11939"/>
 
             <TextView
                 android:id="@+id/text3"
+                android:textSize="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=" ome to near petrol station"/>
@@ -48,12 +51,12 @@
         <ImageView
 
             android:src="@drawable/ic_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="14dp"
+            android:layout_height="14dp" />
         <ImageView
             android:id="@+id/edit_image"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
             android:src="@drawable/ic_edit" />
 
     </LinearLayout>

@@ -25,8 +25,10 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MyCartFragment extends Fragment implements MenuAdapter.Interface_AdapterMenu{
- TextView checkout;
+public class MyCartFragment extends Fragment implements MenuAdapter.Interface_AdapterMenu {
+    TextView checkout;
+    int minteger = 0;
+
 
     public MyCartFragment() {
         // Required empty public constructor
@@ -40,6 +42,8 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         return inflater.inflate(R.layout.fragment_my_cart, container, false);
     }
 
+
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
@@ -49,20 +53,20 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
 
     private RecyclerView rv_cart;
     private List<MenuModel> mAllMenuList = new ArrayList<>();
-    private String food_name[] = {"Spring Roll","Spring Roll"};
+    private String food_name[] = {"Spring Roll", "Spring Roll"};
     private MenuAdapter mMenuAdapter;
 
-    private void init(){
-        for (int i=0;i<food_name.length;i++) {
+    private void init() {
+        for (int i = 0; i < food_name.length; i++) {
             mAllMenuList.add(new MenuModel(food_name[i]));
         }
 
         rv_cart = getView().findViewById(R.id.activity_my_cart_recycler);
-        checkout =getView().findViewById(R.id.checkout_btn);
+        checkout = getView().findViewById(R.id.checkout_btn);
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getActivity(),Checkout_cardActivity.class);
+                Intent intent = new Intent(getActivity(), Checkout_cardActivity.class);
                 startActivity(intent);
 
             }
@@ -74,19 +78,28 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
 
     @Override
     public void click_AdapterMenu(int position) {
-        if(position>=0){
+        if (position >= 0) {
             startActivity(new Intent(getContext(), ItemsDetailActivity.class));
-            getActivity().overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
+            getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
         }
     }
 
     @Override
     public void click_AdapterMenu_Plus(int position) {
 
-        if(position >=0){
+        if (position >= 0) {
 
         }
     }
 
+    private void inIt() {
 
+        setupTabs();
+        // plussign //minussign
+    }
+
+    private void setupTabs() {
+
+    }
 }
+

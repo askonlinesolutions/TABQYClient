@@ -123,13 +123,10 @@
         <activity
             android:name=".Reservation.Activity.Thankyou"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Reservation.Activity.TableReservation"/>
-
+        <activity android:name=".Reservation.Activity.TableReservation" />
         <activity
             android:name=".Reservation.Activity.MyReservation"
             android:screenOrientation="portrait" />
-
         <activity
             android:name=".Reservation.Activity.ChooseLocation"
             android:screenOrientation="portrait"
@@ -138,19 +135,19 @@
             android:name=".Activities.filter.FilterActivity"
             android:screenOrientation="portrait">
 
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".Commons.Activity.SearchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden" />
-
-        <activity android:name=".Checkout_cardActivity"></activity>
-
+        <activity android:name=".Checkout_cardActivity" />
+        <activity android:name=".ContactDetailActivity"></activity>
     </application>
 
 </manifest>
