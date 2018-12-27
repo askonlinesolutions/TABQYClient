@@ -5,11 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
 
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityTabqyPointsBinding;
 
-public class TabqyPointsActivity extends AppCompatActivity {
+public class TabqyPointsActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityTabqyPointsBinding binding;
     TabqyPointsAdapter tabqyPointsAdapter;
 
@@ -24,6 +25,7 @@ public class TabqyPointsActivity extends AppCompatActivity {
     private void init() {
 
         setRecyclerview();
+        binding.backBtn.setOnClickListener(this);
     }
 
     private void setRecyclerview() {
@@ -33,5 +35,15 @@ public class TabqyPointsActivity extends AppCompatActivity {
         tabqyPointsAdapter = new TabqyPointsAdapter( this);
         binding.tabqyRv.setAdapter(tabqyPointsAdapter);
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.back_btn:
+                onBackPressed();
+                this.overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+                break;
+        }
     }
 }

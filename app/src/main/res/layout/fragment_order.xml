@@ -37,9 +37,10 @@
                         android:background="@color/light_prime"
                         android:button="@null"
                         android:gravity="center"
-                        android:padding="@dimen/size_10"
+                        android:padding="@dimen/size_8"
                         android:text="Table Order"
-                        android:textColor="@color/white_color" />
+                        android:textColor="@color/white_color"
+                        android:textSize="@dimen/_10sdp" />
 
                     <RadioButton
                         android:id="@+id/online_order_rb"
@@ -48,9 +49,10 @@
                         android:layout_weight="1"
                         android:button="@null"
                         android:gravity="center"
-                        android:padding="@dimen/size_10"
+                        android:padding="@dimen/size_8"
                         android:text="Online Order"
-                        android:textColor="@color/light_prime" />
+                        android:textColor="@color/light_prime"
+                        android:textSize="@dimen/_10sdp" />
 
 
                 </RadioGroup>
@@ -71,7 +73,7 @@
             <LinearLayout
                 android:id="@+id/new_order_layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="center"
                 android:background="@color/bg_color_3"
                 android:gravity="center"
@@ -87,7 +89,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/new_order"
                     android:textColor="@color/sketch_black"
-                    android:textSize="@dimen/title_size"
+                    android:textSize="@dimen/_12sdp"
 
                     />
 
@@ -119,14 +121,14 @@
                     </android.support.v7.widget.RecyclerView>
 
                     <!--<View-->
-                        <!--android:layout_width="match_parent"-->
-                        <!--android:layout_height="2dp"-->
-                        <!--android:background="@color/bg_color_2" />-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:background="@color/bg_color_2" />-->
 
                     <LinearLayout
                         android:id="@+id/old_order_layout"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="@dimen/_40sdp"
                         android:layout_gravity="center"
                         android:layout_marginTop="2dp"
                         android:background="@color/bg_color_3"
@@ -142,7 +144,7 @@
                             android:gravity="center_vertical"
                             android:text="@string/old_order"
                             android:textColor="@color/sketch_black"
-                            android:textSize="@dimen/title_size"
+                            android:textSize="@dimen/_12sdp"
 
                             />
 
@@ -150,7 +152,7 @@
                             android:id="@+id/show_old_order_iv"
                             android:layout_width="@dimen/size_20"
                             android:layout_height="@dimen/size_20"
-                            android:src="@drawable/ic_up_arrow_prime" />
+                            android:src="@drawable/ic_down_arrow_prime" />
 
                     </LinearLayout>
                 </LinearLayout>

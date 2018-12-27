@@ -8,6 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -35,6 +38,9 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
         binding.profileEditIv.setOnClickListener(this);
         binding.restaurentPointsLayout.setOnClickListener(this);
         binding.tabyqPointLayout.setOnClickListener(this);
+        binding.myOrderTv.setOnClickListener(this);
+        binding.myOrderBody.setOnClickListener(this);
+
 
     }
 
@@ -60,6 +66,25 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
                 startActivity(intentRestro);
                 getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
+
+            case R.id.profile_edit_iv:
+                Intent intentEdit = new Intent(getActivity(), ProfileSettingActivity.class);
+                startActivity(intentEdit);
+                getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.my_order_tv:
+                Intent intentReceipt = new Intent(getActivity(), MyReceiptActivity.class);
+                startActivity(intentReceipt);
+                getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.my_order_body:
+                Intent intentDetails = new Intent(getActivity(), MyReceiptsDetailsActivity.class);
+                startActivity(intentDetails);
+                getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
         }
 
     }

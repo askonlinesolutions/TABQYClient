@@ -233,40 +233,14 @@
                     android:scaleY="1.1"
                     android:src="@drawable/ic_cash_two"/>
 
-                <ImageView
-                    android:id="@+id/star_a"
+                <RatingBar
+                    android:id="@+id/review_Rating_Bar"
+                    style="?android:attr/ratingBarStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:src="@drawable/ic_star"/>
-                <ImageView
-                    android:id="@+id/star_b"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/star_a"
-                    android:layout_marginLeft="3dp"
-                    android:src="@drawable/ic_star"/>
-                <ImageView
-                    android:id="@+id/star_c"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toLeftOf="@+id/star_b"
-                    android:layout_marginLeft="3dp"
-                    android:src="@drawable/ic_star"/>
-                <ImageView
-                    android:id="@+id/star_d"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toLeftOf="@+id/star_c"
-                    android:src="@drawable/ic_star"/>
-                <ImageView
-                    android:id="@+id/star_e"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="3dp"
-                    android:layout_toLeftOf="@+id/star_d"
-                    android:src="@drawable/ic_star_b"/>
+                    android:layout_marginLeft="5dp"
+                    android:rating="3.5"
+                    android:theme="@style/userRatingBar" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"

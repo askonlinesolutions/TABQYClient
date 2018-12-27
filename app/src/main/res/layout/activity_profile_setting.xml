@@ -11,7 +11,7 @@
         tools:context=".OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity">
 
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-            android:id="@+id/restro_back_btn"
+            android:id="@+id/profile_back_btn"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/theme_color"
@@ -22,6 +22,208 @@
             android:text="Profile Setting"
             android:textColor="@color/white_color"
             android:textSize="@dimen/title_size" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:elevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_color"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/_15sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/my_address_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:drawablePadding="15dp"
+                    android:elevation="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Set user pic"
+                    android:textSize="@dimen/_13sdp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/add_new_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_background_button"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Upload"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_first_name_et"
+                    style="@style/edit_text_style"
+                    android:background="@null"
+                    android:hint="@string/first_name"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:layout_weight="1">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/profile_last_name_et"
+                    style="@style/edit_text_style"
+                    android:hint="@string/last_name"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="40" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/view_color" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:padding="@dimen/_5sdp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/profile_email_et"
+                style="@style/edit_text_style"
+                android:hint="@string/email"
+                android:background="@null"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/view_color" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:padding="@dimen/_5sdp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/language_et"
+                style="@style/edit_text_style"
+                android:background="@null"
+                android:hint="@string/language"
+                android:inputType="textEmailAddress" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:drawablePadding="10dp"
+                    android:elevation="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Notification"
+                    android:textSize="@dimen/_13sdp" />
+
+
+                <Switch
+                    android:id="@+id/switch_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/custom_switch_btn"
+                    android:padding="@dimen/_3sdp"
+
+                    android:thumb="@null"
+                    app:track="@null" />
+
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/white_color"
+            android:elevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_color"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/_15sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:drawablePadding="15dp"
+                    android:elevation="@dimen/_15sdp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:text="Sign out"
+                    android:textSize="@dimen/_13sdp" />
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
 
     </LinearLayout>
 </layout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity">
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:id="@+id/receipt_back_btn"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme_color"
+            android:drawableLeft="@drawable/ic_back"
+            android:drawablePadding="15dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="My Receipt"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_size" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/my_receipt_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+</layout>

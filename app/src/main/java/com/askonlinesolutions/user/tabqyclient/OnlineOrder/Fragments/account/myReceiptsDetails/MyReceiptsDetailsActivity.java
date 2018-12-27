@@ -1,37 +1,39 @@
-package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting;
+package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails;
 
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.DatePicker;
 
 import com.askonlinesolutions.user.tabqyclient.R;
-import com.askonlinesolutions.user.tabqyclient.databinding.ActivityProfileSettingBinding;
+import com.askonlinesolutions.user.tabqyclient.databinding.ActivityFilterBinding;
+import com.askonlinesolutions.user.tabqyclient.databinding.ActivityMyReceiptsDetailsBinding;
 
-public class ProfileSettingActivity extends AppCompatActivity implements View.OnClickListener {
+public class MyReceiptsDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ActivityProfileSettingBinding binding;
+    ActivityMyReceiptsDetailsBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding= DataBindingUtil.setContentView(this,R.layout.activity_profile_setting);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_my_receipts_details);
 
         init();
     }
 
     private void init() {
-        binding.profileBackBtn.setOnClickListener(this);
+        binding.detailsBackBtn.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.profile_back_btn:
+            case R.id.details_back_btn:
                 onBackPressed();
                 this.overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
                 break;
         }
+
     }
 }
