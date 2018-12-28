@@ -13,6 +13,7 @@ import com.askonlinesolutions.user.tabqyclient.databinding.ActivityTabqyPointsBi
 public class TabqyPointsActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityTabqyPointsBinding binding;
     TabqyPointsAdapter tabqyPointsAdapter;
+    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +24,16 @@ public class TabqyPointsActivity extends AppCompatActivity implements View.OnCli
     }
 
     private void init() {
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getString("key");
+            //The key argument here must match that used in the other activity
+        }
+        if (value != null && value.equals("receipt")) {
+            binding.backBtn.setText("Restaurant points");
+        } else {
+            binding.backBtn.setText("Tabqy points");
+        }
         setRecyclerview();
         binding.backBtn.setOnClickListener(this);
     }
@@ -32,7 +42,7 @@ public class TabqyPointsActivity extends AppCompatActivity implements View.OnCli
 
         LinearLayoutManager gridLayoutManager = new LinearLayoutManager(this, GridLayoutManager.VERTICAL, false);
         binding.tabqyRv.setLayoutManager(gridLayoutManager);
-        tabqyPointsAdapter = new TabqyPointsAdapter( this);
+        tabqyPointsAdapter = new TabqyPointsAdapter(this);
         binding.tabqyRv.setAdapter(tabqyPointsAdapter);
 
     }
