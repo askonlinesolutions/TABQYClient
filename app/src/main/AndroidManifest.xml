@@ -135,12 +135,11 @@
             android:name=".Activities.filter.FilterActivity"
             android:screenOrientation="portrait">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
 
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity
             android:name=".Commons.Activity.SearchActivity"
@@ -153,6 +152,7 @@
         <activity android:name=".OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity"></activity>
+        <activity android:name=".ContactDetailActivity"></activity>
     </application>
 
 </manifest>

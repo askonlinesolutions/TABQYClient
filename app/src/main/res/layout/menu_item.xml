@@ -10,10 +10,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
         android:paddingLeft="15dp"
-        android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingBottom="10dp">
+        android:paddingTop="10dp">
 
 
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
@@ -28,15 +28,14 @@
         <RelativeLayout
             android:id="@+id/food_rel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/food">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/iv_res"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_marginTop="5dp"
                 android:layout_marginRight="6dp"
+                android:layout_marginTop="5dp"
                 android:src="@drawable/tablereservationrestaurant" />
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
@@ -113,12 +112,15 @@
                 android:layout_marginTop="5dp">
 
                 <RelativeLayout
+                    android:id="@+id/minus"
                     android:layout_width="30dp"
                     android:layout_height="22dp"
                     android:layout_toLeftOf="@id/one"
-                    android:background="@drawable/button_pink_square_solid">
+                    android:background="@drawable/button_pink_square_solid"
+                   >
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    <TextView
+                        android:id="@+id/minussign"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
@@ -134,7 +136,8 @@
                     android:layout_toLeftOf="@id/plus"
                     android:background="@drawable/button_whit">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    <TextView
+                        android:id="@+id/integer_number"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
@@ -148,15 +151,17 @@
                     android:id="@+id/plus"
                     android:layout_width="30dp"
                     android:layout_height="22dp"
+
                     android:layout_alignParentRight="true"
                     android:background="@drawable/button_pink_square_solid">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    <TextView
+                        android:id="@+id/plussign"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+
                         android:layout_centerHorizontal="true"
                         android:text="+"
-                        android:id="@+id/plussign"
                         android:textColor="@color/white_color"
                         android:textSize="14sp" />
                 </RelativeLayout>
@@ -165,10 +170,10 @@
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/rel"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_below="@id/rel"
                 android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
                 android:text="Total 44.00"
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp" />

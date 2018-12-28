@@ -27,6 +27,8 @@ import java.util.List;
  */
 public class MyCartFragment extends Fragment implements MenuAdapter.Interface_AdapterMenu {
     TextView checkout;
+    int minteger = 0;
+
 
     public MyCartFragment() {
         // Required empty public constructor
@@ -39,6 +41,8 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_my_cart, container, false);
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
@@ -58,11 +62,11 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         }
 
         rv_cart = getView().findViewById(R.id.activity_my_cart_recycler);
-        checkout = getView().findViewById(R.id.checkout_btn);
+        checkout =getView().findViewById(R.id.checkout_btn);
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Checkout_cardActivity.class);
+                Intent intent=new Intent(getActivity(),Checkout_cardActivity.class);
                 startActivity(intent);
 
             }
@@ -88,5 +92,14 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         }
     }
 
+    private void inIt() {
 
+        setupTabs();
+        // plussign //minussign
+    }
+
+    private void setupTabs() {
+
+    }
 }
+

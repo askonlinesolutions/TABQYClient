@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/bg_color_6"
+        android:background="#FCFCFC"
         tools:context=".OnlineOrder.Activity.MyCart">
 
 <!--
@@ -48,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height=".5dp"
             android:background="@color/bg_color_2"
-            android:layout_marginTop="120sp"/>
+            android:layout_marginTop="100sp"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40sp"
