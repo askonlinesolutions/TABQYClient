@@ -22,7 +22,7 @@
         android:value="@integer/google_play_services_version" />
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyDAbdXJirRKf03JMcS7hdQqq17WTLJyajY" />
+        android:value="AIzaSyDVOfhbag1ROacwa9gZNkUgzdOKeMkk0LI" />
 
     <application
         android:allowBackup="true"
@@ -41,6 +41,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
         <activity
             android:name=".Commons.Activity.GuestActivity"
             android:screenOrientation="portrait" />
@@ -135,11 +146,12 @@
             android:name=".Activities.filter.FilterActivity"
             android:screenOrientation="portrait">
 
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".Commons.Activity.SearchActivity"
@@ -151,8 +163,12 @@
         <activity android:name=".OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity" />
-        <activity android:name=".OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity"></activity>
-        <activity android:name=".ContactDetailActivity"></activity>
+        <activity android:name=".OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity" />
+        <activity android:name=".ContactDetailActivity" />
+        <activity android:name=".Activities.addAddresss.baseActivity.AppBaseActivity" />
+        <activity android:name=".Activities.addAddresss.AddAddressActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            ></activity>
     </application>
 
 </manifest>
