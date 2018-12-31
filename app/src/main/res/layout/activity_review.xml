@@ -468,7 +468,7 @@
                     android:orientation="vertical">
 
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -551,7 +551,7 @@
                     android:orientation="vertical">
 
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
@@ -631,7 +631,7 @@
                     android:orientation="vertical">
 
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="18dp"
@@ -681,13 +681,13 @@
                     android:layout_height="50dp"
                     android:id="@+id/go_back"
                     android:layout_weight="1"
-                    android:background="@drawable/shape_background_gray"
+                    android:background="@drawable/shape_background_button"
                     android:gravity="center"
                     android:text="Go Back"
                     android:textColor="@android:color/white"
                     android:textSize="15dp" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:id="@+id/checkout_btn"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
