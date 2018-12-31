@@ -22,7 +22,7 @@
         android:value="@integer/google_play_services_version" />
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyDAbdXJirRKf03JMcS7hdQqq17WTLJyajY" />
+        android:value="AIzaSyDVOfhbag1ROacwa9gZNkUgzdOKeMkk0LI " />
 
     <application
         android:allowBackup="true"
@@ -41,6 +41,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
         <activity
             android:name=".Commons.Activity.GuestActivity"
             android:screenOrientation="portrait" />
@@ -84,7 +95,7 @@
             android:name=".Activities.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OnlineOrder.Activity.ItemsDetailActivity"
+            android:name=".OnlineOrder.Activity.item_details.ItemsDetailActivity"
             android:screenOrientation="portrait" />
 
         <uses-library android:name="com.google.android.maps" />

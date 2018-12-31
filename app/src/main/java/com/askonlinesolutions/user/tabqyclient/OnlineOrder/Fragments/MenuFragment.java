@@ -1,8 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments;
 
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,9 +11,7 @@ import android.view.ViewGroup;
 
 import com.askonlinesolutions.user.tabqyclient.Adapters.MenuAdapter;
 import com.askonlinesolutions.user.tabqyclient.Model.MenuModel;
-import com.askonlinesolutions.user.tabqyclient.Model.OfferModel;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ItemsDetailActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 
 import java.util.ArrayList;

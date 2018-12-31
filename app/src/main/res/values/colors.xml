@@ -49,7 +49,12 @@
     <color name="bg_color_5">#F6F6F6</color>
     <color name="bg_color_6">#F0F0F0</color>
 
+    <color name="black_trans_50">#80000000</color>
+    <color name="black_trans_80">#CC000000</color>
     <color name="icon_color_1">#636363</color>
-
+    <color name="color_767676">#767676</color>
+    <color name="color_808080">#808080</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_534f47">#534f47</color>
 
 </resources>
