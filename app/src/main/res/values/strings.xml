@@ -13,7 +13,7 @@
 
     <!--LoginActivity-->
     <string name="already_have_an_account">Already have an account ?</string>
-    <string name="email">Email</string>
+    <string name="email"><font size="13">Email</font></string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot Password?</string>
     <string name="create_an_account">Create an account</string>
@@ -22,8 +22,8 @@
     <!--SignUp-->
     <string name="phone">Phone</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="first_name">First Name</string>
-    <string name="last_name">Last Name</string>
+    <string name="first_name"><font size="13">First Name</font></string>
+    <string name="last_name"><font size="13">Last Name</font></string>
     <string name="gender_optional">Gender(Optional)</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
@@ -118,6 +118,7 @@
     <string name="new_order">New Order</string>
     <string name="repeat">Repeat</string>
     <string name="life_time_point">Life time \npoint</string>
+    <string name="language"><font size="13">Language</font></string>
 
 
 </resources>

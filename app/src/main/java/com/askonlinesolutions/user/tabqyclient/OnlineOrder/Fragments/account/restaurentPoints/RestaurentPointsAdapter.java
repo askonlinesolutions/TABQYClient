@@ -15,11 +15,11 @@ public class RestaurentPointsAdapter extends RecyclerView.Adapter<RestaurentPoin
 
     private String[] dataSource;
     Context context;
-//    private OrderStatusAdapter.OnItemClickLister onItemClickLister;
+    private OnItemClickLister onItemClickLister;
 
-    public RestaurentPointsAdapter(Context context/*, OrderStatusAdapter.OnItemClickLister onItemClickLister*/) {
+    public RestaurentPointsAdapter(Context context, OnItemClickLister onItemClickLister) {
 //        dataSource = dataArgs;
-//        this.onItemClickLister = onItemClickLister;
+        this.onItemClickLister = onItemClickLister;
         this.context = context;
     }
 
@@ -52,22 +52,12 @@ public class RestaurentPointsAdapter extends RecyclerView.Adapter<RestaurentPoin
 
         public MyViewHolder(View itemView) {
             super(itemView);
-//            canceleBtn = (TextView) itemView.findViewById(R.id.cancele_btn_tv);
-//            trackOrderBtn = itemView.findViewById(R.id.track_order_tv);
-
-//            canceleBtn.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    onItemClickLister.onItemClick(getAdapterPosition(),"CANCELE");
-//                }
-//            });
-//
-//            trackOrderBtn.setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View view) {
-//                    onItemClickLister.onItemClick(getAdapterPosition(),"TRACK");
-//                }
-//            });
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onItemClickLister.onItemClick(getAdapterPosition(), "RECEIPTS");
+                }
+            });
 
         }
 

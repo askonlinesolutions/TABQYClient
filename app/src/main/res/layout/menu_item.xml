@@ -10,10 +10,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
         android:paddingLeft="15dp"
+        android:paddingTop="10dp"
         android:paddingRight="15dp"
-        android:paddingTop="10dp">
+        android:paddingBottom="10dp">
 
 
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
@@ -28,7 +28,8 @@
         <RelativeLayout
             android:id="@+id/food_rel"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/food">
 
             <ImageView
                 android:id="@+id/iv_res"
@@ -107,8 +108,8 @@
                 android:id="@+id/rel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
                 android:layout_below="@id/quantity"
+                android:layout_alignParentRight="true"
                 android:layout_marginTop="5dp">
 
                 <RelativeLayout

@@ -150,8 +150,15 @@
         <activity android:name=".OnlineOrder.Activity.trackOrder.TrackOrderActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity" />
         <activity android:name=".OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity" />
-        <activity android:name=".OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity"></activity>
-        <activity android:name=".ContactDetailActivity"></activity>
+        <activity android:name=".OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity" />
+        <activity android:name=".OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity" />
+        <activity android:name=".OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity" />
+        <activity android:name=".ContactDetailActivity" />
+        <activity android:name=".CheckoutAddAddressActivity" />
+        <activity android:name=".AddPaymentActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".GuestLoginActivity" />
+        <activity android:name=".PlacingOrderActivity"></activity>
     </application>
 
 </manifest>

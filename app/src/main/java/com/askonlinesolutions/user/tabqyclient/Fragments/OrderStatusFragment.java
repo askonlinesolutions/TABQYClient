@@ -32,30 +32,23 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
     private boolean isVisible = true;
     private boolean isShow = true;
 
-    public OrderStatusFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_order, container, false);
-
         inIt();
         return binding.getRoot();
     }
 
     private void inIt() {
-
         setNewOrderRecyclerView();
         setOldOrderRecyclerView();
         setupTabs();
         binding.showNewOrderIv.setOnClickListener(this);
         binding.showOldOrderIv.setOnClickListener(this);
-
-
+        binding.newOrderLayout.setOnClickListener(this);
+        binding.oldOrderLayout.setOnClickListener(this);
     }
 
     private void setupTabs() {
@@ -108,29 +101,36 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.show_new_order_iv:
+            case R.id.new_order_layout:
                 if (isVisible) {
                     binding.newOrderRv.setVisibility(View.GONE);
                     binding.showNewOrderIv.setImageResource(R.drawable.ic_down_arrow_prime);
+                    binding.oldOrderRv.setVisibility(View.VISIBLE);
+                    binding.showOldOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
                     isVisible = false;
                 } else {
                     binding.newOrderRv.setVisibility(View.VISIBLE);
                     binding.showNewOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
+                    binding.oldOrderRv.setVisibility(View.GONE);
+                    binding.showOldOrderIv.setImageResource(R.drawable.ic_down_arrow_prime);
                     isVisible = true;
                 }
                 break;
 
-            case R.id.show_old_order_iv:
+            case R.id.old_order_layout:
                 if (isShow) {
                     binding.oldOrderRv.setVisibility(View.GONE);
                     binding.showOldOrderIv.setImageResource(R.drawable.ic_down_arrow_prime);
                     binding.newOrderRv.setVisibility(View.VISIBLE);
+                    binding.showNewOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
 
                     isShow = false;
                 } else {
                     binding.oldOrderRv.setVisibility(View.VISIBLE);
                     binding.showOldOrderIv.setImageResource(R.drawable.ic_up_arrow_prime);
 //                    binding.newOrderRv.setVisibility(View.GONE);
+                    binding.newOrderRv.setVisibility(View.GONE);
+                    binding.showNewOrderIv.setImageResource(R.drawable.ic_down_arrow_prime);
                     isShow = true;
                 }
                 break;
@@ -143,7 +143,7 @@ public class OrderStatusFragment extends Fragment implements View.OnClickListene
         if (type.equals("CANCELE")) {
             Toast.makeText(getActivity(), type, Toast.LENGTH_SHORT).show();
         } else if (type.equals("TRACK")) {
-            Intent intent=new Intent(getContext(), TrackOrderActivity.class);
+            Intent intent = new Intent(getContext(), TrackOrderActivity.class);
             startActivity(intent);
             getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
             Toast.makeText(getActivity(), type, Toast.LENGTH_SHORT).show();
