@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlacingOrderActivity">
+    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+        android:id="@+id/activity_login_title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/theme_color"
+        android:drawableLeft="@drawable/ic_back"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="Placing your order"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/title_size" />
+
+</LinearLayout>

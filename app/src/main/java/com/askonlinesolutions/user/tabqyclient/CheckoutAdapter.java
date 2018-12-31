@@ -14,7 +14,7 @@ class CheckoutAdapter extends RecyclerView.Adapter<CheckoutAdapter.Viewholder> {
     ArrayList name;
     Context context;
     public CheckoutAdapter(Checkout_cardActivity checkout_cardActivity, ArrayList name) {
-        this.context =checkout_cardActivity;
+               this.context =checkout_cardActivity;
         this.name =name;
 
 

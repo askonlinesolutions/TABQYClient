@@ -12,6 +12,9 @@ import com.askonlinesolutions.user.tabqyclient.Activities.addAddresss.AddAddress
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.R;

@@ -162,15 +162,17 @@
                     android:layout_alignParentLeft="true"
                     android:layout_toLeftOf="@+id/activity_cart_btn_redeem">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    <EditText
+                        android:background="@null"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="@dimen/size_10"
                         android:textColor="@color/hint_color"
-                        android:text="@string/enter_coupon_code_here"
+                        android:hint="@string/enter_coupon_code_here"
                         android:gravity="center"
                         android:layout_centerInParent="true"
                         android:drawableLeft="@drawable/ic_offer"
+                        android:inputType="text"
                         android:drawablePadding="@dimen/size_10" />
 
                 </RelativeLayout>
@@ -205,7 +207,9 @@
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
+                    android:id="@+id/detail_btn"
+                    android:layout_height="35dp"
+
                     android:textSize="@dimen/size_10"
                     android:textColor="@android:color/white"
                     android:text="@string/add_more"
@@ -216,7 +220,7 @@
                     android:id="@+id/checkout_btn"
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
+                    android:layout_height="35dp"
                     android:textSize="@dimen/size_10"
                     android:textColor="@android:color/white"
                     android:text="@string/checkout"
@@ -228,7 +232,8 @@
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="40dp"
+                    android:id="@+id/guest_btn"
+                    android:layout_height="35dp"
                     android:textSize="@dimen/size_10"
                     android:textColor="@android:color/white"
                     android:text="@string/checkout_as_guest"
