@@ -174,7 +174,7 @@
         <activity android:name=".AddPaymentActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".GuestLoginActivity" />
-        <activity android:name=".PlacingOrderActivity"></activity>
+        <activity android:name=".PlacingOrderActivity" />
     </application>
 
 </manifest>
