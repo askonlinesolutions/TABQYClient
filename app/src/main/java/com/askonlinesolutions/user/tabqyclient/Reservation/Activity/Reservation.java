@@ -32,8 +32,6 @@ public class Reservation extends AppCompatActivity implements View.OnClickListen
     private ReservationAdultsAdapter reservationAdultsAdapter;
     private ReservationChildAdapter reservationChildAdapter;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
