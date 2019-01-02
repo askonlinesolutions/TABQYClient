@@ -11,7 +11,7 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragm
 
 public class ReviewActivity extends AppCompatActivity {
     RelativeLayout minus,plus;
-    TextView integer_number,goBack,checkout_btn,activity_login_title;
+    TextView integer_number,goBack;
     int start= 1;
 
 
@@ -21,9 +21,7 @@ public class ReviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_review);
         minus=(RelativeLayout)findViewById(R.id.minus);
         plus=(RelativeLayout)findViewById(R.id.plus);
-        activity_login_title=(TextView)findViewById(R.id.activity_login_title);
         goBack=(TextView)findViewById(R.id.go_back);
-        checkout_btn =(TextView)findViewById(R.id.checkout_btn);
         integer_number=(TextView)findViewById(R.id.integer_number);
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,18 +39,6 @@ public class ReviewActivity extends AppCompatActivity {
                 displaytext(start);
             }
         });
-        activity_login_title.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                onBackPressed();
-            }
-        });
-        checkout_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent( ReviewActivity.this,PlacingOrderActivity.class);
-                startActivity(intent);            }
-        });
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +50,7 @@ public class ReviewActivity extends AppCompatActivity {
     private void displaytext(int number) {
         integer_number=(TextView)findViewById(R.id.integer_number);
         integer_number.setText(""  + start);
-
     }
-}
+
+
+            }

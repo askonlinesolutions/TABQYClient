@@ -15,18 +15,26 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary">
 
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:id="@+id/activity_login_title"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="@color/theme_color"
-                android:drawableLeft="@drawable/ic_back"
-                android:drawablePadding="15dp"
-                android:gravity="center_vertical"
-                android:paddingLeft="15dp"
+            <ImageView
+                android:id="@+id/back_checkout"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="3dp"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                android:src="@drawable/ic_chevron_left" />
+
+            <TextView
+                android:id="@+id/header_checkout_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/back_checkout"
                 android:text="Checkout"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/title_size" />
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
 
         </RelativeLayout>
 
@@ -64,7 +72,7 @@
                             android:orientation="vertical">
 
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -73,16 +81,16 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
-                                android:layout_marginTop="2dp"
+                                android:layout_marginTop="7dp"
                                 android:layout_toRightOf="@+id/person_image"
                                 android:text="Azeem Anwar"
-                                android:textSize="11sp" />
+                                android:textSize="13sp" />
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -91,7 +99,7 @@
                                 android:text="bestforsale@gmail.com"
                                 android:textSize="10sp" />
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -127,13 +135,14 @@
 
                         <LinearLayout
                             android:id="@+id/ordering"
+
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_toRightOf="@+id/order_image"
                             android:orientation="horizontal">
 
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -146,8 +155,8 @@
 
                             <ImageView
                                 android:id="@+id/edit_image_order"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="25dp"
+                                android:layout_height="20dp"
                                 android:layout_alignParentEnd="true"
                                 android:src="@drawable/ic_down_arrow_" />
 
@@ -276,7 +285,7 @@
                             android:layout_alignParentTop="true"
                             android:orientation="horizontal">
 
-                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            <TextView
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -289,10 +298,11 @@
                             <ImageView
                                 android:id="@+id/payment"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_height="21dp"
+                                android:layout_marginRight="3dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_gravity="center"
-                                android:layout_marginRight="4dp"
+
                                 android:src="@drawable/ic_down_arrow_prime" />
 
                         </LinearLayout>
@@ -399,9 +409,6 @@
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
                             android:visibility="visible">
-                            <RadioGroup
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content" >
 
 
                             <RadioButton
@@ -410,7 +417,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_below="@id/cashing"
                                 android:layout_margin="1dp"
-                                android:text="3456xxxxxxxxxxx7436|Visa|HDFC"
+                                android:text="Cash on delivery"
                                 android:visibility="visible" />
 
                             <RadioButton
@@ -418,9 +425,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_below="@id/cashing"
-                                android:text="3426xxxxxxxxxxx7435|Visa|SBI"
+                                android:text="Cash on delivery"
                                 android:visibility="visible" />
-                            </RadioGroup>
 
                             <Button
                                 android:id="@+id/addNewCard"
@@ -437,15 +443,15 @@
                         </LinearLayout>
 
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 

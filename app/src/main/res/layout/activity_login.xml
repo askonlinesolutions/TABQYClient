@@ -61,7 +61,7 @@
                    android:src="@drawable/ic_login"
                    android:layout_alignParentLeft="true"/>
 
-               <EditText
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_edt_email"
@@ -100,7 +100,7 @@
                    android:src="@drawable/ic_lock"
                    android:layout_alignParentLeft="true"/>
 
-               <EditText
+               <com.askonlinesolutions.user.tabqyclient.customText.CustomEditText
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:id="@+id/activity_login_edt_password"
