@@ -2,321 +2,325 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:context=".Activities.filter.FilterActivity">
+        android:layout_height="wrap_content">
 
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-            android:id="@+id/activity_login_title"
+        <LinearLayout xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/theme_color"
-            android:drawableLeft="@drawable/ic_back"
-            android:drawablePadding="15dp"
-            android:gravity="center_vertical"
-            android:paddingLeft="15dp"
-            android:text="Filter by"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/title_size" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/size_15"
-            android:layout_marginRight="@dimen/size_15"
-            android:layout_marginTop="@dimen/size_15"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".Activities.filter.FilterActivity">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:text="@string/star"
-                android:textSize="@dimen/button_text_size" />
-
-            <!--<RatingBar-->
-            <!--android:id="@+id/ratingBar"-->
-            <!--style="@style/CustomRatingBar"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:isIndicator="true"-->
-            <!--android:numStars="5"-->
-            <!--android:rating="4"-->
-            <!--android:stepSize="0.01" />-->
-
-            <RatingBar
-                android:id="@+id/review_Rating_Bar"
-                style="?android:attr/ratingBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="@dimen/size_10"
-                android:rating="3.3"
-                android:theme="@style/userRatingBar" />
-
-            <View
+                android:id="@+id/activity_login_title"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/size_5"
-                android:background="@color/view_color" />
-
-
-            <!--<RatingBar-->
-            <!--android:id="@+id/rating"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:numStars="5"-->
-            <!--android:rating="3"-->
-            <!--android:layout_marginTop="@dimen/size_5"-->
-            <!--android:stepSize="1"-->
-            <!--android:theme="@style/userRatingBar"/>-->
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/theme_color"
+                android:drawableLeft="@drawable/ic_back"
+                android:drawablePadding="15dp"
                 android:gravity="center_vertical"
-                android:text="@string/distance"
-                android:textSize="@dimen/_12sdp" />
+                android:paddingLeft="15dp"
+                android:text="Filter by"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_size" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_10"
-                android:orientation="horizontal">
+                android:layout_marginLeft="@dimen/size_15"
+                android:layout_marginRight="@dimen/size_15"
+                android:layout_marginTop="@dimen/size_15"
+                android:orientation="vertical">
 
-
-                <LinearLayout
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:gravity="center_vertical"
+                    android:text="@string/star"
+                    android:textSize="@dimen/button_text_size" />
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                <!--<RatingBar-->
+                <!--android:id="@+id/ratingBar"-->
+                <!--style="@style/CustomRatingBar"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:isIndicator="true"-->
+                <!--android:numStars="5"-->
+                <!--android:rating="4"-->
+                <!--android:stepSize="0.01" />-->
+
+                <RatingBar
+                    android:id="@+id/review_Rating_Bar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:rating="3.3"
+                    android:theme="@style/userRatingBar" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@color/view_color" />
+
+
+                <!--<RatingBar-->
+                <!--android:id="@+id/rating"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:numStars="5"-->
+                <!--android:rating="3"-->
+                <!--android:layout_marginTop="@dimen/size_5"-->
+                <!--android:stepSize="1"-->
+                <!--android:theme="@style/userRatingBar"/>-->
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:text="@string/distance"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="MIN"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_12sdp" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:id="@+id/min_dis_tv"
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="MIN"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/min_dis_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="1 KM"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:background="@color/view_color" />
+
+
+                    </LinearLayout>
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="1 KM"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_11sdp" />
+                        android:layout_weight="1" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/size_5"
-                        android:background="@color/view_color" />
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="MAX"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/max_dis_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="1 KM"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:background="@color/view_color" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
-                <TextView
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/distance_rangeSeekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    app:bar_color="@color/gray"
+                    app:bar_highlight_color="#56005E"
+                    app:corner_radius="10"
+                    app:data_type="_integer"
+                    app:left_thumb_color="#56005E"
+                    app:left_thumb_color_pressed="#56005E"
+                    app:max_value="100"
+                    app:min_value="0"
+                    app:right_thumb_color="#56005E"
+                    app:right_thumb_color_pressed="#56005E" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@color/view_color" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center_vertical"
+                    android:text="Avg Cost"
+                    android:textSize="@dimen/_12sdp" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="@dimen/size_10"
+                    android:orientation="horizontal">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="MAX"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_12sdp" />
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:id="@+id/max_dis_tv"
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="MIN"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/min_avg_cost_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="SAR 1.0"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:background="@color/view_color" />
+
+
+                    </LinearLayout>
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="1 KM"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_11sdp" />
+                        android:layout_weight="1" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/size_5"
-                        android:background="@color/view_color" />
 
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="MAX"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                            android:id="@+id/max_avg_cost_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="SAR 0.5"
+                            android:textColor="@color/light_prime"
+                            android:textSize="@dimen/_11sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/size_5"
+                            android:background="@color/view_color" />
+
+
+                    </LinearLayout>
 
                 </LinearLayout>
+
+                <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
+                    android:id="@+id/avg_cost_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:layout_marginTop="25dp"
+                    app:bar_color="@color/gray"
+                    app:bar_highlight_color="#56005E"
+                    app:corner_radius="10"
+                    app:data_type="_integer"
+                    app:left_thumb_color="#56005E"
+                    app:left_thumb_color_pressed="#56005E"
+                    app:max_value="100"
+                    app:min_value="0"
+                    app:right_thumb_color="#56005E"
+                    app:right_thumb_color_pressed="#56005E" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/size_5"
+                    android:background="@color/view_color" />
+
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/save_btn_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/shape_background_button"
+                    android:gravity="center"
+                    android:text="@string/save"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_14" />
 
             </LinearLayout>
-
-
-            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
-                android:id="@+id/distance_rangeSeekbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                app:bar_color="@color/gray"
-                app:bar_highlight_color="#56005E"
-                app:corner_radius="10"
-                app:data_type="_integer"
-                app:left_thumb_color="#56005E"
-                app:left_thumb_color_pressed="#56005E"
-                app:max_value="100"
-                app:min_value="0"
-                app:right_thumb_color="#56005E"
-                app:right_thumb_color_pressed="#56005E" />
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/size_5"
-                android:background="@color/view_color" />
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:gravity="center_vertical"
-                android:text="Avg Cost"
-                android:textSize="@dimen/_12sdp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_10"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="MIN"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_12sdp" />
-
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:id="@+id/min_avg_cost_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="SAR 1.0"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_11sdp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/size_5"
-                        android:background="@color/view_color" />
-
-
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="MAX"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_12sdp" />
-
-                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                        android:id="@+id/max_avg_cost_tv"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:text="SAR 0.5"
-                        android:textColor="@color/light_prime"
-                        android:textSize="@dimen/_11sdp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="@dimen/size_5"
-                        android:background="@color/view_color" />
-
-
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <com.crystal.crystalrangeseekbar.widgets.CrystalRangeSeekbar
-                android:id="@+id/avg_cost_seekbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                app:bar_color="@color/gray"
-                app:bar_highlight_color="#56005E"
-                app:corner_radius="10"
-                app:data_type="_integer"
-                app:left_thumb_color="#56005E"
-                app:left_thumb_color_pressed="#56005E"
-                app:max_value="100"
-                app:min_value="0"
-                app:right_thumb_color="#56005E"
-                app:right_thumb_color_pressed="#56005E" />
-
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/size_5"
-                android:background="@color/view_color" />
-
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:id="@+id/save_btn_tv"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="50dp"
-                android:background="@drawable/shape_background_button"
-                android:gravity="center"
-                android:text="@string/save"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/size_14" />
-
 
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
 </layout>

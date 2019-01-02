@@ -13,16 +13,16 @@ import android.widget.TextView;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterViewPagerMain;
 import com.askonlinesolutions.user.tabqyclient.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener
-{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
-//    @BindView(R.id.viewpager)ViewPager mPager;
+    String value;
+    //    @BindView(R.id.viewpager)ViewPager mPager;
 //    @BindView(R.id.tab)TabLayout mTab;
 //    @BindView(R.id.toolbar_text_head)TextView mHeading;
 //    @BindView(R.id.toolbar_back_heading)ImageView mBack;
     AdapterViewPagerMain mAdapter;
 
-    final int[] ICONS = new int[]{R.drawable.ic_magnifying_glass_white, R.drawable.ic_offer_bottom, R.drawable.ic_cart,R.drawable.ic_order_status,
+    final int[] ICONS = new int[]{R.drawable.ic_magnifying_glass_white, R.drawable.ic_offer_bottom, R.drawable.ic_cart, R.drawable.ic_order_status,
             R.drawable.ic_account};
 
     private ViewPager mPager;
@@ -44,11 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mPager = findViewById(R.id.viewpager);
         mTab = findViewById(R.id.tab);
 
-        mAdapter = new AdapterViewPagerMain(getSupportFragmentManager(),this);
+        mAdapter = new AdapterViewPagerMain(getSupportFragmentManager(), this);
         mPager.setAdapter(mAdapter);
         mTab.setupWithViewPager(mPager);
-
-      //  setUpTab();
+        getBundleData();
+        //  setUpTab();
 
         mTab.getTabAt(0).setIcon(ICONS[0]).setText("Restaurant");
         mTab.getTabAt(1).setIcon(ICONS[1]).setText("Offers");
@@ -56,20 +56,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mTab.getTabAt(3).setIcon(ICONS[3]).setText("Order Status");
         mTab.getTabAt(4).setIcon(ICONS[4]).setText("Account");
 
-        mTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener()
-        {
+        mTab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab)
-            {
-                int tabIconColor = ContextCompat.getColor(MainActivity.this, R.color.white_smoke );
+            public void onTabSelected(TabLayout.Tab tab) {
+                int tabIconColor = ContextCompat.getColor(MainActivity.this, R.color.white_smoke);
                 tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
-               // mTab.getTabAt(0).setIcon(TAB_ICONS[0]).setText("Restaurant");
+                // mTab.getTabAt(0).setIcon(TAB_ICONS[0]).setText("Restaurant");
                 //mTab.getTabAt(3).setIcon(TAB_ICONS[3]).setText("Order Status");
             }
 
             @Override
-            public void onTabUnselected(TabLayout.Tab tab)
-            {
+            public void onTabUnselected(TabLayout.Tab tab) {
                 int tabIconColor = ContextCompat.getColor(MainActivity.this, R.color.dark_grey);
                 tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
             }
@@ -87,18 +84,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             @Override
-            public void onPageSelected(int position)
-            {
+            public void onPageSelected(int position) {
                 Log.d(TAG, "onPageSelected: " + position);
-              if (position==0) {
-                  tv_title.setText("Restaurants");
-              } else if (position==1) {
+                if (position == 0) {
+                    tv_title.setText("Restaurants");
+                } else if (position == 1) {
                     tv_title.setText("Offers");
-              } else if (position==2) {
+                } else if (position == 2) {
                     tv_title.setText("My Cart");
-              } else if (position==3) {
-                  tv_title.setText("Order Status");
-              } else   if (position==4) {
+                } else if (position == 3) {
+                    tv_title.setText("Order Status");
+                } else if (position == 4) {
                     tv_title.setText("Account");
                 }
             }
@@ -109,6 +105,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+
+    }
+
+    private void getBundleData() {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getString("key");
+            //The key argument here must match that used in the other activity
+        }
+        if (value != null && value.equals("AddCart")) {
+            mPager.setCurrentItem(2);
+            tv_title.setText("My Cart");
+//            mTab.getTabAt(2).setIcon(ICONS[2]).setText("My Cart");
+        } else {
+            mPager.setCurrentItem(0);
+//            binding.backBtn.setText("Tabqy points");
+        }
 
     }
 

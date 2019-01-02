@@ -94,16 +94,16 @@ public class AddAddressActivity extends AppCompatActivity implements OnMapReadyC
     }
 
 
-//    @Override
-//    public void onResume() {
-//        super.onResume();
-//        if (mGoogleApiClient != null &&
-//                ContextCompat.checkSelfPermission(this,
-//                        Manifest.permission.ACCESS_FINE_LOCATION)
-//                        == PackageManager.PERMISSION_GRANTED) {
-//            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-//        }
-//    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mGoogleApiClient != null &&
+                ContextCompat.checkSelfPermission(this,
+                        Manifest.permission.ACCESS_FINE_LOCATION)
+                        == PackageManager.PERMISSION_GRANTED) {
+            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        }
+    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

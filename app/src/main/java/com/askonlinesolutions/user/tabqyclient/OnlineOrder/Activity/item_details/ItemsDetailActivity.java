@@ -1,21 +1,32 @@
 package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details;
 
+import android.app.Dialog;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityItemsDetailBinding;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityProfileSettingBinding;
 
+import java.util.Calendar;
+
 public class ItemsDetailActivity extends AppCompatActivity implements View.OnClickListener, ItemDetailsAdapter.OnItemClickLister {
 
     ActivityItemsDetailBinding binding;
     private ItemDetailsAdapter itemDetailsAdapter;
+    ImageView crossTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,16 +42,16 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
         binding.shareDetailsHideIv.setOnClickListener(this);
         binding.shareDetailsShowIv.setOnClickListener(this);
         binding.plusIv.setOnClickListener(this);
+        binding.addCartFab.setOnClickListener(this);
         setUpRecyclerView();
     }
 
     private void setUpRecyclerView() {
 
-        LinearLayoutManager gridLayoutManager = new LinearLayoutManager(this,GridLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager gridLayoutManager = new LinearLayoutManager(this, GridLayoutManager.HORIZONTAL, false);
         binding.itemsRv.setLayoutManager(gridLayoutManager);
         itemDetailsAdapter = new ItemDetailsAdapter(this, this);
         binding.itemsRv.setAdapter(itemDetailsAdapter);
-
 
 
     }
@@ -66,6 +77,16 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
                 binding.shareDetailsShowIv.setVisibility(View.GONE);
                 binding.shareDetailsHideIv.setVisibility(View.VISIBLE);
                 break;
+            case R.id.plus_iv:
+                showAddInfoDialog();
+                break;
+
+            case R.id.add_cart_fab:
+                Intent mainIntent=new Intent(ItemsDetailActivity.this, MainActivity.class);
+                mainIntent.putExtra("key","AddCart");
+                startActivity(mainIntent);
+                break;
+
         }
     }
 
@@ -73,4 +94,23 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
     public void onItemClick(int Pos, String type) {
 
     }
+
+    private void showAddInfoDialog() {
+
+        final Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.dialog_add_item);
+        dialog.setTitle("Loading...");
+        dialog.show();
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        crossTv = dialog.findViewById(R.id.dialog_add_more_item_cross);
+        crossTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+    }
+
+
 }
