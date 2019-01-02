@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".PlacingOrderActivity">
+
     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:id="@+id/activity_login_title"
         android:layout_width="match_parent"
@@ -17,5 +19,62 @@
         android:text="Placing your order"
         android:textColor="@color/white_color"
         android:textSize="@dimen/title_size" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:src="@drawable/food" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="So far ,so good"
+        android:textSize="@dimen/_20sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:id="@+id/detail_btn"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/placing_background"
+            android:gravity="center"
+            android:layout_marginRight="20dp"
+            android:text="2"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/checkout_btn"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/placing_background"
+            android:gravity="center"
+            android:text="09"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+    </LinearLayout>
+    <TextView
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="waiting for resturant to accept\n the order picup\n point"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
