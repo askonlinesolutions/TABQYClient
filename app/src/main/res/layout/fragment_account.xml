@@ -253,8 +253,8 @@
                             <ProgressBar
                                 android:id="@+id/tabyq_progress_bar"
                                 style="@android:style/Widget.ProgressBar.Horizontal"
-                                android:layout_width="@dimen/_100sdp"
-                                android:layout_height="@dimen/_100sdp"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_90sdp"
                                 android:layout_marginBottom="10dp"
                                 android:max="400"
                                 android:progress="400"
@@ -375,8 +375,8 @@
                             <ProgressBar
                                 android:id="@+id/restaurent_pb"
                                 style="@android:style/Widget.ProgressBar.Horizontal"
-                                android:layout_width="@dimen/_100sdp"
-                                android:layout_height="@dimen/_100sdp"
+                                android:layout_width="@dimen/_90sdp"
+                                android:layout_height="@dimen/_90sdp"
                                 android:layout_marginBottom="10dp"
                                 android:max="400"
                                 android:progress="400"

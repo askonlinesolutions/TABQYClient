@@ -1,201 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fragment_info_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:paddingLeft="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Cuisines"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="International food, soup, fastfood etc"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Minimum Order Amount,"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="45SAR"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Working Hours"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="11:00PM to 01:00AM"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Delivery Time"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="20 mints"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Pre-Order (Yes/No)"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="No"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:text="Types Of Payment"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5.5"
+                    android:text="Cash, Credit Card, Sadad"
+                    android:textColor="@color/text_color_1"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color_4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_5sdp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="@dimen/_5sdp">
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:drawableLeft="@drawable/ic_pick_location"
+                    android:drawablePadding="15dp"
+                    android:gravity="center_vertical"
+                    android:text="Dao xiang Restaurant, Dubai"
+                    android:textColor="@color/text_color_5"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/info_add_cart_fab"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_above="@+id/fragment_menu_bottom_rv"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_margin="16sp"
+        android:layout_marginBottom="@dimen/_30sdp"
+        android:background="@color/theme_color"
+        android:src="@drawable/ic_cart" />
 
     <LinearLayout
+        android:id="@+id/fragment_menu_bottom_rv"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@color/white_color">
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/theme_color"
+        android:orientation="horizontal">
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/fragment_info_rv"
-            android:paddingLeft="5dp"
-            android:layout_marginBottom="15dp"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/bg_color_4"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Cuisines"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_border_white"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="3dp"
+                android:text="Most Selling"
+                android:textColor="@color/white_color"
+                android:textSize="12sp" />
 
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="International food, soup, fastfood etc"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
 
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:gravity="center_vertical">
+        </RelativeLayout>
 
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Minimum Order Amount,"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Starter"
+            android:textColor="@color/white_color"
+            android:textSize="12sp" />
 
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="45SAR"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/bg_color_4"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Working Hours"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="11:00PM to 01:00AM"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Delivery Time"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="20 mints"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/bg_color_4"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Pre-Order (Yes/No)"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="No"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Types Of Payment"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"/>
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="5.5"
-                android:text="Cash, Credit Card, Sadad"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_1"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal"
-            android:paddingLeft="15dp"
-            android:paddingRight="15dp"
-            android:background="@color/bg_color_4"
-            android:gravity="center_vertical">
-
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4.5"
-                android:text="Dao xiang Restaurant, Dubai"
-                android:textSize="12sp"
-                android:textColor="@color/text_color_5"
-                android:gravity="center_vertical"
-                android:drawableLeft="@drawable/ic_pick_location"
-                android:drawablePadding="15dp"/>
-
-        </LinearLayout>
-
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Soup"
+            android:textColor="@color/white_color"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
-</ScrollView>
+
+</RelativeLayout>
 
     <!--
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

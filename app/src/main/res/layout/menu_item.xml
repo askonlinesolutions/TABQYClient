@@ -162,7 +162,6 @@
                         android:layout_height="wrap_content"
 
                         android:layout_centerHorizontal="true"
-
                         android:text="+"
                         android:textColor="@color/white_color"
                         android:textSize="14sp" />

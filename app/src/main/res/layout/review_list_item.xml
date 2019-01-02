@@ -30,7 +30,7 @@
                 android:id="@+id/item_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="4.5"
+                android:layout_weight="4"
                 android:orientation="vertical">
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
@@ -78,7 +78,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_toLeftOf="@+id/quantity_food_reviw"
                         android:drawableLeft="@drawable/ic_quality_of_food"
-                        android:drawablePadding="10dp"
+                        android:drawablePadding="5dp"
                         android:text="Quality of food"
                         android:textColor="@color/text_color_1"
                         android:textSize="9dp" />
@@ -113,10 +113,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@+id/item_reviews_layout_review_service"
                         android:drawableLeft="@drawable/ic_customer_service"
-                        android:drawablePadding="10dp"
+                        android:drawablePadding="5dp"
                         android:text="Customer Service"
                         android:textColor="@color/text_color_1"
                         android:textSize="9dp" />
@@ -150,10 +150,10 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentLeft="true"
                         android:layout_gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="5dp"
                         android:layout_toLeftOf="@+id/item_reviews_layout_review_layout_4"
                         android:drawableLeft="@drawable/ic_delivery_time_two"
-                        android:drawablePadding="10dp"
+                        android:drawablePadding="5dp"
                         android:text="Delivery time"
                         android:textColor="@color/text_color_1"
                         android:textSize="9dp" />

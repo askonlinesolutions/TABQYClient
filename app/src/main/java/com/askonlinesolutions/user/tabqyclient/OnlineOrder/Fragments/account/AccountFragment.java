@@ -8,12 +8,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.addAddresss.AddAddressActivity;
+import com.askonlinesolutions.user.tabqyclient.AddPaymentActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.PaymentMethodActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.ChooseLocation;
 import com.askonlinesolutions.user.tabqyclient.databinding.FragmentAccountBinding;
 
 public class AccountFragment extends Fragment implements View.OnClickListener {
@@ -40,6 +47,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
         binding.tabyqPointLayout.setOnClickListener(this);
         binding.myOrderTv.setOnClickListener(this);
         binding.myOrderBody.setOnClickListener(this);
+        binding.addNewTv.setOnClickListener(this);
+        binding.addNewPaymentTv.setOnClickListener(this);
 
 
     }
@@ -82,6 +91,19 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
             case R.id.my_order_body:
                 Intent intentDetails = new Intent(getActivity(), MyReceiptsDetailsActivity.class);
                 startActivity(intentDetails);
+                getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+            case R.id.add_new_tv:
+                Intent intentNewAdd = new Intent(getActivity(), AddAddressActivity.class);
+
+//                Intent intentNewAdd = new Intent(getActivity(), ChooseLocation.class);
+                startActivity(intentNewAdd);
+                getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.add_new_payment_tv:
+                Intent intentPayment = new Intent(getActivity(), AddPaymentActivity.class);
+                startActivity(intentPayment);
                 getActivity().overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
 
