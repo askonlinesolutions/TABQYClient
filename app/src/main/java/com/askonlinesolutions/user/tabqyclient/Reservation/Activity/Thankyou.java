@@ -23,7 +23,7 @@ public class Thankyou extends AppCompatActivity implements View.OnClickListener 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(Thankyou.this,HomeActivity.class));
+                startActivity(new Intent(Thankyou.this,MyReservation.class));
             }
         },TIME_OUT);
 

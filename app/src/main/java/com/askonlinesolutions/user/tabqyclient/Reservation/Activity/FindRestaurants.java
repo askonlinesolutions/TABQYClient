@@ -11,16 +11,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SearchActivity;
 import com.askonlinesolutions.user.tabqyclient.Reservation.Adapter.FindRestaurantItemsAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
 
 public class FindRestaurants extends AppCompatActivity implements View.OnClickListener, FindRestaurantItemsAdapter.FindRestaurantInterface {
 
     private RecyclerView recyclerView;
-    private TextView tv_find_restaurants;
+    private TextView filter;
     private EditText et_find_restaurants;
     private ImageView iv_back;
-    private LinearLayout current_location_lin;
+    private LinearLayout current_location_lin, search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +32,17 @@ public class FindRestaurants extends AppCompatActivity implements View.OnClickLi
         //tv_find_restaurants = findViewById(R.id.tv_find_restaurants);
         et_find_restaurants = findViewById(R.id.et_find_restaurants);
         iv_back = findViewById(R.id.iv_back_find_restaurants);
+filter=findViewById(R.id.filter_btn_tv);
         current_location_lin = findViewById(R.id.current_location_lin);
 
         //tv_find_restaurants.setOnClickListener(this);
         et_find_restaurants.setOnClickListener(this);
         iv_back.setOnClickListener(this);
         current_location_lin.setOnClickListener(this);
+        filter.setOnClickListener(this);
 
         recyclerView = findViewById(R.id.find_restaurants_recycler);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.VERTICAL,false);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         setAdapter();
@@ -57,15 +61,18 @@ public class FindRestaurants extends AppCompatActivity implements View.OnClickLi
         /*if (v.getId()==R.id.tv_find_restaurants){
             et_find_restaurants.setVisibility(View.VISIBLE);
         }*/
-        if (v.getId()==R.id.et_find_restaurants){
+        if (v.getId() == R.id.et_find_restaurants) {
+            Intent searchIntent = new Intent(FindRestaurants.this, SearchActivity.class);
+            startActivity(searchIntent);
             et_str = et_find_restaurants.getText().toString().trim();
-        }
-        else if (v.getId()==R.id.iv_back_find_restaurants){
+        } else if (v.getId() == R.id.iv_back_find_restaurants) {
             onBackPressed();
-        }
-        else if (v.getId()==R.id.current_location_lin){
+        } else if (v.getId() == R.id.current_location_lin) {
             startActivity(new Intent(FindRestaurants.this, ChooseLocation.class));
-        } else {}
+        } else if(v.getId()==R.id.filter_btn_tv){
+            Intent filterIntent = new Intent(FindRestaurants.this, FilterActivity.class);
+            startActivity(filterIntent);
+        }
     }
 
     @Override
@@ -76,10 +83,10 @@ public class FindRestaurants extends AppCompatActivity implements View.OnClickLi
 
     @Override
     public void getPosition(String Tag) {
-        if (Tag=="reserve"){
+        if (Tag == "reserve") {
             startActivity(new Intent(FindRestaurants.this, ReserveTable.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+        } else {
         }
-        else{}
     }
 }

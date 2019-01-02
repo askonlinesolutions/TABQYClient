@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.Commons.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,8 +8,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
 import com.askonlinesolutions.user.tabqyclient.Commons.Adapters.AdapterCountryList;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.FindRestaurants;
 
 import java.util.ArrayList;
 
@@ -75,6 +78,9 @@ public class SelectCountryActivity extends AppCompatActivity implements View.OnC
             }
             arr_check.set(pos, "1");
             setMyAdapter();
+
+            Intent filterIntent = new Intent(SelectCountryActivity.this, SelectAreaActivity.class);
+            startActivity(filterIntent);
         }
     }
 }

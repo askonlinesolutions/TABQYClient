@@ -27,6 +27,7 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
     ActivityItemsDetailBinding binding;
     private ItemDetailsAdapter itemDetailsAdapter;
     ImageView crossTv;
+    TextView addBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +104,14 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
         dialog.show();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         crossTv = dialog.findViewById(R.id.dialog_add_more_item_cross);
+        addBtn=dialog.findViewById(R.id.add_btn_tv);
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         crossTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

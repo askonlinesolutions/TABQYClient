@@ -10,8 +10,7 @@ import android.widget.TextView;
 import com.askonlinesolutions.user.tabqyclient.Helper.Utils;
 import com.askonlinesolutions.user.tabqyclient.R;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener
-{
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 //    @BindView(R.id.header_text)TextView mHeader;
 //    @BindView(R.id.title_back_register)ImageView mBack;
 
@@ -42,36 +41,36 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void setupWindowAnimations() {
-        overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+        overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
     }
 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
+        overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
     }
 
     @Override
     public void onClick(View v) {
-        if (v==tv_title) {
+        if (v == tv_title) {
             finish();
-            overridePendingTransition(R.anim.slide_from_left,R.anim.slide_to_right);
-        } else if(v == btn){
+            overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
+        } else if (v == btn) {
             signUp();
         }
     }
 
-    private void signUp(){
-        if(!edt_email.getText().toString().trim().equals("")){
-            if(Utils.checkemail(edt_email.getText().toString().trim())){
-                if(!edt_phone.getText().toString().trim().equals("")){
-                    if(Utils.isValidMobile(edt_phone.getText().toString().trim())){
-                        if(!edt_password.getText().toString().trim().equals("")){
-                            if(!edt_confirm_password.getText().toString().trim().equals("")){
-                                if(edt_password.getText().toString().trim()
-                                        .equals(edt_confirm_password.getText().toString().trim())){
-                                    if(!edt_first_name.getText().toString().trim().equals("")){
-                                        if(!edt_last_name.getText().toString().trim().equals("")){
+    private void signUp() {
+        if (!edt_email.getText().toString().trim().equals("")) {
+            if (Utils.checkemail(edt_email.getText().toString().trim())) {
+                if (!edt_phone.getText().toString().trim().equals("")) {
+                    if (Utils.isValidMobile(edt_phone.getText().toString().trim())) {
+                        if (!edt_password.getText().toString().trim().equals("")) {
+                            if (!edt_confirm_password.getText().toString().trim().equals("")) {
+                                if (edt_password.getText().toString().trim()
+                                        .equals(edt_confirm_password.getText().toString().trim())) {
+                                    if (!edt_first_name.getText().toString().trim().equals("")) {
+                                        if (!edt_last_name.getText().toString().trim().equals("")) {
                                             edt_email.setText("");
                                             edt_password.setText("");
                                             edt_phone.setText("");

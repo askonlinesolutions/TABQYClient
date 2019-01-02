@@ -18,16 +18,6 @@ import com.askonlinesolutions.user.tabqyclient.R;
  */
 public class OfferFragment extends Fragment {
 
-//    private static final String TAG = OfferFragment.class.getSimpleName();
-//    List<OfferModel>mOfferList = new ArrayList<>();
-//    RecyclerView mOfferRecycler;
-//    OfferAdapter mOffer;
-//    RecyclerView.LayoutManager mManager;
-//    String food_name[] = {"Spring Roll","Veg Roll","Chicken Roll"};
-    public OfferFragment() {
-//         Required empty public constructor
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
