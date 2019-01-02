@@ -216,7 +216,7 @@
                     android:gravity="center"
                     android:background="@drawable/shape_background_button"/>
 
-                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                <TextView
                     android:id="@+id/checkout_btn"
                     android:layout_width="0dp"
                     android:layout_weight="1"
