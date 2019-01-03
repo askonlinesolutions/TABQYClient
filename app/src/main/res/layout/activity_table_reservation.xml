@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white_color"
     android:orientation="vertical"
-    tools:context=".Activities.TableReservation">
+    tools:context=".Reservation.Activity.TableReservation">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -42,13 +42,14 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/food_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingBottom="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingTop="10dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
                     android:id="@+id/food"
@@ -65,6 +66,15 @@
                     android:text="No food selected"
                     android:textColor="@color/colorPrimary"
                     android:visibility="gone" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/food_menu_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/food"
+                    android:visibility="gone">
+
+                </android.support.v7.widget.RecyclerView>
 
                 <RelativeLayout
                     android:id="@+id/food_rel"
@@ -215,11 +225,13 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/add_food_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
@@ -255,9 +267,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_below="@id/rel"
-                        android:layout_weight="1"
                         android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
+                        android:layout_weight="1"
                         android:text="Charge your mind"
                         android:textColor="@color/light_prime"
                         android:textSize="10sp" />
@@ -483,124 +495,154 @@
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="7dp"
-                android:background="@color/view_color"></View>
-            <!--<RelativeLayout-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="Subtotal:"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="SAR.114.00"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--</RelativeLayout>-->
-            <!--<View-->
-            <!--android:background="@color/view_color"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"></View>-->
-            <!--<RelativeLayout-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="VAT:"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="SAR.5.00"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--</RelativeLayout>-->
-            <!--<View-->
-            <!--android:background="@color/view_color"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"></View>-->
-            <!--<RelativeLayout-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="Discount:"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="SAR.2.0"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--</RelativeLayout>-->
-            <!--<View-->
-            <!--android:background="@color/view_color"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"></View>-->
-            <!--<RelativeLayout-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="Delivery:"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textColor="@color/colorPrimary"-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="Free"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--</RelativeLayout>-->
-            <!--<View-->
-            <!--android:background="@color/view_color"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"></View>-->
-            <!--<RelativeLayout-->
-            <!--android:paddingTop="10dp"-->
-            <!--android:paddingBottom="10dp"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="15dp"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="Grand Total:"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--<com.askonlinesolutions.user.tabqyclient.customText.CustomTextView-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:textColor="@color/colorPrimary"-->
-            <!--android:textSize="10sp"-->
-            <!--android:text="SAR.144.00"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content" />-->
-            <!--</RelativeLayout>-->
-            <!--<View-->
-            <!--android:background="@color/view_color"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"></View>-->
+                android:background="@color/view_color" />
+
+            <LinearLayout
+                android:id="@+id/total_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Subtotal:"
+                        android:textSize="10sp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="SAR.114.00"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VAT:"
+                        android:textSize="10sp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="SAR.5.00"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Discount:"
+                        android:textSize="10sp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="SAR.2.0"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delivery:"
+                        android:textSize="10sp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="Free"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="10dp">
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Grand Total:"
+                        android:textSize="10sp" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="SAR.144.00"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color"></View>
+
+            </LinearLayout>
+
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
                 android:id="@+id/tv_book"
                 android:layout_width="match_parent"

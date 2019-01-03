@@ -19,6 +19,7 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.res
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityItemsDetailBinding;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityProfileSettingBinding;
+import com.askonlinesolutions.user.tabqyclient.tableCode.myCart.TableMyCartActivity;
 
 import java.util.Calendar;
 
@@ -28,6 +29,7 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
     private ItemDetailsAdapter itemDetailsAdapter;
     ImageView crossTv;
     TextView addBtn;
+    String value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +47,27 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
         binding.plusIv.setOnClickListener(this);
         binding.addCartFab.setOnClickListener(this);
         setUpRecyclerView();
+        getBundleData();
     }
+
+
+    private void getBundleData() {
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            value = extras.getString("key");
+            //The key argument here must match that used in the other activity
+        }
+        if (value != null && value.equals("MENU_ITEM")) {
+//            mPager.setCurrentItem(2);
+//            tv_title.setText("My Cart");
+//            mTab.getTabAt(2).setIcon(ICONS[2]).setText("My Cart");
+        } else {
+//            mPager.setCurrentItem(0);
+//            binding.backBtn.setText("Tabqy points");
+        }
+
+    }
+
 
     private void setUpRecyclerView() {
 
@@ -83,9 +105,20 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
                 break;
 
             case R.id.add_cart_fab:
-                Intent mainIntent=new Intent(ItemsDetailActivity.this, MainActivity.class);
-                mainIntent.putExtra("key","AddCart");
-                startActivity(mainIntent);
+                if (value != null && value.equals("MENU_ITEM")) {
+                    Intent mainIntent = new Intent(ItemsDetailActivity.this, TableMyCartActivity.class);
+//                    mainIntent.putExtra("key","AddCart");
+                    startActivity(mainIntent);
+                } else {
+                    Intent mainIntent = new Intent(ItemsDetailActivity.this, MainActivity.class);
+                    mainIntent.putExtra("key", "AddCart");
+                    startActivity(mainIntent);
+                }
+
+//
+//                Intent mainIntent = new Intent(ItemsDetailActivity.this, MainActivity.class);
+//                mainIntent.putExtra("key", "AddCart");
+//                startActivity(mainIntent);
                 break;
 
         }
@@ -104,7 +137,7 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
         dialog.show();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         crossTv = dialog.findViewById(R.id.dialog_add_more_item_cross);
-        addBtn=dialog.findViewById(R.id.add_btn_tv);
+        addBtn = dialog.findViewById(R.id.add_btn_tv);
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override

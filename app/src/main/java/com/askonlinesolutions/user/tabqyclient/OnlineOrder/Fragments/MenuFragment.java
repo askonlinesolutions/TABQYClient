@@ -34,8 +34,8 @@ import butterknife.ButterKnife;
 public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClickLister {
     @BindView(R.id.menu_recycler)
     RecyclerView mRecycler;
-    @BindView(R.id.menu_add_cart_fab)
-    FloatingActionButton addToCart;
+//    @BindView(R.id.menu_add_cart_fab)
+//    FloatingActionButton addToCart;
     TextView addBtn;
     //   List<MenuModel> mAllMenuList = new ArrayList<>();
 //    String food_name[] = {"Spring Roll","Veg Roll","Chicken Roll"};
@@ -61,14 +61,14 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
     private void init() {
         setRestaurentPointsRecyclerView();
 
-        addToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mainIntent = new Intent(getActivity(), MainActivity.class);
-                mainIntent.putExtra("key", "AddCart");
-                startActivity(mainIntent);
-            }
-        });
+//        addToCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent mainIntent = new Intent(getActivity(), MainActivity.class);
+//                mainIntent.putExtra("key", "AddCart");
+//                startActivity(mainIntent);
+//            }
+//        });
     }
 
     private void setRestaurentPointsRecyclerView() {

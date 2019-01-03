@@ -171,7 +171,9 @@
         <activity android:name=".AddPaymentActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".GuestLoginActivity" />
-        <activity android:name=".tableCode.TableDashboardActivity"></activity>
+        <activity android:name=".tableCode.TableDashboardActivity" />
+        <activity android:name=".tableCode.menuList.MenuItemActivity" />
+        <activity android:name=".tableCode.myCart.TableMyCartActivity"></activity>
     </application>
 
 </manifest>

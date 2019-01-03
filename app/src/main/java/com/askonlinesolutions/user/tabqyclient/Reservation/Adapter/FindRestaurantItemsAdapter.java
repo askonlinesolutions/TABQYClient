@@ -50,6 +50,12 @@ public class FindRestaurantItemsAdapter extends RecyclerView.Adapter<FindRestaur
                     findRestaurantInterface.getPosition("open");
                 }
             });*/
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    findRestaurantInterface.getPosition("reserve_view");
+                }
+            });
 
             tv_reserve = itemView.findViewById(R.id.tv_reserve);
             tv_reserve.setOnClickListener(new View.OnClickListener() {

@@ -5,10 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.tableCode.TableDashboardActivity;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -20,7 +22,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         init();
     }
-
+private TextView TableCode;
     private RelativeLayout layout_login, layout_online_order, layout_reservation;
 
     private void init(){
@@ -28,10 +30,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         layout_login = findViewById(R.id.activity_home_layout_login);
         layout_online_order = findViewById(R.id.activity_home_layout_online_order);
         layout_reservation = findViewById(R.id.activity_home_layout_reservation);
+        TableCode=findViewById(R.id.table_code_tv);
 
         layout_login.setOnClickListener(this);
         layout_online_order.setOnClickListener(this);
         layout_reservation.setOnClickListener(this);
+        TableCode.setOnClickListener(this);
 
     }
 
@@ -54,6 +58,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         } else if (id1 == R.id.activity_home_layout_login) {
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
-        } else {}
+        } else if (id1==R.id.table_code_tv){
+            startActivity(new Intent(HomeActivity.this, TableDashboardActivity.class));
+            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+
+        }
     }
 }

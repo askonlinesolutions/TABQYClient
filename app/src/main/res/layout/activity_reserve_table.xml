@@ -262,20 +262,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
+                android:id="@+id/calendar"
                 android:layout_centerVertical="true"
                 android:src="@drawable/ic_calendar"
                 android:layout_width="18dp"
                 android:layout_height="18dp" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/date_recycler"
+                android:layout_toRightOf="@id/calendar"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
         </RelativeLayout>
         <View
             android:background="@color/view_color"
             android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
+            android:layout_height="1dp"/>
         <View
             android:background="@color/view_color"
             android:layout_marginTop="5dp"
             android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
+            android:layout_height="1dp"/>
         <RelativeLayout
             android:padding="10dp"
             android:layout_width="match_parent"
