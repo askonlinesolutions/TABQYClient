@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.Commons.Activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,9 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
+import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
 import com.askonlinesolutions.user.tabqyclient.Adapters.SearchAdapter;
 import com.askonlinesolutions.user.tabqyclient.Commons.Adapters.AdapterAreaList;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.FindRestaurants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -85,6 +89,8 @@ public class SelectAreaActivity extends AppCompatActivity implements View.OnClic
             }
             arr_check.set(pos, "1");
             setMyAdapter();
+            Intent filterIntent = new Intent(SelectAreaActivity.this, MainActivity.class);
+            startActivity(filterIntent);
         }
     }
 }

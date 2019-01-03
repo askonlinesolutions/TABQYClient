@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.Adapters.MenuAdapter;
@@ -35,6 +36,7 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
     RecyclerView mRecycler;
     @BindView(R.id.menu_add_cart_fab)
     FloatingActionButton addToCart;
+    TextView addBtn;
     //   List<MenuModel> mAllMenuList = new ArrayList<>();
 //    String food_name[] = {"Spring Roll","Veg Roll","Chicken Roll"};
 //   MenuAdapter mMenuAdapter;
@@ -111,6 +113,14 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
         dialog.show();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         crossTv = dialog.findViewById(R.id.dialog_add_more_item_cross);
+        addBtn=dialog.findViewById(R.id.add_btn_tv);
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
         crossTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

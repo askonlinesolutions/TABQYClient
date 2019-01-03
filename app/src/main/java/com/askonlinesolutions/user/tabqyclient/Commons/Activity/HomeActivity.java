@@ -49,10 +49,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(HomeActivity.this, MainActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else if (id1 == R.id.activity_home_layout_reservation) {
-            startActivity(new Intent(HomeActivity.this, SearchActivity.class));
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else if (id1 == R.id.activity_home_layout_login) {
-            startActivity(new Intent(HomeActivity.this, DetailActivity.class));
+            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else {}
     }

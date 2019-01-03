@@ -16,7 +16,7 @@ import com.askonlinesolutions.user.tabqyclient.R;
 public class TableReservation extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView iv_back_table_reservation;
-    private TextView tv_nofood,tv_book;
+    private TextView tv_nofood,tv_book,addFoodItem;
     private RelativeLayout food_rel;
 
     @Override
@@ -27,10 +27,12 @@ public class TableReservation extends AppCompatActivity implements View.OnClickL
         iv_back_table_reservation = findViewById(R.id.iv_back_table_reservation);
         tv_nofood = findViewById(R.id.tv_nofood);
         tv_book = findViewById(R.id.tv_book);
+        addFoodItem=findViewById(R.id.tv_add_food_item);
         food_rel = findViewById(R.id.food_rel);
 
         iv_back_table_reservation.setOnClickListener(this);
         tv_book.setOnClickListener(this);
+        addFoodItem.setOnClickListener(this);
 
          String s = getIntent().getStringExtra("res");
 
@@ -65,9 +67,14 @@ public class TableReservation extends AppCompatActivity implements View.OnClickL
             case R.id.iv_back_table_reservation:
                 onBackPressed();
                 break;
+
+            case R.id.tv_add_food_item:
+                startActivity(new Intent(TableReservation.this,DetailActivity.class));
+                break;
+
             case R.id.tv_book:
                 if (s.equals("tv_withoutfood")){
-                    startActivity(new Intent(TableReservation.this,MyReservation.class));
+                    startActivity(new Intent(TableReservation.this,Thankyou.class));
                 }
                 else if (s.equals("tv_withfood")){
                     startActivity(new Intent(TableReservation.this,DetailActivity.class));

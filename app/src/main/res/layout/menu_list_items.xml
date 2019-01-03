@@ -12,6 +12,7 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
             android:background="@color/white_color"
             android:orientation="vertical">
 
@@ -19,8 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:paddingTop="@dimen/_5sdp">
+                android:paddingRight="15dp">
 
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
@@ -135,7 +135,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_below="@id/rel"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
                         android:text="44.00"
                         android:textColor="@color/sketch_black"

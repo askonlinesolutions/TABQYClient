@@ -6,7 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.FindRestaurants;
 
 public class ThankYouSignup extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,6 +36,9 @@ public class ThankYouSignup extends AppCompatActivity implements View.OnClickLis
 
         if (v == tv_title){
             finish();
+        }else if (v==tv_next){
+            Intent filterIntent = new Intent(ThankYouSignup.this, SelectCountryActivity.class);
+            startActivity(filterIntent);
         }
     }
 }

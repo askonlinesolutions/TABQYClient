@@ -45,12 +45,9 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
-
 
         <activity
             android:name=".Commons.Activity.GuestActivity"
@@ -79,6 +76,7 @@
         <activity
             android:name=".OnlineOrder.Activity.PlacingOrderActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".PlacingOrderActivity" />
         <activity
             android:name=".OnlineOrder.Activity.OrderRejectActivity"
             android:screenOrientation="portrait" />
@@ -166,15 +164,14 @@
         <activity android:name=".OnlineOrder.Fragments.account.myReceiptsDetails.MyReceiptsDetailsActivity" />
         <activity android:name=".ContactDetailActivity" />
         <activity android:name=".Activities.addAddresss.baseActivity.AppBaseActivity" />
-        <activity android:name=".Activities.addAddresss.AddAddressActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan"
-            ></activity>
-
+        <activity
+            android:name=".Activities.addAddresss.AddAddressActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <activity android:name=".CheckoutAddAddressActivity" />
         <activity android:name=".AddPaymentActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".GuestLoginActivity" />
-        <activity android:name=".PlacingOrderActivity"></activity>
+        <activity android:name=".tableCode.TableDashboardActivity"></activity>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.Reservation.Adapter.ReservationAdultsAdapter;
 import com.askonlinesolutions.user.tabqyclient.Reservation.Adapter.ReservationChildAdapter;
@@ -120,7 +121,7 @@ public class Reservation extends AppCompatActivity implements View.OnClickListen
                 startActivity(intent);
                 break;
             case R.id.tv_withfood:
-                Intent intent2 = new Intent(Reservation.this, TableReservation.class);
+                Intent intent2 = new Intent(Reservation.this, DetailActivity.class);
                 intent2.putExtra("res","tv_withfood");
                 startActivity(intent2);
                 break;

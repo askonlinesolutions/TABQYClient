@@ -57,6 +57,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
            startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
            setupWindowAnimations();
        } else if (v == tv_login) {
+           startActivity(new Intent(LoginActivity.this,FindRestaurants.class));
+           setupWindowAnimations();
            login();
        } else if (v == tv_forgot_password) {
 
