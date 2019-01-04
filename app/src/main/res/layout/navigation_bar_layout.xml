@@ -97,6 +97,7 @@
 
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/tabqy_points"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_50sdp"
@@ -116,6 +117,7 @@
 
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/restaurant_points"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_50sdp"
@@ -197,6 +199,7 @@
                     android:orientation="horizontal">
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/add_payment_method_tv"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -227,6 +230,7 @@
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
 
+                    android:id="@+id/voucher_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_50sdp"
@@ -277,7 +281,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:paddingLeft="15dp"
-                    android:src="@drawable/location" />
+                    android:src="@drawable/ic_save_location" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:id="@+id/save_location_tv"
@@ -317,6 +321,7 @@
 
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/office_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_50sdp"
@@ -337,6 +342,7 @@
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
 
+                    android:id="@+id/home_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_50sdp"
@@ -368,7 +374,7 @@
                     android:layout_height="40dp"
                     android:layout_gravity="center"
                     android:paddingLeft="15dp"
-                    android:src="@drawable/ic_time" />
+                    android:src="@drawable/ic_about" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:id="@+id/nav_about_tv"
