@@ -3,6 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +33,7 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/rest1" />
+                android:src="@drawable/table_image" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -41,7 +45,7 @@
                 <ImageView
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/placeholder" />
+                    android:src="@drawable/table_food_image" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewBold
                     android:layout_width="wrap_content"
@@ -84,7 +88,7 @@
                         android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:src="@drawable/ic_calories"
+                        android:src="@drawable/ic_points"
 
                         />
 
@@ -155,7 +159,7 @@
                         android:layout_height="35dp"
                         android:layout_gravity="center"
                         android:layout_marginLeft="@dimen/_10sdp"
-                        android:src="@drawable/ic_calories"
+                        android:src="@drawable/ic_visit"
 
                         />
 
@@ -195,7 +199,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginRight="@dimen/_20sdp"
-            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="horizontal">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
@@ -222,11 +225,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:background="@drawable/curve_background"
             android:paddingBottom="@dimen/_5sdp"
             android:paddingLeft="@dimen/_15sdp"
             android:paddingRight="@dimen/_15sdp"
+            android:layout_marginBottom="20dp"
             android:paddingTop="@dimen/_5sdp">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
@@ -240,4 +244,5 @@
         </LinearLayout>
 
     </LinearLayout>
+    </ScrollView>
 </layout>

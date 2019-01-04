@@ -33,7 +33,7 @@ private TextView TableCode;
         layout_login = findViewById(R.id.activity_home_layout_login);
         layout_online_order = findViewById(R.id.activity_home_layout_online_order);
         layout_reservation = findViewById(R.id.activity_home_layout_reservation);
-        tablecode_btn =findViewById(R.id.tablecode_btn);
+        tablecode_btn =findViewById(R.id.table_code_tv);
         TableCode=findViewById(R.id.table_code_tv);
 
         layout_login.setOnClickListener(this);

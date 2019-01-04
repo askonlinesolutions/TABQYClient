@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.view.View;
+import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsAdapter;
@@ -13,7 +15,7 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tab
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityMenuItemBinding;
 
-public class MenuItemActivity extends AppCompatActivity implements MenuItemAdapter.OnItemClickLister {
+public class MenuItemActivity extends AppCompatActivity implements MenuItemAdapter.OnItemClickLister, View.OnClickListener {
 
     private ActivityMenuItemBinding binding;
     private MenuItemAdapter menuItemAdapter;
@@ -29,7 +31,10 @@ public class MenuItemActivity extends AppCompatActivity implements MenuItemAdapt
 
     private void init() {
         setUpRecyclerview();
+        TextView restro_back_btn;
+        binding.restroBackBtn.setOnClickListener( this);
     }
+
 
     private void setUpRecyclerview() {
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3, GridLayoutManager.VERTICAL, false);
@@ -49,5 +54,10 @@ public class MenuItemActivity extends AppCompatActivity implements MenuItemAdapt
         } else {
 
         }
+    }
+
+    @Override
+    public void onClick(View view) {
+        onBackPressed();
     }
 }

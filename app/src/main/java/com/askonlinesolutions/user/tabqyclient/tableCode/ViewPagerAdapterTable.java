@@ -5,11 +5,13 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.askonlinesolutions.user.tabqyclient.CallWaitingFragment;
 import com.askonlinesolutions.user.tabqyclient.Fragments.OrderStatusFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.OfferFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.AccountFragment;
+import com.askonlinesolutions.user.tabqyclient.TableMyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.menuDashboard.MenuDashboardFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.qrCode.QrCodeFragment;
 
@@ -33,11 +35,11 @@ public class ViewPagerAdapterTable extends FragmentPagerAdapter {
             case 1:
                 return new OfferFragment();
             case 2:
-                return new MyCartFragment();
+                return new TableMyCartFragment();
             case 3:
                 return new OrderStatusFragment();
             case 4:
-                return new QrCodeFragment();
+                return new CallWaitingFragment();
             default:
                 return    new MenuDashboardFragment();
 

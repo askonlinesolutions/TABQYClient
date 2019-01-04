@@ -6,19 +6,6 @@
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
-    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-        android:id="@+id/activity_login_title"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/theme_color"
-        android:drawableLeft="@drawable/ic_back"
-        android:drawablePadding="15dp"
-        android:gravity="center_vertical"
-        android:paddingLeft="15dp"
-        android:text="My Cart "
-        android:textColor="@color/white_color"
-        android:textSize="@dimen/title_size" />
-
 
     <ScrollView
         android:layout_width="match_parent"

@@ -26,6 +26,7 @@ import com.askonlinesolutions.user.tabqyclient.Model.MenuModel;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.Reservation.Activity.Thankyou;
 import com.askonlinesolutions.user.tabqyclient.databinding.FragmentTableMyCartBinding;
+import com.askonlinesolutions.user.tabqyclient.tableCode.menuList.MenuItemActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,7 +43,7 @@ public class TableMyCartFragment extends Fragment implements MenuAdapter.Interfa
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_table_my_cart, container, false);
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_table_my_cart, container, false);
         return binding.getRoot();
     }
 
@@ -54,10 +55,10 @@ public class TableMyCartFragment extends Fragment implements MenuAdapter.Interfa
     }
 
     private RecyclerView rv_cart;
-    TextView request_btn,no_btn,yes_btn,play_btn,detail_btn;
+    TextView request_btn, no_btn, yes_btn, play_btn, detail_btn;
     ImageView btncross;
-     LinearLayout press_yes;
-     RelativeLayout dialog_yes;
+    LinearLayout press_yes;
+    RelativeLayout dialog_yes;
     private List<MenuModel> mAllMenuList = new ArrayList<>();
     private String food_name[] = {"Spring Roll", "Spring Roll"};
     private MenuAdapter mMenuAdapter;
@@ -69,10 +70,19 @@ public class TableMyCartFragment extends Fragment implements MenuAdapter.Interfa
         }
 
         rv_cart = getView().findViewById(R.id.activity_my_cart_recycler);
-        request_btn=getView().findViewById(R.id.request_btn);
+        request_btn = getView().findViewById(R.id.request_btn);
+        detail_btn = getView().findViewById(R.id.detail_btn);
 
         rv_cart.setLayoutManager(new LinearLayoutManager(getContext()));
         rv_cart.setAdapter(new MenuAdapter(getContext(), mAllMenuList, this));
+        detail_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), MenuItemActivity.class);
+//
+                startActivity(intent);
+            }
+        });
 
         request_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,46 +108,47 @@ public class TableMyCartFragment extends Fragment implements MenuAdapter.Interfa
 
         }
     }
-    private void showDialog()
-    {
+
+    private void showDialog() {
         final Dialog dialog = new Dialog(getActivity());
         dialog.setCancelable(true);
         dialog.setContentView(R.layout.request_bill);
         dialog.show();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         btncross = (ImageView) dialog.findViewById(R.id.close_img);
-        no_btn =dialog.findViewById(R.id.no_btn);
-        yes_btn=dialog.findViewById(R.id.yes_btn);
-        press_yes=dialog.findViewById(R.id.press_yes);
-        dialog_yes=dialog.findViewById(R.id.dialog_yes);
-        play_btn=dialog.findViewById(R.id.play_btn);
+        no_btn = dialog.findViewById(R.id.no_btn);
+        yes_btn = dialog.findViewById(R.id.yes_btn);
+        press_yes = dialog.findViewById(R.id.press_yes);
+        dialog_yes = dialog.findViewById(R.id.dialog_yes);
+        play_btn = dialog.findViewById(R.id.play_btn);
         btncross.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View arg0) {
-               dialog.dismiss();
+                dialog.dismiss();
             }
         });
         no_btn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent=new Intent(getActivity(), Thankyou.class);
-            startActivity(intent);
-        }
-    });
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Thankyou.class);
+                startActivity(intent);
+            }
+        });
         yes_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  press_yes.setVisibility(View.VISIBLE);
-                  dialog_yes.setVisibility(View.GONE);
+                press_yes.setVisibility(View.VISIBLE);
+                dialog_yes.setVisibility(View.GONE);
 
             }
-        });play_btn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            Intent intent=new Intent(getActivity(), Thankyou.class);
-            startActivity(intent);
-        }
-    });
+        });
+        play_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Thankyou.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
