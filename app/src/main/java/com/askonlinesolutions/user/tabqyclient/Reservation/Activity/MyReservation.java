@@ -21,7 +21,6 @@ public class MyReservation extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_reservation);
 
-
         iv_back = findViewById(R.id.iv_back_my_reservation);
         
         recyclerView = findViewById(R.id.my_reservation_recycler);
