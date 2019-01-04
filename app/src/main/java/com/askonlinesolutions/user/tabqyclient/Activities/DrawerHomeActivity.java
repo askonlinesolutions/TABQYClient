@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.Activities;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -23,10 +24,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterViewPagerMain;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityDrawerHomeBinding;
 
-public class DrawerHomeActivity extends AppCompatActivity
+public class DrawerHomeActivity extends AppCompatActivity implements View.OnClickListener
         /* implements NavigationView.OnNavigationItemSelectedListener*/ {
     ActivityDrawerHomeBinding binding;
     private static final String TAG = DrawerHomeActivity.class.getSimpleName();
@@ -91,6 +93,25 @@ public class DrawerHomeActivity extends AppCompatActivity
         locationLayout = findViewById(R.id.location_layout);
         paymentLayout = findViewById(R.id.payment_layout);
         aboutLayout = findViewById(R.id.about_layout);
+
+
+        myOrderTv.setOnClickListener(this);
+        myQrCodeTv.setOnClickListener(this);
+        pointTv.setOnClickListener(this);
+        paymentOptionTV.setOnClickListener(this);
+        favoritesRestTv.setOnClickListener(this);
+        saveLocationTv.setOnClickListener(this);
+        aboutTv.setOnClickListener(this);
+        offerTv.setOnClickListener(this);
+        notificationTv.setOnClickListener(this);
+        liveChatTv.setOnClickListener(this);
+        receiptTv.setOnClickListener(this);
+        shareAppTv.setOnClickListener(this);
+
+        pointShowIv.setOnClickListener(this);
+        locationShowIv.setOnClickListener(this);
+        paymentOptionShowIv.setOnClickListener(this);
+        aboutShowIv.setOnClickListener(this);
 
 
         setDrawer();
@@ -230,6 +251,25 @@ public class DrawerHomeActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.nav_my_order_tv:
+                Intent intent=new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
+                startActivity(intent);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.nav_qrcode:
+//                Intent intentQr=new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
+//                startActivity(intentQr);
+//                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+        }
+
     }
 
 //    @SuppressWarnings("StatementWithEmptyBody")
