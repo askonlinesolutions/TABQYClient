@@ -42,7 +42,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.8dp"
-                android:background="@drawable/tablayout_above"></View>
+                android:background="@drawable/tablayout_above"/>
 
             <android.support.design.widget.TabLayout
                 android:id="@+id/tab"
@@ -52,7 +52,7 @@
                 android:elevation="7dp"
                 app:tabBackground="@drawable/tab_color_selection"
                 app:tabSelectedTextColor="@color/white_smoke"
-                app:tabTextAppearance="@style/CustomStyle"></android.support.design.widget.TabLayout>
+                app:tabTextAppearance="@style/CustomStyle"/>
 
         </LinearLayout>
 

@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -110,7 +111,7 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
 //                    mainIntent.putExtra("key","AddCart");
                     startActivity(mainIntent);
                 } else {
-                    Intent mainIntent = new Intent(ItemsDetailActivity.this, MainActivity.class);
+                    Intent mainIntent = new Intent(ItemsDetailActivity.this, DrawerHomeActivity.class);
                     mainIntent.putExtra("key", "AddCart");
                     startActivity(mainIntent);
                 }

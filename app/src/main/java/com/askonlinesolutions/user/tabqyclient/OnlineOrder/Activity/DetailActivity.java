@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.InfoFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MenuFragment;
@@ -68,7 +69,8 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 
                 } else {
 
-                    Intent mainIntent = new Intent(DetailActivity.this, MainActivity.class);
+//                    Intent mainIntent = new Intent(DetailActivity.this, MainActivity.class);
+                    Intent mainIntent = new Intent(DetailActivity.this, DrawerHomeActivity.class);
                     mainIntent.putExtra("key", "AddCart");
                     startActivity(mainIntent);
                 }

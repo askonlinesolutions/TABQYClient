@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -50,7 +51,8 @@ private TextView TableCode;
     public void onClick(View v) {
         int id1 = v.getId();
         if (id1 == R.id.activity_home_layout_online_order) {
-            startActivity(new Intent(HomeActivity.this, MainActivity.class));
+//            startActivity(new Intent(HomeActivity.this, MainActivity.class));
+            startActivity(new Intent(HomeActivity.this, DrawerHomeActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else if (id1 == R.id.activity_home_layout_reservation) {
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));

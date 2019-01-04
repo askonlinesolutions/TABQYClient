@@ -23,6 +23,7 @@
         <item name="colorControlNormal">@color/gray</item>
         <item name="colorControlActivated">@color/orange</item>
     </style>
+
     <style name="CustomRatingBar" parent="@android:style/Widget.RatingBar">
         <item name="android:progressDrawable">@drawable/custom_rating_bar</item>
         <item name="android:minHeight">18dp</item>
@@ -75,4 +76,8 @@
         <item name="colorAccent">#0091ea</item>
         <item name="android:textColorPrimaryDisableOnly">#f44336</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

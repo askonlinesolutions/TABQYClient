@@ -173,7 +173,11 @@
         <activity android:name=".GuestLoginActivity" />
         <activity android:name=".tableCode.TableDashboardActivity" />
         <activity android:name=".tableCode.menuList.MenuItemActivity" />
-        <activity android:name=".tableCode.myCart.TableMyCartActivity"></activity>
+        <activity android:name=".tableCode.myCart.TableMyCartActivity" />
+        <activity
+            android:name=".Activities.DrawerHomeActivity"
+            android:label="@string/title_activity_drawer_home"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

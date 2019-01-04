@@ -19,8 +19,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_qr_code" />
-                            <entry key="sourceFile" value="E:\Akhilprojects\office work\MarvelPrototype_9i1agje_30102018104817_v6\qr-code.svg" />
+                            <entry key="outputName" value="ic_share_app" />
+                            <entry key="sourceFile" value="E:\Akhilprojects\office work\share_app.svg" />
                           </map>
                         </option>
                       </PersistentState>
