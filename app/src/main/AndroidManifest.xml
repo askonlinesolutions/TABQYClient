@@ -177,6 +177,8 @@
         <activity
             android:name=".Activities.DrawerHomeActivity"
             android:label="@string/title_activity_drawer_home"
+            android:theme="@style/AppTheme"></activity><activity android:name=".SampleActivity"></activity>
+
             android:theme="@style/AppTheme" />
         <activity android:name=".tableCode.qrCode.QRCodeActivity"></activity>
     </application>

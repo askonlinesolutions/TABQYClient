@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white_color"
+        tools:context=".CallWaitingFragment">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white_color"
+            android:layout_height="match_parent">
+
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+          android:layout_marginLeft="60dp"
+            android:layout_marginRight="@dimen/_50sdp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/call_waiting" />
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:id="@+id/call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_background_button"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Call Waiter"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/size_15" />
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+             android:id="@+id/ringing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20dp"
+            android:text="Ringing..."/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</layout>

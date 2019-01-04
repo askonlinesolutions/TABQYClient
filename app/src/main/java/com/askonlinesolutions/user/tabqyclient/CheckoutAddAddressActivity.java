@@ -18,7 +18,7 @@ import java.util.Arrays;
 
 public class CheckoutAddAddressActivity extends AppCompatActivity {
     ArrayList name = new ArrayList<>(Arrays.asList("Sector 6"));
-    TextView addLocation;
+    TextView addLocation,activity_login_title;
     EditText searchLocation;
 
     @Override
@@ -28,6 +28,7 @@ public class CheckoutAddAddressActivity extends AppCompatActivity {
         addLocation = findViewById(R.id.location);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         searchLocation = findViewById(R.id.search_location);
+        activity_login_title=findViewById(R.id.activity_login_title);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         RecentSearchAdapter recentSearchAdapter = new RecentSearchAdapter(CheckoutAddAddressActivity.this, name);
@@ -45,6 +46,12 @@ public class CheckoutAddAddressActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent filterIntent = new Intent(CheckoutAddAddressActivity.this, AddAddressActivity.class);
                 startActivity(filterIntent);
+            }
+        });
+        activity_login_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
 

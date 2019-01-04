@@ -14,6 +14,7 @@ import com.askonlinesolutions.user.tabqyclient.databinding.ActivityCheckoutCardB
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,6 +22,7 @@ import java.util.Arrays;
 public class Checkout_cardActivity extends AppCompatActivity implements View.OnClickListener {
     ActivityCheckoutCardBinding binding;
     ImageView contactDetail;
+    TextView activity_login_title;
     private boolean isVisible = true;
     private boolean isShow = true;
     ArrayList name = new ArrayList<>(Arrays.asList("Riyadh,Sulimania Dabbab", "Riyadh,Sulimania Dabbab "));
@@ -30,9 +32,11 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_checkout_card);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+        activity_login_title =findViewById(R.id.activity_login_title);
        // ImageView contactDetail = (ImageView) findViewById(R.id.contactDetail);
         // RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.paymentRecyclerView);
         RadioButton radio = (RadioButton) findViewById(R.id.table_order_RB);
+        activity_login_title=findViewById(R.id.activity_login_title);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         CheckoutAdapter checkoutAdapter = new CheckoutAdapter(Checkout_cardActivity.this, name);
@@ -53,6 +57,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         binding.addNew.setOnClickListener(this);
         binding.review.setOnClickListener(this);
         binding.addNewCard.setOnClickListener(this);
+
 
     }
 
@@ -153,6 +158,9 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
             case R.id.review:
                 Intent review =new Intent(this,ReviewActivity.class);
                 startActivity(review);
+                break;
+            case R.id.activity_login_title:
+                onBackPressed();
                 break;
 
         }

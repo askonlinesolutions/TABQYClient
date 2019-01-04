@@ -22,12 +22,14 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     //    @BindView(R.id.menu_add_cart_fab)
     FloatingActionButton addToCart;
     String value;
+    TextView activity_main_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         addToCart = findViewById(R.id.menu_add_cart_fab);
+        activity_main_title =findViewById(R.id.activity_main_title);
         getBundleData();
         init();
     }
@@ -55,6 +57,12 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
     private TextView tv_tab_1, tv_tab_2, tv_tab_3;
 
     private void init() {
+        activity_main_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
 
 

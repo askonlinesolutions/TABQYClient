@@ -24,6 +24,9 @@ public class ReviewActivity extends AppCompatActivity {
         plus=(RelativeLayout)findViewById(R.id.plus);
         goBack=(TextView)findViewById(R.id.go_back);
         integer_number=(TextView)findViewById(R.id.integer_number);
+        checkout_btn=(TextView)findViewById(R.id.checkout_btn);
+
+      //  activity_login_title =findViewById(R.id.activity_login_title);
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,6 +49,19 @@ public class ReviewActivity extends AppCompatActivity {
                onBackPressed();
             }
         });
+        checkout_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReviewActivity.this,PlacingOrderActivity.class);
+                startActivity(intent);
+            }
+        });
+    //    activity_login_title.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        onBackPressed();
+        //    }
+       // });
 
 
         checkout_btn.setOnClickListener(new View.OnClickListener() {

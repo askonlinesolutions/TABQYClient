@@ -23,7 +23,7 @@ public class TableDashboardActivity extends AppCompatActivity {
     private static final String TAG = TableDashboardActivity.class.getSimpleName();
     ViewPagerAdapterTable adapterTable;
     final int[] ICONS = new int[]{R.drawable.ic_qr_code, R.drawable.ic_offer_bottom, R.drawable.ic_cart, R.drawable.ic_order_status,
-            R.drawable.ic_call};
+            R.drawable.ic_call_waiter};
 
     private ViewPager mPager;
     private TabLayout mTab;
@@ -63,6 +63,12 @@ public class TableDashboardActivity extends AppCompatActivity {
         binding.tab.getTabAt(2).setIcon(ICONS[2]).setText("My Cart");
         binding.tab.getTabAt(3).setIcon(ICONS[3]).setText("Order Status");
         binding.tab.getTabAt(4).setIcon(ICONS[4]).setText("Call Waiter");
+        tv_title.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
 
         binding.tab.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -134,4 +140,5 @@ public class TableDashboardActivity extends AppCompatActivity {
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
 }

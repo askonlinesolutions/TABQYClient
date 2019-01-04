@@ -36,8 +36,7 @@
             android:layout_width="280dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_toLeftOf="@+id/imageLayout">
+            android:layout_marginLeft="15dp">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:id="@+id/offer_food_name"

@@ -20,7 +20,7 @@ import com.askonlinesolutions.user.tabqyclient.tableCode.menuList.MenuItemAdapte
 public class TableMyCartActivity extends AppCompatActivity implements TableMyCartAdapter.OnItemClickLister, View.OnClickListener {
     private TableMyCartAdapter tableMyCartAdapter;
     ActivityTableMyCartBinding binding;
-    TextView cencelBtn, addMore, reserve;
+    TextView cencelBtn, addMore, reserve,cart_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,11 @@ public class TableMyCartActivity extends AppCompatActivity implements TableMyCar
         cencelBtn = findViewById(R.id.cancel_btn);
         addMore = findViewById(R.id.add_more_btn);
         reserve = findViewById(R.id.reserve_btn);
+        cart_title=findViewById(R.id.cart_title);
         cencelBtn.setOnClickListener(this);
         addMore.setOnClickListener(this);
         reserve.setOnClickListener(this);
+        cart_title.setOnClickListener(this);
 
 
     }
@@ -73,6 +75,9 @@ public class TableMyCartActivity extends AppCompatActivity implements TableMyCar
                 Intent intentReserve = new Intent(TableMyCartActivity.this, TableReservation.class);
                 intentReserve.putExtra("res","tv_withfood");
                 startActivity(intentReserve);
+                break;
+            case  R.id.cart_title:
+                onBackPressed();
                 break;
         }
     }

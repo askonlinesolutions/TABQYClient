@@ -687,7 +687,7 @@
                     android:textColor="@android:color/white"
                     android:textSize="15dp" />
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:id="@+id/checkout_btn"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
