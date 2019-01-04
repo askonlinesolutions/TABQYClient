@@ -36,6 +36,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
        // ImageView contactDetail = (ImageView) findViewById(R.id.contactDetail);
         // RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.paymentRecyclerView);
         RadioButton radio = (RadioButton) findViewById(R.id.table_order_RB);
+        activity_login_title=findViewById(R.id.activity_login_title);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         CheckoutAdapter checkoutAdapter = new CheckoutAdapter(Checkout_cardActivity.this, name);
@@ -56,6 +57,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         binding.addNew.setOnClickListener(this);
         binding.review.setOnClickListener(this);
         binding.addNewCard.setOnClickListener(this);
+
 
     }
 
@@ -159,6 +161,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                 break;
             case R.id.activity_login_title:
                 onBackPressed();
+                break;
 
         }
     }

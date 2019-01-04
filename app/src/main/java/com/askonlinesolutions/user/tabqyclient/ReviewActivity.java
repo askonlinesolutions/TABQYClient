@@ -25,6 +25,7 @@ public class ReviewActivity extends AppCompatActivity {
         goBack=(TextView)findViewById(R.id.go_back);
         integer_number=(TextView)findViewById(R.id.integer_number);
         checkout_btn=(TextView)findViewById(R.id.checkout_btn);
+
       //  activity_login_title =findViewById(R.id.activity_login_title);
         minus.setOnClickListener(new View.OnClickListener() {
             @Override
