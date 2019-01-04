@@ -32,7 +32,7 @@ public class FindRestaurants extends AppCompatActivity implements View.OnClickLi
         //tv_find_restaurants = findViewById(R.id.tv_find_restaurants);
         et_find_restaurants = findViewById(R.id.et_find_restaurants);
         iv_back = findViewById(R.id.iv_back_find_restaurants);
-filter=findViewById(R.id.filter_btn_tv);
+        filter = findViewById(R.id.filter_btn_tv);
         current_location_lin = findViewById(R.id.current_location_lin);
 
         //tv_find_restaurants.setOnClickListener(this);
@@ -69,7 +69,7 @@ filter=findViewById(R.id.filter_btn_tv);
             onBackPressed();
         } else if (v.getId() == R.id.current_location_lin) {
             startActivity(new Intent(FindRestaurants.this, ChooseLocation.class));
-        } else if(v.getId()==R.id.filter_btn_tv){
+        } else if (v.getId() == R.id.filter_btn_tv) {
             Intent filterIntent = new Intent(FindRestaurants.this, FilterActivity.class);
             startActivity(filterIntent);
         }
@@ -86,7 +86,10 @@ filter=findViewById(R.id.filter_btn_tv);
         if (Tag == "reserve") {
             startActivity(new Intent(FindRestaurants.this, ReserveTable.class));
             overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
-        } else {
+        } else if (Tag.equals("reserve_view")) {
+            startActivity(new Intent(FindRestaurants.this, ReserveTable.class));
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
         }
     }
 }

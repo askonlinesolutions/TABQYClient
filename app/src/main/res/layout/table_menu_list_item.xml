@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder_item" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/calories_tv"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-5dp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_plus" />
+
+        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+            android:id="@+id/calories_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/transparent_background"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:padding="@dimen/_5sdp"
+            android:text="Soringv Rolls"
+            android:textColor="@color/white_color"
+            android:textSize="12sp" />
+
+
+    </RelativeLayout>
+</layout>

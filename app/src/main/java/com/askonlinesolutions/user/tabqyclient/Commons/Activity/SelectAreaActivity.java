@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
 import com.askonlinesolutions.user.tabqyclient.Adapters.SearchAdapter;
@@ -89,7 +90,7 @@ public class SelectAreaActivity extends AppCompatActivity implements View.OnClic
             }
             arr_check.set(pos, "1");
             setMyAdapter();
-            Intent filterIntent = new Intent(SelectAreaActivity.this, MainActivity.class);
+            Intent filterIntent = new Intent(SelectAreaActivity.this, DrawerHomeActivity.class);
             startActivity(filterIntent);
         }
     }

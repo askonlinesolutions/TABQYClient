@@ -101,6 +101,7 @@
 
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                android:id="@+id/table_code_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"

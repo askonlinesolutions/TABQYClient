@@ -53,6 +53,7 @@ public class TimeAdapter extends RecyclerView.Adapter<TimeAdapter.MyViewHolder> 
         @Override
         public void onClick(View v) {
             timeAdapterInterface.getDetails();
+
         }
     }
 

@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class ReserveTable extends AppCompatActivity implements TimeAdapter.TimeAdapterInterface, View.OnClickListener {
 
 
-    private RecyclerView recyclerView;
+    private RecyclerView recyclerView,dateRecycler;
     private ImageView iv_back;
     private ArrayList<String> time = new ArrayList<>();
     @Override
@@ -57,6 +57,7 @@ public class ReserveTable extends AppCompatActivity implements TimeAdapter.TimeA
 
         iv_back = findViewById(R.id.iv_back_reservetable);
         recyclerView = findViewById(R.id.time_recycler);
+        dateRecycler=findViewById(R.id.date_recycler);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(),LinearLayoutManager.HORIZONTAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
 

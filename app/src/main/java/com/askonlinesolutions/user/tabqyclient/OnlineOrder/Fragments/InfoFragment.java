@@ -38,7 +38,7 @@ import butterknife.ButterKnife;
  */
 public class InfoFragment extends Fragment implements OnMapReadyCallback {
     GoogleMap mMap;
-    FloatingActionButton infoAddToCart;
+//    FloatingActionButton infoAddToCart;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -60,18 +60,18 @@ public class InfoFragment extends Fragment implements OnMapReadyCallback {
     private RecyclerView rv;
 
     private void init() {
-        infoAddToCart = getView().findViewById(R.id.info_add_cart_fab);
+//        infoAddToCart = getView().findViewById(R.id.info_add_cart_fab);
         rv = getView().findViewById(R.id.fragment_info_rv);
         rv.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
         rv.setAdapter(new AdapterInfoImage());
-        infoAddToCart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mainIntent = new Intent(getActivity(), MainActivity.class);
-                mainIntent.putExtra("key", "AddCart");
-                startActivity(mainIntent);
-            }
-        });
+//        infoAddToCart.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent mainIntent = new Intent(getActivity(), MainActivity.class);
+//                mainIntent.putExtra("key", "AddCart");
+//                startActivity(mainIntent);
+//            }
+//        });
         setMap();
     }
 

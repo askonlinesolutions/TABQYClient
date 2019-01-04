@@ -122,7 +122,6 @@
             android:name=".Reservation.Activity.Reservation"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
-
         <activity
             android:name=".Reservation.Activity.FindRestaurants"
             android:screenOrientation="portrait"
@@ -173,7 +172,12 @@
         <activity android:name=".ReviewActivity" />
         <activity android:name=".GuestLoginActivity" />
         <activity android:name=".tableCode.TableDashboardActivity" />
-        <activity android:name=".SampleActivity"></activity>
+        <activity android:name=".tableCode.menuList.MenuItemActivity" />
+        <activity android:name=".tableCode.myCart.TableMyCartActivity" />
+        <activity
+            android:name=".Activities.DrawerHomeActivity"
+            android:label="@string/title_activity_drawer_home"
+            android:theme="@style/AppTheme"></activity><activity android:name=".SampleActivity"></activity>
 
     </application>
 

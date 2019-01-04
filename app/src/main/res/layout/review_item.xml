@@ -231,7 +231,6 @@
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/review_rv"
                 android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/_50sdp"
                 android:layout_height="wrap_content">
 
 
@@ -240,67 +239,67 @@
 
         </LinearLayout>
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/review_add_cart_fab"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_above="@+id/fragment_menu_bottom_rv"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="right"
-            android:layout_margin="16sp"
-            android:layout_marginBottom="@dimen/_30sdp"
-            android:background="@color/theme_color"
-            android:src="@drawable/ic_cart" />
+        <!--<android.support.design.widget.FloatingActionButton-->
+        <!--android:id="@+id/review_add_cart_fab"-->
+        <!--android:layout_width="55dp"-->
+        <!--android:layout_height="55dp"-->
+        <!--android:layout_above="@+id/fragment_menu_bottom_rv"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:layout_margin="16sp"-->
+        <!--android:layout_marginBottom="@dimen/_30sdp"-->
+        <!--android:background="@color/theme_color"-->
+        <!--android:src="@drawable/ic_cart" />-->
 
-        <LinearLayout
-            android:id="@+id/fragment_menu_bottom_rv"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:background="@color/theme_color"
-            android:orientation="horizontal">
+        <!--<LinearLayout-->
+        <!--android:id="@+id/fragment_menu_bottom_rv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:background="@color/theme_color"-->
+        <!--android:orientation="horizontal">-->
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+        <!--<RelativeLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1">-->
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/shape_border_white"
-                    android:gravity="center"
-                    android:paddingBottom="3dp"
-                    android:paddingLeft="15dp"
-                    android:paddingRight="15dp"
-                    android:paddingTop="3dp"
-                    android:text="Most Selling"
-                    android:textColor="@color/white_color"
-                    android:textSize="12sp" />
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/shape_border_white"-->
+        <!--android:gravity="center"-->
+        <!--android:paddingBottom="3dp"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp"-->
+        <!--android:paddingTop="3dp"-->
+        <!--android:text="Most Selling"-->
+        <!--android:textColor="@color/white_color"-->
+        <!--android:textSize="12sp" />-->
 
 
-            </RelativeLayout>
+        <!--</RelativeLayout>-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Starter"
-                android:textColor="@color/white_color"
-                android:textSize="12sp" />
+        <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Starter"-->
+        <!--android:textColor="@color/white_color"-->
+        <!--android:textSize="12sp" />-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="Soup"
-                android:textColor="@color/white_color"
-                android:textSize="12sp" />
+        <!--<TextView-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center"-->
+        <!--android:text="Soup"-->
+        <!--android:textColor="@color/white_color"-->
+        <!--android:textSize="12sp" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
 
     </RelativeLayout>

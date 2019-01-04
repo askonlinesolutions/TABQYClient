@@ -24,7 +24,7 @@ public class ReviewsFragment extends Fragment {
 
     private ReviewAdapter reviewAdapter;
     RecyclerView reviewRv;
-    FloatingActionButton AddCartFab;
+//    FloatingActionButton AddCartFab;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +32,7 @@ public class ReviewsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.review_item, container, false);
         reviewRv=view.findViewById(R.id.review_rv);
-        AddCartFab=view.findViewById(R.id.review_add_cart_fab);
+//        AddCartFab=view.findViewById(R.id.review_add_cart_fab);
 
         init();
         return view;
@@ -40,14 +40,14 @@ public class ReviewsFragment extends Fragment {
 
     private void init() {
         setupReviewRecycler();
-        AddCartFab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent mainIntent=new Intent(getActivity(), MainActivity.class);
-                mainIntent.putExtra("key","AddCart");
-                startActivity(mainIntent);
-            }
-        });
+//        AddCartFab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent mainIntent=new Intent(getActivity(), MainActivity.class);
+//                mainIntent.putExtra("key","AddCart");
+//                startActivity(mainIntent);
+//            }
+//        });
 
     }
 
