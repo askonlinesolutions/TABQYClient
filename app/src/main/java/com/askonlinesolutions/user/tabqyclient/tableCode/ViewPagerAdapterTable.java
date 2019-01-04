@@ -13,23 +13,22 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragm
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.AccountFragment;
 import com.askonlinesolutions.user.tabqyclient.TableMyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.menuDashboard.MenuDashboardFragment;
+import com.askonlinesolutions.user.tabqyclient.tableCode.orderStatus.TableOrderStatusFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.qrCode.QrCodeFragment;
 
 public class ViewPagerAdapterTable extends FragmentPagerAdapter {
 
     Context context;
     int total_tab = 5;
-    public ViewPagerAdapterTable(FragmentManager fm, Context context)
-    {
+
+    public ViewPagerAdapterTable(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
 
     @Override
-    public Fragment getItem(int position)
-    {
-        switch (position)
-        {
+    public Fragment getItem(int position) {
+        switch (position) {
             case 0:
                 return new MenuDashboardFragment();
             case 1:
@@ -37,18 +36,17 @@ public class ViewPagerAdapterTable extends FragmentPagerAdapter {
             case 2:
                 return new TableMyCartFragment();
             case 3:
-                return new OrderStatusFragment();
+                return new TableOrderStatusFragment();
             case 4:
                 return new CallWaitingFragment();
             default:
-                return    new MenuDashboardFragment();
+                return new MenuDashboardFragment();
 
         }
     }
 
     @Override
-    public int getCount()
-    {
+    public int getCount() {
         return total_tab;
     }
 

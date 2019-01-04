@@ -23,13 +23,16 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.AddPaymentActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterViewPagerMain;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.myReceipt.MyReceiptActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.profileSetting.ProfileSettingActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityDrawerHomeBinding;
 
-public class DrawerHomeActivity extends AppCompatActivity implements View.OnClickListener
-        /* implements NavigationView.OnNavigationItemSelectedListener*/ {
+public class DrawerHomeActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
     ActivityDrawerHomeBinding binding;
     private static final String TAG = DrawerHomeActivity.class.getSimpleName();
     String value;
@@ -65,53 +68,13 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
 
     AdapterViewPagerMain mAdapter;
     TextView myOrderTv, myQrCodeTv, pointTv, paymentOptionTV, favoritesRestTv, saveLocationTv,
-            aboutTv, offerTv, notificationTv, liveChatTv, receiptTv, shareAppTv;
-    ImageView pointShowIv, locationShowIv, paymentOptionShowIv, aboutShowIv;
+            aboutTv, offerTv, notificationTv, liveChatTv, receiptTv, shareAppTv, tabqy_tv, restaurant_tv, home_tv, office_tv, addPaymentMethodTv;
+    ImageView pointShowIv, locationShowIv, paymentOptionShowIv, aboutShowIv, settingIv;
     LinearLayout pointLayout, locationLayout, paymentLayout, aboutLayout;
 
+    boolean isPoint = true, isLocation = true, isPayment = true, isAbout = true;
+
     private void init() {
-
-        myOrderTv = findViewById(R.id.nav_my_order_tv);
-        myQrCodeTv = findViewById(R.id.nav_qrcode);
-        pointTv = findViewById(R.id.nav_points_tv);
-        paymentOptionTV = findViewById(R.id.nav_payment_option_tv);
-        favoritesRestTv = findViewById(R.id.nav_Favorites_rest_tv);
-        saveLocationTv = findViewById(R.id.save_location_tv);
-        aboutTv = findViewById(R.id.nav_about_tv);
-        offerTv = findViewById(R.id.nav_offer_tv);
-        notificationTv = findViewById(R.id.nav_notification_tv);
-        liveChatTv = findViewById(R.id.nav_live_chat_tv);
-        receiptTv = findViewById(R.id.nav_receipt_tv);
-        shareAppTv = findViewById(R.id.nav_share_chat_tv);
-
-        pointShowIv = findViewById(R.id.points_show_iv);
-        locationShowIv = findViewById(R.id.location_show_iv);
-        paymentOptionShowIv = findViewById(R.id.payment_show_iv);
-        aboutShowIv = findViewById(R.id.about_show_iv);
-
-        pointLayout = findViewById(R.id.points_layout);
-        locationLayout = findViewById(R.id.location_layout);
-        paymentLayout = findViewById(R.id.payment_layout);
-        aboutLayout = findViewById(R.id.about_layout);
-
-
-        myOrderTv.setOnClickListener(this);
-        myQrCodeTv.setOnClickListener(this);
-        pointTv.setOnClickListener(this);
-        paymentOptionTV.setOnClickListener(this);
-        favoritesRestTv.setOnClickListener(this);
-        saveLocationTv.setOnClickListener(this);
-        aboutTv.setOnClickListener(this);
-        offerTv.setOnClickListener(this);
-        notificationTv.setOnClickListener(this);
-        liveChatTv.setOnClickListener(this);
-        receiptTv.setOnClickListener(this);
-        shareAppTv.setOnClickListener(this);
-
-        pointShowIv.setOnClickListener(this);
-        locationShowIv.setOnClickListener(this);
-        paymentOptionShowIv.setOnClickListener(this);
-        aboutShowIv.setOnClickListener(this);
 
 
         setDrawer();
@@ -130,7 +93,69 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-//        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);
+        View view = navigationView.getHeaderView(0);
+
+        myOrderTv = view.findViewById(R.id.nav_my_order_tv);
+        myQrCodeTv = view.findViewById(R.id.nav_qrcode);
+        pointTv = view.findViewById(R.id.nav_points_tv);
+        paymentOptionTV = view.findViewById(R.id.nav_payment_option_tv);
+        favoritesRestTv = view.findViewById(R.id.nav_Favorites_rest_tv);
+        saveLocationTv = view.findViewById(R.id.save_location_tv);
+        aboutTv = view.findViewById(R.id.nav_about_tv);
+        offerTv = view.findViewById(R.id.nav_offer_tv);
+        notificationTv = view.findViewById(R.id.nav_notification_tv);
+        liveChatTv = view.findViewById(R.id.nav_live_chat_tv);
+        receiptTv = view.findViewById(R.id.nav_receipt_tv);
+        shareAppTv = view.findViewById(R.id.nav_share_chat_tv);
+
+        tabqy_tv = view.findViewById(R.id.tabqy_points);
+        restaurant_tv = view.findViewById(R.id.restaurant_points);
+        shareAppTv = view.findViewById(R.id.nav_share_chat_tv);
+
+        pointShowIv = view.findViewById(R.id.points_show_iv);
+        settingIv = view.findViewById(R.id.setting_iv);
+        locationShowIv = view.findViewById(R.id.location_show_iv);
+        paymentOptionShowIv = view.findViewById(R.id.payment_show_iv);
+        aboutShowIv = view.findViewById(R.id.about_show_iv);
+        home_tv = view.findViewById(R.id.home_tv);
+        office_tv = view.findViewById(R.id.office_tv);
+        addPaymentMethodTv = view.findViewById(R.id.add_payment_method_tv);
+
+        pointLayout = view.findViewById(R.id.points_layout);
+        locationLayout = view.findViewById(R.id.location_layout);
+        paymentLayout = view.findViewById(R.id.payment_layout);
+        aboutLayout = view.findViewById(R.id.about_layout);
+
+
+        findView();
+    }
+
+    private void findView() {
+
+        myOrderTv.setOnClickListener(this);
+        myQrCodeTv.setOnClickListener(this);
+        pointTv.setOnClickListener(this);
+        paymentOptionTV.setOnClickListener(this);
+        favoritesRestTv.setOnClickListener(this);
+        saveLocationTv.setOnClickListener(this);
+        aboutTv.setOnClickListener(this);
+        offerTv.setOnClickListener(this);
+        notificationTv.setOnClickListener(this);
+        liveChatTv.setOnClickListener(this);
+        receiptTv.setOnClickListener(this);
+        shareAppTv.setOnClickListener(this);
+        addPaymentMethodTv.setOnClickListener(this);
+        settingIv.setOnClickListener(this);
+        pointShowIv.setOnClickListener(this);
+        locationShowIv.setOnClickListener(this);
+        paymentOptionShowIv.setOnClickListener(this);
+        aboutShowIv.setOnClickListener(this);
+        restaurant_tv.setOnClickListener(this);
+        tabqy_tv.setOnClickListener(this);
+        home_tv.setOnClickListener(this);
+        office_tv.setOnClickListener(this);
+        addPaymentMethodTv.setOnClickListener(this);
 
     }
 
@@ -255,26 +280,96 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        switch (view.getId())
-        {
+        switch (view.getId()) {
             case R.id.nav_my_order_tv:
-                Intent intent=new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
+                Intent intent = new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
                 startActivity(intent);
                 this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
+            case R.id.setting_iv:
+                Intent intentSetting = new Intent(DrawerHomeActivity.this, ProfileSettingActivity.class);
+                startActivity(intentSetting);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
 
             case R.id.nav_qrcode:
-//                Intent intentQr=new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
-//                startActivity(intentQr);
-//                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
                 break;
+            case R.id.nav_points_tv:
+
+                if (isPoint) {
+                    pointLayout.setVisibility(View.VISIBLE);
+                    pointShowIv.setImageResource(R.drawable.ic_up_arrow);
+                    isPoint = false;
+                } else {
+                    pointLayout.setVisibility(View.GONE);
+                    pointShowIv.setImageResource(R.drawable.ic_down_arrow_);
+                    isPoint = true;
+                }
+                break;
+
+            case R.id.nav_payment_option_tv:
+
+                if (isPayment) {
+                    paymentLayout.setVisibility(View.VISIBLE);
+                    paymentOptionShowIv.setImageResource(R.drawable.ic_up_arrow);
+                    isPayment = false;
+                } else {
+                    paymentLayout.setVisibility(View.GONE);
+                    paymentOptionShowIv.setImageResource(R.drawable.ic_down_arrow_);
+                    isPayment = true;
+                }
+                break;
+
+            case R.id.tabqy_points:
+                Intent intentTabqy = new Intent(DrawerHomeActivity.this, TabqyPointsActivity.class);
+                startActivity(intentTabqy);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.restaurant_points:
+                Intent intentRest = new Intent(DrawerHomeActivity.this, RestaurentPointsActivity.class);
+                startActivity(intentRest);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+
+            case R.id.add_payment_method_tv:
+                Intent intentPay = new Intent(DrawerHomeActivity.this, AddPaymentActivity.class);
+                startActivity(intentPay);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+            case R.id.save_location_tv:
+                if (isLocation) {
+                    locationLayout.setVisibility(View.VISIBLE);
+                    locationShowIv.setImageResource(R.drawable.ic_up_arrow);
+                    isLocation = false;
+                } else {
+                    locationLayout.setVisibility(View.GONE);
+                    locationShowIv.setImageResource(R.drawable.ic_down_arrow_);
+                    isLocation = true;
+                }
+                break;
+            case R.id.nav_about_tv:
+
+                if (isAbout) {
+                    aboutLayout.setVisibility(View.VISIBLE);
+                    aboutShowIv.setImageResource(R.drawable.ic_up_arrow);
+                    isAbout = false;
+                } else {
+                    aboutLayout.setVisibility(View.GONE);
+                    aboutShowIv.setImageResource(R.drawable.ic_down_arrow_);
+                    isAbout = true;
+                }
+                break;
+
         }
 
     }
 
-//    @SuppressWarnings("StatementWithEmptyBody")
-//    @Override
-//    public boolean onNavigationItemSelected(MenuItem item) {
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
 //        // Handle navigation view item clicks here.
 //        int id = item.getItemId();
 //
@@ -291,9 +386,9 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
 //        } else if (id == R.id.nav_send) {
 //
 //        }
-//
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
-//        return true;
-//    }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }
