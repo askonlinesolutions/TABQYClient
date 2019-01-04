@@ -18,15 +18,17 @@ public class ViewPagerAdapterTable extends FragmentPagerAdapter {
 
     Context context;
     int total_tab = 5;
-
-    public ViewPagerAdapterTable(FragmentManager fm, Context context) {
+    public ViewPagerAdapterTable(FragmentManager fm, Context context)
+    {
         super(fm);
         this.context = context;
     }
 
     @Override
-    public Fragment getItem(int position) {
-        switch (position) {
+    public Fragment getItem(int position)
+    {
+        switch (position)
+        {
             case 0:
                 return new MenuDashboardFragment();
             case 1:
@@ -38,13 +40,14 @@ public class ViewPagerAdapterTable extends FragmentPagerAdapter {
             case 4:
                 return new QrCodeFragment();
             default:
-                return new MenuDashboardFragment();
+                return    new MenuDashboardFragment();
 
         }
     }
 
     @Override
-    public int getCount() {
+    public int getCount()
+    {
         return total_tab;
     }
 

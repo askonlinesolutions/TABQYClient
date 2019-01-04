@@ -27,7 +27,7 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class MyCartFragment extends Fragment implements MenuAdapter.Interface_AdapterMenu {
-    TextView checkout,guest,detail;
+    TextView checkout, guest, detail;
     int minteger = 0;
 
 
@@ -63,8 +63,8 @@ public class MyCartFragment extends Fragment implements MenuAdapter.Interface_Ad
         rv_cart = getView().findViewById(R.id.activity_my_cart_recycler);
 
         checkout = getView().findViewById(R.id.checkout_btn);
-        guest=getView().findViewById(R.id.guest_btn);
-        detail =getView().findViewById(R.id.detail_btn);
+        guest = getView().findViewById(R.id.guest_btn);
+        detail = getView().findViewById(R.id.detail_btn);
         checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

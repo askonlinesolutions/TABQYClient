@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.tableCode.TableDashboardActivity;
 
@@ -61,8 +62,14 @@ private TextView TableCode;
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
             overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
         } else if (id1==R.id.table_code_tv){
-            startActivity(new Intent(HomeActivity.this, TableDashboardActivity.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.putExtra("key","TABLE_CODE");
+
+            startActivity(intent);
+            this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+//            startActivity(new Intent(HomeActivity.this, TableDashboardActivity.class));
+//            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
 
         }
     }

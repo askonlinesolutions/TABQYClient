@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityTableDashboardBinding;
+import com.askonlinesolutions.user.tabqyclient.tableCode.menuDashboard.MenuDashboardFragment;
 
 public class TableDashboardActivity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class TableDashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_table_dashboard);
-
+//        setFragment(new MenuDashboardFragment());
         init();
     }
 
