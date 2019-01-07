@@ -8,11 +8,12 @@
     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
         android:id="@+id/tv_time"
         android:text="09:00 AM"
-        android:background="@drawable/button_pink_hollow_round"
+
         android:textSize="12sp"
         android:layout_marginRight="8dp"
         android:textColor="@color/colorPrimary"
         android:padding="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <!--android:background="@drawable/button_pink_hollow_round"-->
 </LinearLayout>

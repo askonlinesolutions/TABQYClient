@@ -1,319 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ReserveTable">
+    tools:context=".Reservation.Activity.ReserveTable">
 
     <RelativeLayout
         android:id="@+id/toolbar"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize">
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary">
+
         <ImageView
             android:id="@+id/iv_back_reservetable"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:src="@drawable/ic_back"
             android:layout_width="23dp"
-            android:layout_height="23dp" />
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+            android:layout_height="23dp"
+            android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@id/iv_back_reservetable"
-            android:layout_centerVertical="true"
-            android:text="Reserve a table"
-            android:textColor="@color/white_color"
-            android:textSize="20sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-    <ScrollView
-        android:background="@color/white_color"
-        android:layout_below="@id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:background="@color/white_color"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-    <RelativeLayout
-        android:id="@+id/background"
-        android:background="@drawable/background"
-        android:layout_width="match_parent"
-        android:layout_height="180dp"></RelativeLayout>
-    <LinearLayout
-        android:paddingTop="7dp"
-        android:paddingBottom="4dp"
-        android:id="@+id/lin"
-        android:background="@color/white_color"
-        android:layout_toRightOf="@id/res_img_rel"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <RelativeLayout
-        android:layout_marginLeft="7dp"
-        android:paddingRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:src="@drawable/ic_back" />
+
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-            android:text="Dao Xiang Restaurant"
-            android:textSize="13sp"
-            android:textColor="@color/sketch_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-            android:id="@+id/tv_open"
-            android:text="Open"
-            android:layout_alignParentRight="true"
-            android:textColor="@color/white_color"
-            android:background="@drawable/circle_green_background"
-            android:gravity="center"
-            android:textSize="9dp"
-            android:paddingLeft="17dp"
-            android:paddingRight="17dp"
-            android:paddingTop="4dp"
-            android:paddingBottom="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-        android:text="International,Asian,Chinese"
-        android:paddingLeft="7dp"
-        android:textSize="10sp"
-        android:textColor="@color/textgray"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <RelativeLayout
-        android:layout_marginLeft="7dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <android.support.v7.widget.AppCompatRatingBar
-            android:id="@+id/ratingBar"
-            android:numStars="5"
-            android:stepSize="1"
-            android:rating="4"
-            android:layout_centerVertical="true"
-            style="?android:attr/ratingBarStyleSmall"
-            android:backgroundTint="@color/orange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:theme="@style/RatingBar"/>
-        <TextView
-            android:text="(461 Ratings)"
-            android:textColor="@color/textgray"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/ratingBar"
-            android:layout_marginLeft="3dp"
-            android:textSize="8sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="7dp"
-            android:textSize="8sp"
-            android:text="@string/loren"
-            android:layout_width="320dp"
-            android:layout_height="wrap_content" />
-        <RelativeLayout
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="3dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/iv_location"
-                android:src="@drawable/ic_location2"
-                android:layout_centerVertical="true"
-                android:layout_width="20dp"
-                android:layout_height="20dp" />
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-                android:layout_toRightOf="@+id/iv_location"
-                android:paddingLeft="3dp"
-                android:layout_centerVertical="true"
-                android:textSize="10dp"
-                android:text="@string/khamis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-        <View
-            android:layout_marginTop="5dp"
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <View
-            android:layout_marginTop="5dp"
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <RelativeLayout
-            android:background="@color/white_color"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        <RelativeLayout
-            android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:padding="10dp"
-            android:background="@drawable/button_gray_solid"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-                android:id="@+id/distance"
-                android:text="Distance"
-                android:textSize="8sp"
-                android:textColor="@color/textgray"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-                android:layout_below="@id/distance"
-                android:text="4miles"
-                android:textSize="10sp"
-                android:textColor="@color/sketch_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-                android:layout_alignParentRight="true"
-                android:text="Order for 2"
-                android:textSize="8sp"
-                android:layout_centerVertical="true"
-                android:textColor="@color/sketch_black"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </RelativeLayout>
-        </RelativeLayout>
-        <View
-            android:layout_marginTop="15dp"
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <View
-            android:layout_marginTop="5dp"
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <RelativeLayout
-            android:layout_marginLeft="7dp"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/card"
-            android:src="@drawable/ic_card"
-            android:layout_centerVertical="true"
-            android:layout_width="18dp"
-            android:layout_height="18dp" />
-        <ImageView
-            android:layout_toRightOf="@id/card"
-            android:id="@+id/cash"
-            android:src="@drawable/ic_cash"
-            android:layout_marginLeft="3dp"
-            android:layout_width="21dp"
-            android:layout_height="23dp" />
-        <ImageView
-            android:layout_toRightOf="@+id/cash"
-            android:id="@+id/cashtwo"
-            android:src="@drawable/ic_cash_two"
-            android:layout_marginLeft="3dp"
-            android:layout_centerVertical="true"
-            android:layout_width="21dp"
-            android:layout_height="21dp" />
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
-            android:id="@+id/three"
-            android:layout_toRightOf="@id/cashtwo"
-            android:text="3"
-            android:textSize="8sp"
-            android:layout_gravity="center"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/iv_back_reservetable"
+            android:text="Reserve a table"
             android:textColor="@color/white_color"
-            android:background="@drawable/button_orange"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:layout_toRightOf="@id/three"
-            android:id="@+id/coins"
-            android:src="@drawable/ic_coins"
-            android:layout_gravity="center"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="3dp"
-            android:layout_width="17dp"
-            android:layout_height="17dp" />
-        </RelativeLayout>
-        <View
-            android:layout_marginTop="10dp"
-            android:background="@color/view_color"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:background="@color/white_color">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <View
-            android:layout_marginTop="5dp"
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
-        <RelativeLayout
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/calendar"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_calendar"
-                android:layout_width="18dp"
-                android:layout_height="18dp" />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/date_recycler"
-                android:layout_toRightOf="@id/calendar"
-                android:layout_marginLeft="5dp"
+            android:layout_height="match_parent"
+            android:background="@color/white_color"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/background"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="180dp"
+                android:background="@drawable/background"></RelativeLayout>
 
-
-
-
-
-        </RelativeLayout>
-        <View
-            android:background="@color/view_color"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-        <View
-            android:background="@color/view_color"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"/>
-        <RelativeLayout
-            android:padding="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/table"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_table"
-                android:layout_width="18dp"
-                android:layout_height="18dp" />
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/time_recycler"
-                android:layout_toRightOf="@id/table"
-                android:layout_marginLeft="5dp"
+            <LinearLayout
+                android:id="@+id/lin"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/res_img_rel"
+                android:background="@color/white_color"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingTop="7dp">
 
-        </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:paddingRight="10dp">
 
-        <View
-            android:background="@color/view_color"
-            android:layout_marginTop="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"></View>
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dao Xiang Restaurant"
+                        android:textColor="@color/sketch_black"
+                        android:textSize="13sp" />
 
-    </LinearLayout>
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:id="@+id/tv_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/circle_green_background"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="17dp"
+                        android:paddingRight="17dp"
+                        android:paddingTop="4dp"
+                        android:text="Open"
+                        android:textColor="@color/white_color"
+                        android:textSize="9dp" />
+                </RelativeLayout>
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="7dp"
+                    android:text="International,Asian,Chinese"
+                    android:textColor="@color/textgray"
+                    android:textSize="10sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp">
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBar"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:backgroundTint="@color/orange"
+                        android:numStars="5"
+                        android:rating="4"
+                        android:stepSize="1"
+                        android:theme="@style/RatingBar" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/ratingBar"
+                        android:text="(461 Ratings)"
+                        android:textColor="@color/textgray"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="3dp"
+                    android:text="@string/loren"
+                    android:textSize="8sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="3dp">
+
+                    <ImageView
+                        android:id="@+id/iv_location"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_location2" />
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/iv_location"
+                        android:paddingLeft="3dp"
+                        android:text="@string/khamis"
+                        android:textSize="10dp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color"></View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white_color">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_gray_solid"
+                        android:padding="10dp">
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                            android:id="@+id/distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Distance"
+                            android:textColor="@color/textgray"
+                            android:textSize="8sp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/distance"
+                            android:text="4miles"
+                            android:textColor="@color/sketch_black"
+                            android:textSize="10sp" />
+
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:text="Order for 2"
+                            android:textColor="@color/sketch_black"
+                            android:textSize="8sp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/view_color"></View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:id="@+id/card"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_card" />
+
+                    <ImageView
+                        android:id="@+id/cash"
+                        android:layout_width="21dp"
+                        android:layout_height="23dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/card"
+                        android:src="@drawable/ic_cash" />
+
+                    <ImageView
+                        android:id="@+id/cashtwo"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/cash"
+                        android:src="@drawable/ic_cash_two" />
+
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:id="@+id/points_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/cashtwo"
+                        android:text="Points"
+                        android:textSize="8sp" />
+
+
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:id="@+id/three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/points_tv"
+                        android:background="@drawable/button_orange"
+                        android:paddingBottom="2dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="2dp"
+                        android:text="3"
+                        android:textColor="@color/white_color"
+                        android:textSize="8sp" />
+
+                    <ImageView
+                        android:id="@+id/coins"
+                        android:layout_width="17dp"
+                        android:layout_height="17dp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/three"
+                        android:src="@drawable/ic_coins" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/view_color"></View>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color"></View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/calendar"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_calendar" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/date_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/calendar" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/view_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/table"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_table" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/time_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/table" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/view_color"></View>
+
+            </LinearLayout>
 
         </LinearLayout>
 
