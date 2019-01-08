@@ -314,7 +314,7 @@
                     android:layout_marginTop="50dp"
                     android:background="@drawable/shape_background_button"
                     android:gravity="center"
-                    android:text="@string/save"
+                    android:text="Apply"
                     android:textColor="@android:color/white"
                     android:textSize="@dimen/size_14" />
 

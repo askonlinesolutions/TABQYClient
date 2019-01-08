@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="false" />
@@ -176,10 +177,11 @@
         <activity android:name=".tableCode.myCart.TableMyCartActivity" />
         <activity
             android:name=".Activities.DrawerHomeActivity"
-            android:label="@string/title_activity_drawer_home"
-            android:theme="@style/AppTheme"></activity><activity android:name=".SampleActivity"></activity>
+            android:label="Restaurant"
+            android:theme="@style/AppTheme"></activity>
+        <activity android:name=".SampleActivity"></activity>
 
-            android:theme="@style/AppTheme" />
+        <!--android:theme="@style/AppTheme" />-->
         <activity android:name=".tableCode.qrCode.QRCodeActivity"></activity>
     </application>
 

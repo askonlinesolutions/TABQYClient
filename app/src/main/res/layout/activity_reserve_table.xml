@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ReserveTable">
+    tools:context=".Reservation.Activity.ReserveTable">
 
     <RelativeLayout
         android:id="@+id/toolbar"
@@ -252,6 +252,16 @@
                         android:src="@drawable/ic_cash_two" />
 
 
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                        android:id="@+id/points_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@+id/cashtwo"
+                        android:text="Points"
+                        android:textSize="8sp" />
+
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
                         android:id="@+id/three"
@@ -260,7 +270,7 @@
                         android:layout_centerVertical="true"
                         android:layout_gravity="center"
                         android:layout_marginLeft="3dp"
-                        android:layout_toRightOf="@id/cashtwo"
+                        android:layout_toRightOf="@id/points_tv"
                         android:background="@drawable/button_orange"
                         android:paddingBottom="2dp"
                         android:paddingLeft="5dp"

@@ -53,5 +53,7 @@ public class AdapterRestaurantList extends RecyclerView.Adapter<AdapterRestauran
 
     public interface Interface_AdapterRestaurant{
         void method_AdapterRestaurant(int pos);
+
+        void onConnectionSuspended(int i);
     }
 }

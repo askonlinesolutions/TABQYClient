@@ -191,6 +191,7 @@
                     android:src="@drawable/ic_no_of_table" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextView
+                    android:id="@+id/no_of_table_tv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -203,7 +204,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true"></android.support.v7.widget.RecyclerView>
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/no_of_table_tv"
+                    android:layout_marginTop="@dimen/_5sdp"></android.support.v7.widget.RecyclerView>
             </RelativeLayout>
 
             <View

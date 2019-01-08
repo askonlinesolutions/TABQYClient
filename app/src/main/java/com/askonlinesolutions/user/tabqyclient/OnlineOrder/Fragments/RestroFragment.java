@@ -1,33 +1,59 @@
 package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments;
 
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
 import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SearchActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ChooseCuisine;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterRestaurantList;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.servise.GPSTracker;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RestroFragment extends Fragment implements View.OnClickListener,
-        AdapterRestaurantList.Interface_AdapterRestaurant {
-
-    //    List<String> mRestroList = new ArrayList<>();
-//    RestroAdapter mRestro;
+public class RestroFragment extends Fragment implements View.OnClickListener, AdapterRestaurantList.Interface_AdapterRestaurant
+{
+    GPSTracker gps;
+    //    RestroAdapter mRestro;
 //    LinearLayout mCusisne;
     LinearLayout filter, mCusisne, mSearch;
 
@@ -64,6 +90,21 @@ public class RestroFragment extends Fragment implements View.OnClickListener,
 //                startActivity(new Intent(getContext(), DetailActivity.class));
 //            }
 //        });
+        gps = new GPSTracker(getActivity());
+        // check if GPS enabled
+        if(gps.canGetLocation()){
+            double latitude = gps.getLatitude();
+            double longitude = gps.getLongitude();
+            // \n is for new line
+            Toast.makeText(getActivity(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+        }else{
+            // can't get location
+            // GPS or Network is not enabled
+            // Ask user to enable GPS/network in settings
+            gps.showSettingsAlert();
+        }
+
+
 
         return rowView;
     }
@@ -128,4 +169,12 @@ public class RestroFragment extends Fragment implements View.OnClickListener,
             getActivity().overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
         }
     }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+
+
 }
