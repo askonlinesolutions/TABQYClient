@@ -45,7 +45,23 @@ import java.util.List;
 import java.util.Locale;
 
 public class AddAddressActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
-        LocationListener, View.OnClickListener {
+        LocationListener, View.OnClickListener
+//        OnMapReadyCallback,
+//        GoogleApiClient.ConnectionCallbacks,
+//        GoogleApiClient.OnConnectionFailedListener,
+//        GoogleMap.OnMarkerDragListener,
+//        GoogleMap.OnMapLongClickListener,
+//        GoogleMap.OnMarkerClickListener
+
+
+{
+//
+//    private static final String TAG = "AddAddressActivity";
+//    private GoogleMap mMap;
+//    private double longitude;
+//    private double latitude;
+//    private GoogleApiClient googleApiClient;
+
 
     ActivityAddAddressBinding binding;
     String address;
@@ -68,7 +84,10 @@ public class AddAddressActivity extends AppCompatActivity implements OnMapReadyC
 
     private void init() {
 
-        binding.saveBtnTv.setOnClickListener(this);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+binding.saveBtnTv.setOnClickListener(this     );
         setMap();
 
     }
@@ -101,7 +120,9 @@ public class AddAddressActivity extends AppCompatActivity implements OnMapReadyC
                 ContextCompat.checkSelfPermission(this,
                         Manifest.permission.ACCESS_FINE_LOCATION)
                         == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+//            LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
+
+//            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
         }
     }
 
@@ -145,6 +166,9 @@ public class AddAddressActivity extends AppCompatActivity implements OnMapReadyC
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
             LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        }
+        else {
+
         }
     }
 

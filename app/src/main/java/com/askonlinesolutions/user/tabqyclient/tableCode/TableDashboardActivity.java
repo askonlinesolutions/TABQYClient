@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.tableCode;
 
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.PorterDuff;
 import android.support.design.widget.TabLayout;
@@ -14,11 +15,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Commons.Activity.HomeActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityTableDashboardBinding;
 import com.askonlinesolutions.user.tabqyclient.tableCode.menuDashboard.MenuDashboardFragment;
 
-public class TableDashboardActivity extends AppCompatActivity {
+public class TableDashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final String TAG = TableDashboardActivity.class.getSimpleName();
     ViewPagerAdapterTable adapterTable;
@@ -44,7 +46,7 @@ public class TableDashboardActivity extends AppCompatActivity {
 
         mPager = findViewById(R.id.viewpager);
         mTab = findViewById(R.id.tab);
-
+        binding.menuTitle.setOnClickListener(this);
         setupViewPager();
 
     }
@@ -141,4 +143,13 @@ public class TableDashboardActivity extends AppCompatActivity {
         transaction.commit();
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.menu_title:
+                Intent homeIntent = new Intent(TableDashboardActivity.this, HomeActivity.class);
+                startActivity(homeIntent);
+
+        }
+    }
 }

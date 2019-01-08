@@ -8,10 +8,28 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
+
+    <!--<permission-->
+        <!--android:name="com.askonlinesolutions.user.tabqyclient.permission.MAPS_RECEIVE"-->
+        <!--android:protectionLevel="signature" />-->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+
+
 
 
     <uses-feature
@@ -24,6 +42,7 @@
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyDVOfhbag1ROacwa9gZNkUgzdOKeMkk0LI " />
+
 
     <application
         android:allowBackup="true"
@@ -58,7 +77,8 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Commons.Activity.LoginActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name=".OnlineOrder.Activity.ContactDetailActivity"
             android:screenOrientation="portrait" />

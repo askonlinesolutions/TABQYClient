@@ -27,13 +27,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Booking id"
                 android:textColor="@color/sketch_black"
                 android:textSize="@dimen/_11sdp" />
@@ -43,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Date"
                 android:textColor="@color/dark_green"
                 android:textSize="@dimen/_11sdp" />
@@ -52,6 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Expend"
                 android:textColor="@color/dark_green"
                 android:textSize="@dimen/_11sdp" />
@@ -61,6 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:text="Points"
                 android:textColor="@color/dark_green"
                 android:textSize="@dimen/_11sdp" />
@@ -76,7 +80,9 @@
             android:id="@+id/tabqy_rv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
             android:background="@color/white_color">
 
         </android.support.v7.widget.RecyclerView>
