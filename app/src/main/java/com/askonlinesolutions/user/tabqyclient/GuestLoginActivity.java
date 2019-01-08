@@ -3,15 +3,17 @@ package com.askonlinesolutions.user.tabqyclient;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.nfc.NfcAdapter;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
-public class GuestLoginActivity extends AppCompatActivity {
-
+public class GuestLoginActivity extends AppCompatActivity implements View.OnClickListener {
+        TextView activity_login_title;
     ImageView btncross;
 
     @Override
@@ -20,6 +22,8 @@ public class GuestLoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guest_login);
         final Dialog dialog = new Dialog(this);
         Button button = (Button) findViewById(R.id.guest_dialog);
+        activity_login_title=findViewById(R.id.activity_login_title);
+        activity_login_title.setOnClickListener(this);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,5 +45,11 @@ public class GuestLoginActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+
+    }
+
+    @Override
+    public void onClick(View view) {
+        onBackPressed();
     }
 }
