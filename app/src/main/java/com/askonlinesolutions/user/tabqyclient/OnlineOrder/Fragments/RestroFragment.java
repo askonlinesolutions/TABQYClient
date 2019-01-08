@@ -27,6 +27,7 @@ import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SearchActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ChooseCuisine;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterRestaurantList;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.servise.GPSTracker;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -51,7 +52,7 @@ import java.util.Locale;
  */
 public class RestroFragment extends Fragment implements View.OnClickListener, AdapterRestaurantList.Interface_AdapterRestaurant
 {
-
+    GPSTracker gps;
     //    RestroAdapter mRestro;
 //    LinearLayout mCusisne;
     LinearLayout filter, mCusisne, mSearch;
@@ -89,6 +90,21 @@ public class RestroFragment extends Fragment implements View.OnClickListener, Ad
 //                startActivity(new Intent(getContext(), DetailActivity.class));
 //            }
 //        });
+        gps = new GPSTracker(getActivity());
+        // check if GPS enabled
+        if(gps.canGetLocation()){
+            double latitude = gps.getLatitude();
+            double longitude = gps.getLongitude();
+            // \n is for new line
+            Toast.makeText(getActivity(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+        }else{
+            // can't get location
+            // GPS or Network is not enabled
+            // Ask user to enable GPS/network in settings
+            gps.showSettingsAlert();
+        }
+
+
 
         return rowView;
     }
