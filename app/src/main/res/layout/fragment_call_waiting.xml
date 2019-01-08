@@ -44,8 +44,8 @@
             android:visibility="gone"
             android:layout_gravity="center"
             android:gravity="center"
-            android:padding="10dp"
-            android:textSize="20dp"
+            android:padding="@dimen/_10sdp"
+            android:textSize="18dp"
             android:text="Ringing..."/>
         </LinearLayout>
     </LinearLayout>
