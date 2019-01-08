@@ -32,7 +32,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_checkout_card);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        activity_login_title =findViewById(R.id.activity_login_title);
+       // activity_login_title =findViewById(R.id.activity_login_title);
        // ImageView contactDetail = (ImageView) findViewById(R.id.contactDetail);
         // RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.paymentRecyclerView);
         RadioButton radio = (RadioButton) findViewById(R.id.table_order_RB);
@@ -57,6 +57,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         binding.addNew.setOnClickListener(this);
         binding.review.setOnClickListener(this);
         binding.addNewCard.setOnClickListener(this);
+        binding.activityLoginTitle.setOnClickListener(this);
 
 
     }

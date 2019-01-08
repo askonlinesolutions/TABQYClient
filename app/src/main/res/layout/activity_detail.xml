@@ -25,14 +25,12 @@
                 android:text="@string/restaurant_details"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/title_size" />
-
-            <!--
             <RelativeLayout
-                xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+                android:layout_width="match_parent"
+                android:padding="2dp"
+                android:layout_marginTop="5dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginRight="7dp"
-                android:layout_margin="4dp">
+                >
 
                 <RelativeLayout
                     android:id="@+id/imageLayout"
@@ -55,85 +53,75 @@
                     android:layout_toRightOf="@+id/imageLayout"
                     android:orientation="vertical">
 
-
-
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewMedium
                             android:id="@+id/heading_text_restro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="12sp"
-                            android:textColor="@color/sketch_black"
+                            android:textColor="@color/text_color_1"
                             android:text="Dao Xiang Restaurant"/>
-
-
 
                         <ImageView
                             android:id="@+id/discount_image"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="10dp"
+                            android:layout_height="12dp"
                             android:layout_toRightOf="@id/heading_text_restro"
-                            android:layout_marginLeft="4dp"
-                            android:layout_marginTop="6dp"
-                            android:src="@drawable/ic_offer"/>
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="3.5dp"
+                            android:src="@drawable/ic_discount"/>
 
                         <LinearLayout
-                            android:layout_width="28dp"
-                            android:layout_height="17dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_15sdp"
                             android:layout_marginLeft="5dp"
-                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+
                             android:layout_toRightOf="@+id/discount_image">
 
                             <ImageView
                                 android:id="@+id/offer_image"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_gravity="center"
                                 android:layout_toRightOf="@id/discount_image"
-                                android:scaleType="fitXY"
-                                android:scaleY="1.8"
                                 android:src="@drawable/ic_offer_button"/>
 
                         </LinearLayout>
 
-
-
-
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:id="@+id/country_dish"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="9sp"
                             android:layout_marginTop="19dp"
-                            android:text="International,Asian,Chinese"/>
+                            android:textColor="@color/text_color_7"
+                            android:text="International, Asian, Chinese"/>
 
                         <RelativeLayout
                             android:layout_width="55dp"
-                            android:layout_height="18dp"
+                            android:layout_height="20dp"
+                            android:gravity="center"
                             android:layout_alignParentEnd="true"
-                            android:background="@drawable/oval_background">
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/curve_circuler_backgroung">
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Open"
                                 android:textSize="9sp"
                                 android:layout_centerInParent="true"
-                                android:textColor="@android:color/white"/>
+                                android:textColor="@color/white_color"/>
 
 
                         </RelativeLayout>
 
-
-
-
                     </RelativeLayout>
-
-
-
-
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -141,170 +129,130 @@
                         android:orientation="horizontal"
                         android:layout_marginTop="3dp"
                         android:paddingBottom="2dp"
-                        android:background="@drawable/only_curve_background">
-
+                        android:background="@drawable/shape_border_grey">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_centerInParent="true"
-                            android:orientation="horizontal">
+                            android:orientation="horizontal"
+                            android:gravity="center">
 
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="12dp"
-                                android:layout_marginTop="7dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:gravity="center">
 
-                                <TextView
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Distance"
-                                    android:textSize="8sp"/>
-                                <TextView
+                                    android:textSize="7sp"
+                                    android:textColor="@color/text_color_5"/>
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="4 Miles"
-                                    android:textColor="@color/sketch_black"
+                                    android:textColor="@color/text_color_1"
                                     android:textSize="9sp"/>
 
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="35dp"
-                                android:layout_marginTop="7dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:gravity="center">
 
-                                <TextView
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Avg:"
-                                    android:textSize="8sp"/>
-                                <TextView
+                                    android:textColor="@color/text_color_5"
+                                    android:textSize="7sp"/>
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="45 mins"
-                                    android:textColor="@color/sketch_black"
+                                    android:textColor="@color/text_color_1"
                                     android:textSize="9sp"/>
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="35dp"
-                                android:layout_marginTop="7dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:gravity="center">
 
                                 <ImageView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-
                                     android:src="@drawable/ic_free"/>
-                                <TextView
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Free"
-                                    android:textColor="@color/sketch_black"
+                                    android:textColor="@color/text_color_1"
                                     android:textSize="9sp"/>
-
 
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
-                                android:layout_marginLeft="35dp"
-                                android:layout_marginTop="7dp"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:gravity="center">
 
-                                <TextView
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Min.order"
-                                    android:textSize="8sp"/>
-                                <TextView
+                                    android:textColor="@color/text_color_5"
+                                    android:textSize="7sp"/>
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="SR 50.00"
-                                    android:textColor="@color/sketch_black"
+                                    android:text="SAR 50.00"
+                                    android:textColor="@color/text_color_1"
                                     android:textSize="9sp"/>
-
 
                             </LinearLayout>
 
-
-
-
-
                         </LinearLayout>
-
-
-
 
                     </RelativeLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="5dp">
 
+                        <RatingBar
+                            android:id="@+id/review_Rating_Bar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:rating="3.5"
+                            android:theme="@style/userRatingBar" />
 
-                        <ImageView
-                            android:id="@+id/star_a"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginTop="7dp"
-                            android:src="@drawable/ic_star"/>
-                        <ImageView
-                            android:id="@+id/star_b"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toLeftOf="@+id/star_a"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginTop="7dp"
-                            android:src="@drawable/ic_star"/>
-                        <ImageView
-                            android:id="@+id/star_c"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toLeftOf="@+id/star_b"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginTop="7dp"
-                            android:src="@drawable/ic_star"/>
-                        <ImageView
-                            android:id="@+id/star_d"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
-                            android:layout_toLeftOf="@+id/star_c"
-                            android:layout_marginTop="7dp"
-                            android:src="@drawable/ic_star"/>
-                        <ImageView
-                            android:id="@+id/star_e"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginTop="7dp"
-                            android:layout_toLeftOf="@+id/star_d"
-                            android:src="@drawable/ic_star_b"/>
-
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textSize="7sp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/text_color_5"
+                            android:layout_marginLeft="3dp"
                             android:text="(461rating)"/>
-
-
 
                         <ImageView
                             android:layout_width="wrap_content"
@@ -329,69 +277,62 @@
                             android:scaleY="1.1"
                             android:src="@drawable/ic_cash_two"/>
 
-                       <RelativeLayout
-                           android:layout_width="match_parent"
-                           android:layout_height="wrap_content">
-
-                           <LinearLayout
-                               android:layout_width="wrap_content"
-                               android:layout_height="wrap_content"
-                               android:orientation="horizontal"
-                               android:layout_marginTop="5dp"
-                               android:layout_alignParentEnd="true"
-                               android:layout_marginRight="7dp">
-
-                               <ImageView
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content"
-                                   android:layout_marginRight="6dp"
-                                   android:src="@drawable/ic_heart"/>
-
-                               <TextView
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content"
-                                   android:text="Points"
-                                   android:textSize="7sp"/>
-
-                               <RelativeLayout
-                                   android:layout_width="9.6dp"
-                                   android:layout_height="9.6dp"
-                                   android:layout_marginLeft="4dp"
-                                   android:layout_marginRight="4dp"
-                                   android:background="@drawable/circle_background">
-
-                                   <TextView
-                                       android:layout_width="wrap_content"
-                                       android:layout_height="wrap_content"
-                                       android:text="3"
-                                       android:textColor="@android:color/white"
-                                       android:layout_centerInParent="true"
-                                       android:textSize="7sp"/>
 
 
-                               </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="5dp">
+                            <ImageView
+                                android:layout_width="9dp"
+                                android:layout_height="9dp"
+                                android:src="@drawable/ic_like"
+                                />
 
-                               <ImageView
-                                   android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content"
-                                   android:layout_marginRight="7dp"
-                                   android:src="@drawable/ic_coins"/>
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Points"
+                                android:textSize="7dp"
+                                android:layout_marginLeft="3dp"
+                                android:textColor="@color/text_color_5" />
 
-                           </LinearLayout>
+                            <RelativeLayout
+                                android:layout_width="9.6dp"
+                                android:layout_height="9.6dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/circle_background">
+
+                                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3"
+                                    android:textColor="@android:color/white"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="7sp"/>
 
 
-                       </RelativeLayout>
+                            </RelativeLayout>
 
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/ic_coins"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
-
 
                 </LinearLayout>
 
             </RelativeLayout>
-        -->
 
-            <include layout="@layout/item_restaurant_list" />
+
+            <!--<include layout="@layout/item_restaurant_list" />-->
 
             <View
                 android:layout_width="match_parent"

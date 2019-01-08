@@ -22,7 +22,7 @@ public class TableReservation extends AppCompatActivity implements View.OnClickL
 
     private TableMyCartAdapter tableMyCartAdapter;
     private ImageView iv_back_table_reservation;
-    private TextView tv_nofood, tv_book, addFoodItem;
+    private TextView tv_nofood, tv_book, addFoodItem,food;
     private RelativeLayout food_rel;
     LinearLayout add_food_layout, total_layout;
     RecyclerView foodRV;
@@ -40,6 +40,7 @@ public class TableReservation extends AppCompatActivity implements View.OnClickL
         foodRV = findViewById(R.id.food_menu_rv);
         total_layout = findViewById(R.id.total_layout);
         add_food_layout = findViewById(R.id.add_food_layout);
+        food =findViewById(R.id.food);
         iv_back_table_reservation.setOnClickListener(this);
         tv_book.setOnClickListener(this);
         addFoodItem.setOnClickListener(this);
@@ -49,11 +50,13 @@ public class TableReservation extends AppCompatActivity implements View.OnClickL
         if (s.equals("tv_withoutfood")) {
             showToast(getBaseContext(), "Done");
             tv_nofood.setVisibility(View.GONE);
+            food.setVisibility(View.GONE);
             add_food_layout.setVisibility(View.VISIBLE);
             food_rel.setVisibility(View.GONE);
             total_layout.setVisibility(View.GONE);
         } else if (s.equals("tv_withfood")) {
             food_rel.setVisibility(View.VISIBLE);
+            food.setVisibility(View.VISIBLE);
             tv_nofood.setVisibility(View.GONE);
             total_layout.setVisibility(View.VISIBLE);
             add_food_layout.setVisibility(View.GONE);

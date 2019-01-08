@@ -8,8 +8,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:padding="2dp"
         android:layout_height="wrap_content"
-        android:layout_margin="7dp">
+>
 
         <RelativeLayout
             android:id="@+id/imageLayout"
@@ -46,23 +47,26 @@
 
                 <ImageView
                     android:id="@+id/discount_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="10dp"
+                    android:layout_height="12dp"
                     android:layout_toRightOf="@id/heading_text_restro"
                     android:layout_marginLeft="5dp"
-                    android:layout_marginTop="6dp"
-                    android:src="@drawable/ic_offer"/>
+                    android:layout_marginTop="3.5dp"
+                    android:src="@drawable/ic_discount"/>
 
                 <LinearLayout
-                    android:layout_width="28dp"
-                    android:layout_height="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_15sdp"
                     android:layout_marginLeft="5dp"
+                    android:gravity="center"
+
                     android:layout_toRightOf="@+id/discount_image">
 
                     <ImageView
                         android:id="@+id/offer_image"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
                         android:layout_toRightOf="@id/discount_image"
                         android:src="@drawable/ic_offer_button"/>
 
@@ -79,8 +83,11 @@
 
                 <RelativeLayout
                     android:layout_width="55dp"
-                    android:layout_height="18dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
                     android:layout_alignParentEnd="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
                     android:background="@drawable/circle_green_background">
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular

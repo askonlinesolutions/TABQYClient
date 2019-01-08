@@ -6,6 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -15,6 +17,8 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
 
     private Context context;
     MyReservationAdapterInterface myReservationAdapterInterface;
+    private boolean isVisible = true;
+    private boolean isShow = true;
 
     public MyReservationAdapter(Context context,MyReservationAdapterInterface myReservationAdapterInterface){
         this.context = context;
@@ -47,16 +51,21 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView accepted,cancel;
+        TextView accepted,cancel,menu_btn;
+        RelativeLayout food_rel;
+        LinearLayout food;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
             accepted = itemView.findViewById(R.id.tv_accepted);
             cancel = itemView.findViewById(R.id.tv_cancel);
-
+            menu_btn=itemView.findViewById(R.id.menu_btn);
+            food_rel =itemView.findViewById(R.id.food_rel);
+            food=itemView.findViewById(R.id.food);
             accepted.setOnClickListener(this);
             cancel.setOnClickListener(this);
+            menu_btn.setOnClickListener(this);
         }
 
         @Override
@@ -70,6 +79,20 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
                     break;
                     default:
                         break;
+                case  R.id.menu_btn:
+                    if (isVisible) {
+                        food_rel.setVisibility(View.GONE);
+                        menu_btn.setBackgroundResource(R.drawable.ic_down_arrow_);
+                        isVisible = false;
+                    }else
+                    {
+                        food_rel.setVisibility(View.VISIBLE);
+                        menu_btn.setBackgroundResource(R.drawable.ic_up_arrow);
+                        isVisible=true;
+                    }
+                    break;
+
+
             }
         }
     }
