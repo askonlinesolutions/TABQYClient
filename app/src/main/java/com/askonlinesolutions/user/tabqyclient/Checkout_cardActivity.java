@@ -12,6 +12,7 @@ import android.view.View;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityCheckoutCardBinding;
 
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
     ActivityCheckoutCardBinding binding;
     ImageView contactDetail;
     TextView activity_login_title;
+    LinearLayout deliveryLayout;
     private boolean isVisible = true;
     private boolean isShow = true;
     ArrayList name = new ArrayList<>(Arrays.asList("Riyadh,Sulimania Dabbab", "Riyadh,Sulimania Dabbab "));
@@ -105,13 +107,14 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                     binding.addNew.setVisibility(View.GONE);
                     binding.radio.setVisibility(View.GONE);
                     binding.pickup.setVisibility(View.GONE);
-
+                 binding.deliveryLayout.setVisibility(View.GONE);
                     binding.editImageOrder.setImageResource(R.drawable.ic_down_arrow_prime);
                     isVisible = false;
                 } else {
                     binding.recyclerView.setVisibility(View.VISIBLE);
                     binding.addNew.setVisibility(View.VISIBLE);
-                    binding.pickup.setVisibility(View.VISIBLE);
+                    binding.pickup.setVisibility(View.GONE);
+                    binding.deliveryLayout.setVisibility(View.VISIBLE);
                     binding.addNewCard.setVisibility(View.VISIBLE);
                     binding.radio.setVisibility(View.VISIBLE);
                     binding.editImageOrder.setImageResource(R.drawable.ic_up_arrow_prime);
