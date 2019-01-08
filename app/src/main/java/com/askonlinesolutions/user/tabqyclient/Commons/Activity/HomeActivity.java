@@ -25,23 +25,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         init();
     }
-private TextView TableCode;
+
     private RelativeLayout layout_login, layout_online_order, layout_reservation;
     TextView tablecode_btn;
 
-    private void init(){
+    private void init() {
 
         layout_login = findViewById(R.id.activity_home_layout_login);
         layout_online_order = findViewById(R.id.activity_home_layout_online_order);
         layout_reservation = findViewById(R.id.activity_home_layout_reservation);
-        tablecode_btn =findViewById(R.id.table_code_tv);
-        TableCode=findViewById(R.id.table_code_tv);
+        tablecode_btn = findViewById(R.id.table_code_tv);
+//        TableCode=findViewById(R.id.table_code_tv);
 
         layout_login.setOnClickListener(this);
         layout_online_order.setOnClickListener(this);
         layout_reservation.setOnClickListener(this);
         tablecode_btn.setOnClickListener(this);
-        TableCode.setOnClickListener(this);
+//        TableCode.setOnClickListener(this);
 
     }
 
@@ -58,17 +58,22 @@ private TextView TableCode;
         if (id1 == R.id.activity_home_layout_online_order) {
 //            startActivity(new Intent(HomeActivity.this, MainActivity.class));
             startActivity(new Intent(HomeActivity.this, DrawerHomeActivity.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
         } else if (id1 == R.id.activity_home_layout_reservation) {
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
         } else if (id1 == R.id.activity_home_layout_login) {
-            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
-            overridePendingTransition(R.anim.slide_from_right,R.anim.slide_to_left);
-        } else if (id1==R.id.table_code_tv){
+            Intent intent = new Intent(this, LoginActivity.class);
+            intent.putExtra("login", "LOGIN");
+
+            startActivity(intent);
+//            startActivity(new Intent(HomeActivity.this, LoginActivity.class));
+            overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+
+        } else if (id1 == R.id.table_code_tv) {
 
             Intent intent = new Intent(this, LoginActivity.class);
-            intent.putExtra("key","TABLE_CODE");
+            intent.putExtra("key", "TABLE_CODE");
 
             startActivity(intent);
             this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);

@@ -31,11 +31,13 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.res
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.tabqyPoints.TabqyPointsActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityDrawerHomeBinding;
+import com.askonlinesolutions.user.tabqyclient.tableCode.qrCode.QRCodeActivity;
 
 public class DrawerHomeActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
     ActivityDrawerHomeBinding binding;
     private static final String TAG = DrawerHomeActivity.class.getSimpleName();
     String value;
+    DrawerLayout drawer;
 
     final int[] ICONS = new int[]{R.drawable.ic_magnifying_glass_white, R.drawable.ic_offer_bottom, R.drawable.ic_cart, R.drawable.ic_order_status,
             R.drawable.ic_account};
@@ -295,7 +297,11 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
 
             case R.id.nav_qrcode:
 
+                Intent intentQr = new Intent(DrawerHomeActivity.this, QRCodeActivity.class);
+                startActivity(intentQr);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
                 break;
+
             case R.id.nav_points_tv:
 
                 if (isPoint) {
@@ -363,6 +369,21 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
                 }
                 break;
 
+            case R.id.nav_receipt_tv:
+                Intent intentReceipt = new Intent(DrawerHomeActivity.this, MyReceiptActivity.class);
+                startActivity(intentReceipt);
+                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
+            case R.id.nav_offer_tv:
+                mPager.setCurrentItem(1);
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                if (drawer.isDrawerOpen(GravityCompat.START)) {
+                    drawer.closeDrawer(GravityCompat.START);
+                } else {
+//                    super.onBackPressed();
+                }
+//                this.overridePendingTransition(R.anim.slide_from_right, R.anim.slide_to_left);
+                break;
         }
 
     }
@@ -387,7 +408,7 @@ public class DrawerHomeActivity extends AppCompatActivity implements View.OnClic
 //
 //        }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

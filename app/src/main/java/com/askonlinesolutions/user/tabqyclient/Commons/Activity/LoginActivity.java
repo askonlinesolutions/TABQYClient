@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.Helper.Utils;
 import com.askonlinesolutions.user.tabqyclient.R;
@@ -17,7 +18,7 @@ import com.askonlinesolutions.user.tabqyclient.tableCode.TableDashboardActivity;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView tv_login, tv_signup, tv_title, tv_forgot_password;
     private EditText edt_email, edt_password;
-    String value;
+    String value, login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +66,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(new Intent(LoginActivity.this, TableDashboardActivity.class));
                 setupWindowAnimations();
                 login();
+            } else if (login != null && login.equals("LOGIN")) {
+
+                startActivity(new Intent(LoginActivity.this, DrawerHomeActivity.class));
+                setupWindowAnimations();
+                login();
+
             } else {
+
                 startActivity(new Intent(LoginActivity.this, FindRestaurants.class));
                 setupWindowAnimations();
                 login();
@@ -82,6 +90,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             value = extras.getString("key");
+            login = extras.getString("login");
             //The key argument here must match that used in the other activity
         }
         if (value != null && value.equals("TABLE_CODE")) {

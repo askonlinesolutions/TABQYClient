@@ -117,7 +117,7 @@
                 android:layout_height="1.7dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="5dp"
-                android:background="@android:color/white"></View>
+                android:background="@android:color/white"/>
 
             <RelativeLayout
                 android:id="@+id/activity_home_layout_login"
