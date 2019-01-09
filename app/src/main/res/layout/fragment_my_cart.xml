@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:background="#FCFCFC"
+        android:orientation="vertical"
         tools:context=".OnlineOrder.Activity.MyCart">
 
-<!--
-        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:text="@string/my_cart"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/title_size"
-            android:gravity="center_vertical"
-            android:drawableLeft="@drawable/ic_back"
-            android:drawablePadding="15dp"
-            android:paddingLeft="15dp"
-            android:background="@color/theme_color"/>
+        <!--
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:text="@string/my_cart"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/title_size"
+                    android:gravity="center_vertical"
+                    android:drawableLeft="@drawable/ic_back"
+                    android:drawablePadding="15dp"
+                    android:paddingLeft="15dp"
+                    android:background="@color/theme_color"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/bg_color_2"/>
--->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/bg_color_2"/>
+        -->
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:id="@+id/activity_my_cart_recycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white_color"/>
+                android:background="@color/white_color" />
 
 
         </android.support.v7.widget.CardView>
@@ -47,92 +47,97 @@
         <View
             android:layout_width="match_parent"
             android:layout_height=".5dp"
-            android:background="@color/bg_color_2"
-            android:layout_marginTop="100sp"/>
+            android:layout_marginTop="100sp"
+            android:background="@color/bg_color_2" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40sp"
+            android:background="@color/white_color"
             android:paddingLeft="15dp"
-            android:paddingRight="@dimen/size_15"
-            android:background="@color/white_color">
+            android:paddingRight="@dimen/size_15">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
+                android:layout_alignParentLeft="true"
+                android:gravity="center_vertical"
                 android:text="@string/subtotal"
                 android:textColor="@color/text_color_8"
-                android:textSize="@dimen/size_12"
-                android:gravity="center_vertical"
-                android:layout_alignParentLeft="true"/>
+                android:textSize="@dimen/size_12" />
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
                 android:text="SAR 144.00"
                 android:textColor="@color/text_color_8"
-                android:textSize="@dimen/size_12"
-                android:gravity="center_vertical"
-                android:layout_alignParentRight="true"/>
+                android:textSize="@dimen/size_12" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height=".5dp"
             android:background="@color/bg_color_2" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40sp"
+            android:background="@color/white_color"
             android:paddingLeft="15dp"
-            android:paddingRight="@dimen/size_15"
-            android:background="@color/white_color">
+            android:paddingRight="@dimen/size_15">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
-                android:text="@string/vat"
-                android:textSize="@dimen/size_12"
-                android:textColor="@color/text_color_8"
+                android:layout_alignParentLeft="true"
                 android:gravity="center_vertical"
-                android:layout_alignParentLeft="true"/>
+                android:text="@string/vat"
+                android:textColor="@color/text_color_8"
+                android:textSize="@dimen/size_12" />
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
                 android:text="SAR 5.00"
                 android:textColor="@color/text_color_8"
-                android:textSize="@dimen/size_12"
-                android:gravity="center_vertical"
-                android:layout_alignParentRight="true"/>
+                android:textSize="@dimen/size_12" />
 
         </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height=".5dp"
             android:background="@color/bg_color_2" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40sp"
+            android:background="@color/white_color"
             android:paddingLeft="15dp"
-            android:paddingRight="@dimen/size_15"
-            android:background="@color/white_color">
+            android:paddingRight="@dimen/size_15">
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
-                android:text="@string/grand_total"
-                android:textSize="@dimen/size_12"
-                android:textColor="@color/text_color_8"
+                android:layout_alignParentLeft="true"
                 android:gravity="center_vertical"
-                android:layout_alignParentLeft="true"/>
+                android:text="@string/grand_total"
+                android:textColor="@color/text_color_8"
+                android:textSize="@dimen/size_12" />
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="wrap_content"
                 android:layout_height="40sp"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
                 android:text="Determined after select delivery address"
                 android:textColor="@color/red_color"
-                android:textSize="@dimen/size_8"
-                android:gravity="center_vertical"
-                android:layout_alignParentRight="true"/>
+                android:textSize="@dimen/size_8" />
 
         </RelativeLayout>
 
@@ -144,17 +149,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:background="@color/white_color">
+            android:background="@color/white_color"
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50sp"
-                android:background="@drawable/shape_dotted_border_theme"
+                android:layout_marginBottom="7sp"
                 android:layout_marginLeft="@dimen/size_15"
                 android:layout_marginRight="@dimen/size_15"
                 android:layout_marginTop="7sp"
-                android:layout_marginBottom="7sp">
+                android:background="@drawable/shape_dotted_border_theme">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -163,30 +168,30 @@
                     android:layout_toLeftOf="@+id/activity_cart_btn_redeem">
 
                     <EditText
-                        android:background="@null"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="@dimen/size_10"
-                        android:textColor="@color/hint_color"
-                        android:hint="@string/enter_coupon_code_here"
-                        android:gravity="center"
                         android:layout_centerInParent="true"
+                        android:background="@null"
                         android:drawableLeft="@drawable/ic_offer"
+                        android:drawablePadding="@dimen/size_10"
+                        android:gravity="center"
+                        android:hint="@string/enter_coupon_code_here"
                         android:inputType="text"
-                        android:drawablePadding="@dimen/size_10" />
+                        android:textColor="@color/hint_color"
+                        android:textSize="@dimen/size_10" />
 
                 </RelativeLayout>
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                    android:id="@+id/activity_cart_btn_redeem"
                     android:layout_width="130dp"
                     android:layout_height="match_parent"
-                    android:id="@+id/activity_cart_btn_redeem"
-                    android:textSize="@dimen/size_12"
-                    android:textColor="@android:color/white"
-                    android:text="@string/redeem"
-                    android:gravity="center"
+                    android:layout_alignParentRight="true"
                     android:background="@drawable/shape_background_button"
-                    android:layout_alignParentRight="true"/>
+                    android:gravity="center"
+                    android:text="@string/redeem"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_12" />
 
             </RelativeLayout>
 
@@ -199,46 +204,45 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingRight="@dimen/size_20"
-                android:paddingLeft="@dimen/size_20"
                 android:paddingBottom="@dimen/size_15"
+                android:paddingLeft="@dimen/size_20"
+                android:paddingRight="@dimen/size_20"
                 android:paddingTop="@dimen/size_15">
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:id="@+id/detail_btn"
+                    android:layout_width="0dp"
                     android:layout_height="35dp"
-
-                    android:textSize="@dimen/size_10"
-                    android:textColor="@android:color/white"
-                    android:text="@string/add_more"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_button"
                     android:gravity="center"
-                    android:background="@drawable/shape_background_button"/>
+                    android:text="@string/add_more"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_10" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:id="@+id/checkout_btn"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="35dp"
-                    android:textSize="@dimen/size_10"
-                    android:textColor="@android:color/white"
-                    android:text="@string/checkout"
-                    android:gravity="center"
-                    android:background="@drawable/shape_background_button"
+                    android:layout_marginLeft="@dimen/size_5"
                     android:layout_marginRight="@dimen/size_5"
-                    android:layout_marginLeft="@dimen/size_5"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_button"
+                    android:gravity="center"
+                    android:text="@string/checkout"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_10" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:id="@+id/guest_btn"
+                    android:layout_width="0dp"
                     android:layout_height="35dp"
-                    android:textSize="@dimen/size_10"
-                    android:textColor="@android:color/white"
-                    android:text="@string/checkout_as_guest"
+                    android:layout_weight="1"
+                    android:background="@drawable/shape_background_button"
                     android:gravity="center"
-                    android:background="@drawable/shape_background_button"/>
+                    android:text="@string/checkout_as_guest"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/size_10" />
 
 
             </LinearLayout>

@@ -56,7 +56,8 @@
                             android:orientation="vertical">
 
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -65,7 +66,8 @@
                                 android:textSize="16sp"
                                 android:textStyle="bold" />
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -74,7 +76,8 @@
                                 android:text="Azeem Anwar"
                                 android:textSize="13sp" />
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -83,7 +86,8 @@
                                 android:text="bestforsale@gmail.com"
                                 android:textSize="10sp" />
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="15dp"
@@ -126,7 +130,7 @@
                             android:orientation="horizontal">
 
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -196,7 +200,7 @@
 
                     </LinearLayout>
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:id="@+id/pickup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -267,7 +271,7 @@
                             android:layout_alignParentTop="true"
                             android:orientation="horizontal">
 
-                            <TextView
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -403,18 +407,18 @@
                                     android:layout_height="match_parent"
                                     android:layout_below="@id/cashing"
                                     android:layout_margin="1dp"
-                                    android:textSize="@dimen/_10sdp"
                                     android:text="3437XXXXXXX743|VISA"
+                                    android:textSize="@dimen/_10sdp"
                                     android:visibility="visible" />
 
                                 <RadioButton
                                     android:id="@+id/cashDelivery1"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:layout_margin="1dp"
                                     android:layout_below="@id/cashing"
-                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_margin="1dp"
                                     android:text="3437XXXXXXX743|VISA"
+                                    android:textSize="@dimen/_10sdp"
                                     android:visibility="visible" />
                             </RadioGroup>
 
@@ -434,15 +438,15 @@
                         </LinearLayout>
 
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
-                        <TextView
+                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
