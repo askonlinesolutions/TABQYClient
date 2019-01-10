@@ -46,7 +46,7 @@ public class TableMyCartAdapter extends RecyclerView.Adapter<TableMyCartAdapter.
     @Override
     public int getItemCount() {
         //return dataSource.length;
-        return 6;
+        return 2;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

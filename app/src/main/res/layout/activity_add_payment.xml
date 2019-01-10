@@ -82,12 +82,13 @@
                     android:layout_weight="1"
                     android:background="@null"
                     android:hint="Visa /delta/Electron"
+                    android:padding="5dp"
                     android:textSize="13dp" />
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
-                    android:layout_gravity="right"
+                    android:layout_gravity="center"
                     android:src="@drawable/ic_down_arrow_" />
 
 
@@ -108,8 +109,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/pamentbackground"
                 android:inputType="textEmailAddress"
-                android:padding="4dp"
-                android:singleLine="true" />
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textSize="@dimen/_10sdp" />
 
 
             <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
@@ -128,8 +130,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/pamentbackground"
                 android:inputType="phone"
-                android:padding="2dp"
+                android:maxLength="16"
+                android:padding="10dp"
                 android:singleLine="true"
+                android:textSize="@dimen/_10sdp"
                 android:translationY="3dp" />
 
 
@@ -164,10 +168,12 @@
                         android:id="@+id/mm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_margin="1dp"
+                        android:layout_marginRight="5dp"
                         android:background="@drawable/pamentbackground"
                         android:inputType="phone"
-                        android:padding="5dp" />
+                        android:maxLength="2"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -192,9 +198,12 @@
                         android:id="@+id/yy"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
                         android:background="@drawable/pamentbackground"
                         android:inputType="phone"
-                        android:padding="5dp" />
+                        android:maxLength="4"
+                        android:padding="10dp"
+                        android:textSize="@dimen/_10sdp" />
                 </LinearLayout>
 
 
@@ -214,7 +223,9 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/pamentbackground"
                 android:inputType="phone"
-                android:padding="2dp" />
+                android:maxLength="3"
+                android:padding="10dp"
+                android:textSize="@dimen/_10sdp" />
 
         </LinearLayout>
 

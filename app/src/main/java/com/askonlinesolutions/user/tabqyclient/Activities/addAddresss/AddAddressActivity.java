@@ -44,7 +44,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
-public class AddAddressActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
+public class AddAddressActivity extends AppCompatActivity implements OnMapReadyCallback,
+        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener,
         LocationListener, View.OnClickListener
 //        OnMapReadyCallback,
 //        GoogleApiClient.ConnectionCallbacks,
@@ -87,7 +88,8 @@ public class AddAddressActivity extends AppCompatActivity implements OnMapReadyC
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-binding.saveBtnTv.setOnClickListener(this     );
+        binding.saveBtnTv.setOnClickListener(this);
+        binding.addressBackBtn.setOnClickListener(this);
         setMap();
 
     }
@@ -165,9 +167,8 @@ binding.saveBtnTv.setOnClickListener(this     );
         if (ContextCompat.checkSelfPermission(this,
                 Manifest.permission.ACCESS_FINE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
-            LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
-        }
-        else {
+          // LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, this);
+        } else {
 
         }
     }
@@ -309,6 +310,8 @@ binding.saveBtnTv.setOnClickListener(this     );
                 onBackPressed();
                 this.overridePendingTransition(R.anim.slide_from_left, R.anim.slide_to_right);
                 break;
+            case R.id.address_back_btn:
+                onBackPressed();
         }
     }
 

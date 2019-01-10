@@ -19,8 +19,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_like" />
-                            <entry key="sourceFile" value="D:\aayushi\ofc\like.svg" />
+                            <entry key="height" value="212" />
+                            <entry key="outputName" value="ic_user_thanks" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="D:\aayushi\ofc\svg-icons\user-thanks.svg" />
+                            <entry key="width" value="212" />
                           </map>
                         </option>
                       </PersistentState>
