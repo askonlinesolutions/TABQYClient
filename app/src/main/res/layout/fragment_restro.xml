@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OnlineOrder.Fragments.RestroFragment">
+    tools:context=".OnlineOrder.Fragments.restroFragment.RestroFragment">
 
     <View
         android:layout_width="match_parent"

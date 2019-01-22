@@ -19,11 +19,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="212" />
-                            <entry key="outputName" value="ic_user_thanks" />
+                            <entry key="height" value="1180" />
+                            <entry key="outputName" value="ic_call_call_waiter2" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="D:\aayushi\ofc\svg-icons\user-thanks.svg" />
-                            <entry key="width" value="212" />
+                            <entry key="sourceFile" value="D:\aayushi\MarvelPrototype_9i1agje_30102018104817_v6\call-call-waiter2.svg" />
+                            <entry key="width" value="1242" />
                           </map>
                         </option>
                       </PersistentState>

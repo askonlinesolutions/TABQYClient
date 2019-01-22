@@ -13,8 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.detail_id.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 import com.askonlinesolutions.user.tabqyclient.tableCode.myCart.TableMyCartAdapter;
 

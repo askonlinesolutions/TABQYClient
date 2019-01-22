@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white_color"
-    tools:context=".Commons.Activity.RegisterActivity">
+    tools:context=".Commons.Activity.signUp.RegisterActivity">
 
     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
         android:layout_width="match_parent"
@@ -54,7 +54,8 @@
               android:hint="@string/phone"
               android:textColorHint="@color/hint_color"
               android:textSize="@dimen/size_12"
-              android:inputType="phone"
+              android:inputType="text"
+              android:maxLength="10"
               android:background="@android:color/transparent"
               android:layout_marginTop="20dp"
               android:paddingLeft="5dp"/>

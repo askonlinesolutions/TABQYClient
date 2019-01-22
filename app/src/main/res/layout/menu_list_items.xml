@@ -131,6 +131,7 @@
 
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewLight
+                       android:id="@+id/defaultprice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"

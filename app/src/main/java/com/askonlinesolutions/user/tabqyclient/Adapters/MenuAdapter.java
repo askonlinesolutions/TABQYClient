@@ -98,7 +98,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
 
     @Override
     public int getItemCount() {
-        return mMenuList.size();
+        return 2;
     }
 
     public interface Interface_AdapterMenu {

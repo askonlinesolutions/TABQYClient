@@ -42,7 +42,7 @@ public class OldOrderStatusAdapter extends RecyclerView.Adapter<OldOrderStatusAd
     @Override
     public int getItemCount() {
         //return dataSource.length;
-        return 6;
+        return 2;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

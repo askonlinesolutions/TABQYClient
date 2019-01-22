@@ -52,7 +52,7 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView accepted,cancel,menu_btn;
-        RelativeLayout food_rel;
+        RelativeLayout food_rel,food_menu_hide;
         LinearLayout food;
 
         public MyViewHolder(View itemView) {
@@ -62,10 +62,12 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
             cancel = itemView.findViewById(R.id.tv_cancel);
             menu_btn=itemView.findViewById(R.id.menu_btn);
             food_rel =itemView.findViewById(R.id.food_rel);
+            food_menu_hide=itemView.findViewById(R.id.food_menu_hide);
             food=itemView.findViewById(R.id.food);
             accepted.setOnClickListener(this);
             cancel.setOnClickListener(this);
             menu_btn.setOnClickListener(this);
+            food_menu_hide.setOnClickListener(this);
         }
 
         @Override
@@ -79,7 +81,7 @@ public class MyReservationAdapter extends RecyclerView.Adapter<MyReservationAdap
                     break;
                     default:
                         break;
-                case  R.id.menu_btn:
+                case  R.id.food_menu_hide:
                     if (isVisible) {
                         food_rel.setVisibility(View.GONE);
                         menu_btn.setBackgroundResource(R.drawable.ic_down_arrow_);

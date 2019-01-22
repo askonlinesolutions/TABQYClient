@@ -485,7 +485,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Starter"
+                android:text="Resturent Special"
                 android:textColor="@color/white_color"
                 android:textSize="12sp" />
 
@@ -494,7 +494,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Soup"
+                android:text="Discountes"
                 android:textColor="@color/white_color"
                 android:textSize="12sp" />
 

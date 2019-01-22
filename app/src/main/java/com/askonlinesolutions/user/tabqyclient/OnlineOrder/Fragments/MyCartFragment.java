@@ -16,7 +16,7 @@ import com.askonlinesolutions.user.tabqyclient.Adapters.MenuAdapter;
 import com.askonlinesolutions.user.tabqyclient.Checkout_cardActivity;
 import com.askonlinesolutions.user.tabqyclient.GuestLoginActivity;
 import com.askonlinesolutions.user.tabqyclient.Model.MenuModel;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.DetailActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.detail_id.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemsDetailActivity;
 import com.askonlinesolutions.user.tabqyclient.R;
 

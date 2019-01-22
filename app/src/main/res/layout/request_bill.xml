@@ -13,7 +13,7 @@
             android:layout_centerHorizontal="true"
             android:background="@drawable/lock_background"
             android:elevation="5dp"
-            android:src="@drawable/ic_location_lock" />
+            android:src="@drawable/ic_user_thanks" />
 
         <ImageView
             android:id="@+id/close_img"
@@ -29,7 +29,7 @@
             android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-         android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
             android:elevation="3dp"
 
             android:orientation="horizontal">
@@ -37,9 +37,9 @@
 
             <RelativeLayout
                 android:id="@+id/dialog_yes"
-                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:visibility="visible">
 
 
@@ -97,8 +97,8 @@
             <LinearLayout
                 android:id="@+id/press_yes"
                 android:layout_width="match_parent"
-                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:orientation="vertical"
                 android:visibility="gone">
 
@@ -117,90 +117,91 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_5sdp"
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
-                        android:padding="@dimen/_10sdp"
                         android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_marginBottom="@dimen/_5sdp"
                         android:background="@drawable/shape_light_gray_backgroung"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp">
 
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:gravity="center"
-                            android:text="Order bill :"
-                            android:textSize="@dimen/_12sdp" />
+                            android:orientation="horizontal">
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Order bill :"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=" 177.45"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
                             android:gravity="center"
-                            android:text=" 177.45"
-                            android:textSize="@dimen/_12sdp" />
-                    </LinearLayout>
+                            android:orientation="horizontal">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_marginLeft="25dp"
-                        android:orientation="horizontal">
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Tip :"
+                                android:textSize="@dimen/_12sdp" />
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=" 05"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
+
                             android:gravity="center"
-                            android:text="Tip :"
-                            android:textSize="@dimen/_12sdp" />
+                            android:orientation="horizontal">
 
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text=" 05"
-                            android:textSize="@dimen/_12sdp" />
-                    </LinearLayout>
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Payble Amount :"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/_12sdp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Payble Amount :"
-                            android:textColor="@color/light_black"
-                            android:textSize="@dimen/_12sdp" />
-
-                        <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text=" 182.45"
-                            android:textColor="@color/light_black"
-                            android:textSize="@dimen/_12sdp" />
-                    </LinearLayout>
+                            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text=" 182.45"
+                                android:textColor="@color/light_black"
+                                android:textSize="@dimen/_12sdp" />
+                        </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
@@ -249,8 +250,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                        android:text=""
                                         android:paddingRight="3dp"
+                                        android:text="QZ"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -284,8 +285,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
+                                        android:paddingRight="3dp"
                                         android:text="ABC"
-                                       android:paddingRight="3dp"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -358,8 +359,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                        android:text="GHI"
                                         android:paddingRight="3dp"
+                                        android:text="GHI"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -394,8 +395,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                        android:text="JKL"
                                         android:paddingRight="3dp"
+                                        android:text="JKL"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -428,8 +429,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
+                                        android:paddingRight="3dp"
                                         android:text="MNO"
-                                           android:paddingRight="3dp"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -471,8 +472,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                        android:text="PRS"
                                         android:paddingRight="3dp"
+                                        android:text="PRS"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -507,8 +508,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                        android:text="TUV"
                                         android:paddingRight="3dp"
+                                        android:text="TUV"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>
@@ -618,7 +619,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_marginBottom="13dp"
-                                                android:paddingRight="25dp"
+                                        android:paddingRight="25dp"
                                         android:textSize="10dp" />
                                 </LinearLayout>
                             </android.support.v7.widget.CardView>

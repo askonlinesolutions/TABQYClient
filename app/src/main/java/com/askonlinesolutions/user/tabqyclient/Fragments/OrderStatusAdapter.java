@@ -37,14 +37,14 @@ public class OrderStatusAdapter extends RecyclerView.Adapter<OrderStatusAdapter.
 
     @Override
     public void onBindViewHolder(OrderStatusAdapter.MyViewHolder holder, int position) {
-        //  holder.textView.setText(dataSource[position]);
-
+        // holder.canceleBtn.setText(dataSource[position]);
+       // holder.trackOrderBtn.setText(dataSource[position]);
     }
 
     @Override
     public int getItemCount() {
         //return dataSource.length;
-        return 6;
+        return 2;
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {

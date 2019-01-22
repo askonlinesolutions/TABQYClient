@@ -8,7 +8,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.OfferFragment;
 import com.askonlinesolutions.user.tabqyclient.Fragments.OrderStatusFragment;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragment;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.restroFragment.RestroFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.AccountFragment;
 
 public class AdapterViewPagerMain extends FragmentPagerAdapter

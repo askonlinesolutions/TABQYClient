@@ -25,7 +25,7 @@ public class TableDashboardActivity extends AppCompatActivity implements View.On
     private static final String TAG = TableDashboardActivity.class.getSimpleName();
     ViewPagerAdapterTable adapterTable;
     final int[] ICONS = new int[]{R.drawable.ic_qr_code, R.drawable.ic_offer_bottom, R.drawable.ic_cart, R.drawable.ic_order_status,
-            R.drawable.ic_call_waiter};
+            R.drawable.ic_call_call_waiter2};
 
     private ViewPager mPager;
     private TabLayout mTab;

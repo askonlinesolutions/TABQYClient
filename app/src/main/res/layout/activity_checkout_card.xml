@@ -108,6 +108,7 @@
                     </RelativeLayout>
 
                     <RelativeLayout
+                        android:id="@+id/ordering"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_margin=".5dp"
@@ -122,7 +123,6 @@
                             android:src="@drawable/ic_order_method" />
 
                         <LinearLayout
-                            android:id="@+id/ordering"
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -247,11 +247,10 @@
 
 
                     <RelativeLayout
-                        android:id="@+id/pay"
 
+                        android:id="@+id/paymentMethod"
                         android:layout_width="match_parent"
                         android:layout_height="37dp"
-
                         android:background="#DCDCDC"
                         android:padding="1dp">
 
@@ -264,7 +263,7 @@
                             android:src="@drawable/ic_payment_method" />
 
                         <LinearLayout
-                            android:id="@+id/paymentMethod"
+                            android:id="@+id/pay"
                             android:layout_width="match_parent"
                             android:layout_height="35dp"
                             android:layout_alignParentStart="true"
@@ -278,7 +277,6 @@
                                 android:layout_marginLeft="46dp"
                                 android:layout_weight="1"
                                 android:text="Payment Method"
-
                                 android:textSize="12sp" />
 
                             <ImageView
@@ -288,7 +286,6 @@
                                 android:layout_alignParentEnd="true"
                                 android:layout_gravity="center"
                                 android:layout_marginRight="3dp"
-
                                 android:src="@drawable/ic_down_arrow_prime" />
 
                         </LinearLayout>
@@ -328,7 +325,6 @@
                                     android:gravity="center"
                                     android:padding="8dp"
                                     android:text="Card"
-
                                     android:textColor="@color/white_color" />
 
                                 <RadioButton
@@ -399,7 +395,6 @@
                             <RadioGroup
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content">
-
 
                                 <RadioButton
                                     android:id="@+id/cashDelivery"

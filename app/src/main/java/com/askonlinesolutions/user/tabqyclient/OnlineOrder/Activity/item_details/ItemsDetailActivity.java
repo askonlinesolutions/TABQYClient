@@ -1,5 +1,6 @@
 package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details;
 
+
 import android.app.Dialog;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
@@ -9,27 +10,32 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.DrawerHomeActivity;
-import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.restaurentPoints.RestaurentPointsAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.WebServices.APIClient;
+import com.askonlinesolutions.user.tabqyclient.WebServices.OnResponseInterface;
+import com.askonlinesolutions.user.tabqyclient.WebServices.ResponseListner;
 import com.askonlinesolutions.user.tabqyclient.databinding.ActivityItemsDetailBinding;
-import com.askonlinesolutions.user.tabqyclient.databinding.ActivityProfileSettingBinding;
 import com.askonlinesolutions.user.tabqyclient.tableCode.myCart.TableMyCartActivity;
 
-import java.util.Calendar;
+import java.util.ArrayList;
+import java.util.List;
 
-public class ItemsDetailActivity extends AppCompatActivity implements View.OnClickListener, ItemDetailsAdapter.OnItemClickLister {
+import retrofit2.Call;
+
+public class ItemsDetailActivity extends AppCompatActivity implements View.OnClickListener, ItemDetailsAdapter.OnItemClickLister, OnResponseInterface {
 
     ActivityItemsDetailBinding binding;
+    private List<ItemDetailResponse.DataEntity> dataEntity=new ArrayList<ItemDetailResponse.DataEntity>();
+    private String TAG = ItemsDetailActivity.class.getName();
     private ItemDetailsAdapter itemDetailsAdapter;
     ImageView crossTv;
-    TextView addBtn;
+    TextView addBtn,activity_item_details_text;
     String value;
 
     @Override
@@ -49,7 +55,19 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
         binding.addCartFab.setOnClickListener(this);
         setUpRecyclerView();
         getBundleData();
+        getItemDetail();
     }
+
+    private void getItemDetail() {
+        Call<ItemDetailResponse> itemDetailResponseCall = APIClient.getInstance().getApiInterface().getItemDetail(60);
+        itemDetailResponseCall.request().url();
+        Log.d(TAG, "getitemdetai: " + itemDetailResponseCall.request().url());
+        new ResponseListner(this).getResponse(itemDetailResponseCall);
+    }
+
+    ItemDetailResponse itemDetailResponse;
+
+
 
 
     private void getBundleData() {
@@ -74,7 +92,7 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
 
         LinearLayoutManager gridLayoutManager = new LinearLayoutManager(this, GridLayoutManager.HORIZONTAL, false);
         binding.itemsRv.setLayoutManager(gridLayoutManager);
-        itemDetailsAdapter = new ItemDetailsAdapter(this, this);
+        itemDetailsAdapter = new ItemDetailsAdapter(this,dataEntity);
         binding.itemsRv.setAdapter(itemDetailsAdapter);
 
 
@@ -156,4 +174,23 @@ public class ItemsDetailActivity extends AppCompatActivity implements View.OnCli
     }
 
 
+    @Override
+    public void onApiResponse(Object response) {
+        if (response != null) {
+            itemDetailResponse = (ItemDetailResponse) response;
+            if (itemDetailResponse.getData()!=null && itemDetailResponse.getData().size()>0){
+                    dataEntity = itemDetailResponse.getData();
+             binding.activityItemDetailsText.setText(itemDetailResponse.getData().get(0).getItem_name());
+//                country_dish.setText(detailResponse.getData().getResturantbrand_country());
+                    setUpRecyclerView();
+                }
+
+    }
+
+    }
+
+    @Override
+    public void onApiFailure(String message) {
+
+    }
 }

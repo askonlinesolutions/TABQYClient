@@ -6,15 +6,10 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.askonlinesolutions.user.tabqyclient.CallWaitingFragment;
-import com.askonlinesolutions.user.tabqyclient.Fragments.OrderStatusFragment;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.OfferFragment;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.RestroFragment;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.account.AccountFragment;
 import com.askonlinesolutions.user.tabqyclient.TableMyCartFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.menuDashboard.MenuDashboardFragment;
 import com.askonlinesolutions.user.tabqyclient.tableCode.orderStatus.TableOrderStatusFragment;
-import com.askonlinesolutions.user.tabqyclient.tableCode.qrCode.QrCodeFragment;
 
 public class ViewPagerAdapterTable extends FragmentPagerAdapter {
 

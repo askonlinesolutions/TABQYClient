@@ -34,11 +34,11 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_checkout_card);
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-       // activity_login_title =findViewById(R.id.activity_login_title);
-       // ImageView contactDetail = (ImageView) findViewById(R.id.contactDetail);
+        // activity_login_title =findViewById(R.id.activity_login_title);
+        // ImageView contactDetail = (ImageView) findViewById(R.id.contactDetail);
         // RecyclerView recyclerView1 = (RecyclerView) findViewById(R.id.paymentRecyclerView);
         RadioButton radio = (RadioButton) findViewById(R.id.table_order_RB);
-        activity_login_title=findViewById(R.id.activity_login_title);
+        activity_login_title = findViewById(R.id.activity_login_title);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         CheckoutAdapter checkoutAdapter = new CheckoutAdapter(Checkout_cardActivity.this, name);
@@ -60,6 +60,8 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
         binding.review.setOnClickListener(this);
         binding.addNewCard.setOnClickListener(this);
         binding.activityLoginTitle.setOnClickListener(this);
+        binding.ordering.setOnClickListener(this);
+        binding.paymentMethod.setOnClickListener(this);
 
 
     }
@@ -76,7 +78,8 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                     binding.review.setBackgroundColor(getResources().getColor(R.color.light_prime));
                     binding.pickup.setVisibility(View.VISIBLE);
                     binding.cashingLayout.setVisibility(View.VISIBLE);
-                   // binding.cardLayout.setVisibility(View.VISIBLE);
+
+                    // binding.cardLayout.setVisibility(View.VISIBLE);
                     // inding.cashLayout.setVisibility(View.VISIBLE);
                     binding.deliveryLayout.setVisibility(View.GONE);
                 }
@@ -88,7 +91,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                     binding.review.setBackgroundColor(getResources().getColor(R.color.gray));
                     binding.pickup.setVisibility(View.GONE);
                     binding.cashingLayout.setVisibility(View.GONE);
-                  //  binding.cardLayout.setVisibility(View.GONE);
+                    //  binding.cardLayout.setVisibility(View.GONE);
                     //binding.cashLayout.setVisibility(View.GONE);
                     binding.deliveryLayout.setVisibility(View.VISIBLE);
                 }
@@ -101,13 +104,13 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.edit_image_order:
+            case R.id.ordering:
                 if (isVisible) {
                     binding.recyclerView.setVisibility(View.GONE);
                     binding.addNew.setVisibility(View.GONE);
                     binding.radio.setVisibility(View.GONE);
                     binding.pickup.setVisibility(View.GONE);
-                 binding.deliveryLayout.setVisibility(View.GONE);
+                    binding.deliveryLayout.setVisibility(View.GONE);
                     binding.editImageOrder.setImageResource(R.drawable.ic_down_arrow_prime);
                     isVisible = false;
                 } else {
@@ -122,27 +125,26 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                 }
                 break;
 
-            case R.id.payment:
+            case R.id.paymentMethod:
                 if (isVisible) {
                     binding.cashingLayout.setVisibility(View.GONE);
-                  //  binding.radioGroup.setVisibility(View.GONE);
-                  //  binding.cashDelivery.setVisibility(View.GONE);
-                  //  binding.addNewCard.setVisibility(View.GONE);
-                 //  binding.cashDelivery1.setVisibility(View.GONE);
-                   binding.payment.setImageResource(R.drawable.ic_down_arrow_prime);
+                    //  binding.radioGroup.setVisibility(View.GONE);
+                    //  binding.cashDelivery.setVisibility(View.GONE);
+                    //  binding.addNewCard.setVisibility(View.GONE);
+                    //  binding.cashDelivery1.setVisibility(View.GONE);
+                    binding.payment.setImageResource(R.drawable.ic_down_arrow_prime);
                     isVisible = false;
 
                 } else {
                     binding.cashingLayout.setVisibility(View.VISIBLE);
-                  //  binding.radioGroup.setVisibility(View.VISIBLE);
-                   // binding.cashDelivery.setVisibility(View.VISIBLE);
-                  //  binding.cashDelivery1.setVisibility(View.VISIBLE);
-                  //  binding.addNewCard.setVisibility(View.VISIBLE);
-                   binding.payment.setImageResource(R.drawable.ic_up_arrow_prime);
+                    //  binding.radioGroup.setVisibility(View.VISIBLE);
+                    // binding.cashDelivery.setVisibility(View.VISIBLE);
+                    //  binding.cashDelivery1.setVisibility(View.VISIBLE);
+                    //  binding.addNewCard.setVisibility(View.VISIBLE);
+                    binding.payment.setImageResource(R.drawable.ic_up_arrow_prime);
                     isVisible = true;
                 }
                 break;
-
 
 
             case R.id.contactDetail:
@@ -152,15 +154,15 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
 
             case R.id.addNew:
 
-                Intent address =new Intent(this,CheckoutAddAddressActivity.class);
+                Intent address = new Intent(this, CheckoutAddAddressActivity.class);
                 startActivity(address);
                 break;
             case R.id.addNewCard:
-                Intent card =new Intent(this,AddPaymentActivity.class);
+                Intent card = new Intent(this, AddPaymentActivity.class);
                 startActivity(card);
                 break;
             case R.id.review:
-                Intent review =new Intent(this,ReviewActivity.class);
+                Intent review = new Intent(this, ReviewActivity.class);
                 startActivity(review);
                 break;
             case R.id.activity_login_title:
@@ -182,7 +184,7 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
                     binding.cash.setBackground(getResources().getDrawable(R.drawable.corner));
                     binding.cashLayout.setVisibility(View.GONE);
                     binding.cashdeliveryLayout.setVisibility(View.GONE);
-                        binding.cardLayout.setVisibility(View.VISIBLE);
+                    binding.cardLayout.setVisibility(View.VISIBLE);
 
                     //binding.card.setBackgroundColor(getResources().getColor(R.color.light_prime));
                     binding.cashOnDelivery.setBackground(getResources().getDrawable(R.drawable.corner));
@@ -221,8 +223,6 @@ public class Checkout_cardActivity extends AppCompatActivity implements View.OnC
             }
         });
     }
-
-
 
 
     // private void setpaymentrRecyclerView() {

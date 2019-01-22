@@ -6,7 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.MenuFragment;
-import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.InfoFragment;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.infoFragment.InfoFragment;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.ReviewsFragment;
 
 public class DetailAdapter extends FragmentPagerAdapter

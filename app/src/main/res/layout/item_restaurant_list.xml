@@ -18,6 +18,7 @@
             android:layout_height="100dp">
 
             <ImageView
+                android:id="@+id/retro_image"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
@@ -91,6 +92,7 @@
                     android:background="@drawable/circle_green_background">
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                        android:id="@+id/open"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Open"
@@ -127,12 +129,15 @@
                         android:gravity="center">
 
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
+                          android:id="@+id/distance"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Distance"
                             android:textSize="7sp"
                             android:textColor="@color/text_color_5"/>
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                          android:id="@+id/miles_restro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="4 Miles"
@@ -150,12 +155,14 @@
                         android:gravity="center">
 
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                           android:id="@+id/avg_restro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Avg:"
                             android:textColor="@color/text_color_5"
                             android:textSize="7sp"/>
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                          android:id="@+id/time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="45 mins"
@@ -172,10 +179,12 @@
                         android:gravity="center">
 
                         <ImageView
+                            android:id="@+id/free"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_free"/>
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                           android:id="@+id/free_rest"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Free"
@@ -192,12 +201,15 @@
                         android:gravity="center">
 
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                          android:id="@+id/min_order"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Min.order"
                             android:textColor="@color/text_color_5"
                             android:textSize="7sp"/>
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+
+                         android:id="@+id/sar_prize"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="SAR 50.00"
@@ -218,6 +230,7 @@
                 android:layout_marginTop="5dp">
 
                 <ImageView
+                    android:id="@+id/payment_image"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -225,6 +238,7 @@
                     android:scaleY="1.1"
                     android:src="@drawable/ic_payment_method"/>
                 <ImageView
+                    android:id="@+id/cash"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -232,6 +246,7 @@
                     android:scaleY="1.1"
                     android:src="@drawable/ic_cash"/>
                 <ImageView
+                    android:id="@+id/cash_two"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -250,6 +265,7 @@
                     android:theme="@style/userRatingBar" />
 
                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                   android:id="@+id/rating"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="7sp"
@@ -264,6 +280,7 @@
                     android:layout_marginLeft="3dp">
 
                     <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                       android:id="@+id/points"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Points"
@@ -280,6 +297,7 @@
                         android:background="@drawable/circle_background">
 
                         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                           android:id="@+id/number"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="3"
@@ -291,6 +309,7 @@
                     </RelativeLayout>
 
                     <ImageView
+                        android:id="@+id/coins"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="10dp"
@@ -305,6 +324,7 @@
     </RelativeLayout>
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height=".3dp"
         android:background="@color/view_color"/>

@@ -1,4 +1,4 @@
-package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments;
+package com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.infoFragment;
 
 
 import android.content.Intent;
@@ -13,10 +13,17 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Adapters.AdapterInfoImage;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.menuResturent.MenuResponse;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.restroFragment.ResturentList.ResturentResponse;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Utils.Utility;
+import com.askonlinesolutions.user.tabqyclient.WebServices.APIClient;
+import com.askonlinesolutions.user.tabqyclient.WebServices.OnResponseInterface;
+import com.askonlinesolutions.user.tabqyclient.WebServices.ResponseListner;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,13 +39,18 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class InfoFragment extends Fragment implements OnMapReadyCallback {
+public class InfoFragment extends Fragment implements OnMapReadyCallback, OnResponseInterface {
     GoogleMap mMap;
-//    FloatingActionButton infoAddToCart;
+    //    FloatingActionButton infoAddToCart;
+    private String TAG = InfoFragment.class.getName();
+    private ArrayList<MenuResponse.DataEntity> dataEntity = new ArrayList<>();
+
+    private int restureni_id;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -53,9 +65,27 @@ public class InfoFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
+        getinforesturent(restureni_id);
+        getResturentdata();
         init();
     }
+
+    private void getResturentdata() {
+  //      int extras = getArguments().getInt("resturentId");
+//        if (extras != null) {
+//            restureni_id = extras.getInt("resturentId");
+
+        }
+
+
+    private void getinforesturent(int restureni_id) {
+       // new Utility().showProgressDialog(getActivity());
+        Call<InfoResponse> infoResponseCall = APIClient.getInstance().getApiInterface().getInfoResturentDetail(4);
+        infoResponseCall.request().url();
+        Log.d(TAG, "infoResturentList: " + infoResponseCall.request().url());
+        new ResponseListner(this).getResponse(infoResponseCall);
+    }
+
 
     private RecyclerView rv;
 
@@ -95,4 +125,22 @@ public class InfoFragment extends Fragment implements OnMapReadyCallback {
     }
 
 
+    @Override
+    public void onApiResponse(Object response) {
+        if (response != null) {
+         //   new Utility().hideDialog();
+            InfoResponse infoResponse = (InfoResponse) response;
+            if (infoResponse.getData() != null && infoResponse.getData().size()<0) {
+                dataEntity = infoResponse.getData();
+               // setAdapter();
+            }
+
+        }
+    }
+
+
+    @Override
+    public void onApiFailure(String message) {
+
+    }
 }

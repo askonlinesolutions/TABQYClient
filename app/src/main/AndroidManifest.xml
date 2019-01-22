@@ -17,9 +17,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="com.example.maptest.permission.MAPS_RECEIVE"/>
     <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
-    <!--<uses-permission android:name="android.permission.INTERNET" />-->
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -41,7 +40,7 @@
         android:value="@integer/google_play_services_version" />
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyDVOfhbag1ROacwa9gZNkUgzdOKeMkk0LI " />
+        android:value="AIzaSyDVOfhbag1ROacwa9gZNkUgzdOKeMkk0LI  " />
 
 
     <application
@@ -73,10 +72,10 @@
             android:name=".Commons.Activity.GuestActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Commons.Activity.RegisterActivity"
+            android:name=".Commons.Activity.signUp.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Commons.Activity.LoginActivity"
+            android:name=".Commons.Activity.login.LoginActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
@@ -102,7 +101,7 @@
             android:name=".OnlineOrder.Activity.OrderRejectActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".OnlineOrder.Activity.DetailActivity"
+            android:name=".OnlineOrder.Activity.detail_id.DetailActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Commons.Activity.SelectAreaActivity"

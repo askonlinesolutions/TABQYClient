@@ -38,6 +38,7 @@
                     android:layout_height="100dp">
 
                     <ImageView
+                        android:id="@+id/resturent_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="fitXY"
@@ -47,6 +48,7 @@
                 </RelativeLayout>
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="3dp"
@@ -153,6 +155,7 @@
                                     android:textSize="7sp"
                                     android:textColor="@color/text_color_5"/>
                                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                   android:id="@+id/distance"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="4 Miles"
@@ -175,12 +178,14 @@
                                     android:text="Avg:"
                                     android:textColor="@color/text_color_5"
                                     android:textSize="7sp"/>
+
                                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                    android:id="@+id/avrage_time"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="45 mins"
                                     android:textColor="@color/text_color_1"
-                                    android:textSize="9sp"/>
+                                    android:textSize="9sp" />
 
                             </LinearLayout>
 
@@ -218,6 +223,7 @@
                                     android:textColor="@color/text_color_5"
                                     android:textSize="7sp"/>
                                 <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
+                                  android:id="@+id/min_order"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="SAR 50.00"
@@ -353,7 +359,7 @@
                     android:background="@drawable/shape_custom_tab_pink"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:id="@+id/restaurant_details_tab_1_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -375,7 +381,7 @@
                     android:background="@drawable/shape_custom_tab_grey"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:id="@+id/restaurant_details_tab_2_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -395,7 +401,7 @@
                     android:background="@drawable/shape_custom_tab_grey"
                     android:orientation="vertical">
 
-                    <TextView
+                    <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                         android:id="@+id/restaurant_details_tab_3_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -618,7 +624,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
-                <TextView
+                <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
@@ -635,21 +641,21 @@
 
             </RelativeLayout>
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Starter"
+                android:text="Resturent Special"
                 android:textColor="@color/white_color"
                 android:textSize="12sp" />
 
-            <TextView
+            <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Soup"
+                android:text="Discount"
                 android:textColor="@color/white_color"
                 android:textSize="12sp" />
 
