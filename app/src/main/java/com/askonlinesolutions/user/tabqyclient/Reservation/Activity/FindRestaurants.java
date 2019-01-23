@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
-import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SearchActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.searchResturent.SearchActivity;
 import com.askonlinesolutions.user.tabqyclient.Reservation.Adapter.FindRestaurantItemsAdapter;
 import com.askonlinesolutions.user.tabqyclient.R;
 

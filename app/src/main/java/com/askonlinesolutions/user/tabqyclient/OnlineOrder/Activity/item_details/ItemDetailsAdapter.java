@@ -87,7 +87,7 @@ public class ItemDetailsAdapter extends RecyclerView.Adapter<ItemDetailsAdapter.
 
     }
 
-    interface OnItemClickLister {
+    public interface OnItemClickLister {
         void onItemClick(int Pos, String type);
     }
 //    private class ItemDetailAdapterInterface {

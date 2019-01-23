@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="@color/white_color"
         android:orientation="vertical"
-        tools:context=".Commons.Activity.SearchActivity">
+        tools:context=".OnlineOrder.Activity.searchResturent.SearchActivity">
 
         <com.askonlinesolutions.user.tabqyclient.customText.CustomTextViewRegular
             android:id="@+id/search_back_btn"
@@ -32,6 +32,7 @@
             android:layout_height="wrap_content">
 
             <EditText
+                android:id="@+id/resturent_deatail"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:background="@color/white_color"
@@ -41,10 +42,17 @@
                 android:hint="@string/search_by_food_restaurants"
                 android:paddingLeft="@dimen/size_20"
                 android:paddingRight="@dimen/size_20"
+                android:inputType="text"
                 android:textColorHint="@color/hint_color"
                 android:textSize="@dimen/search_text_size" />
 
         </android.support.v7.widget.CardView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/resturent_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
 
     </LinearLayout>
 </layout>

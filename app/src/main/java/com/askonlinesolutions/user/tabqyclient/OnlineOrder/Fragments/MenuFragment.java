@@ -20,6 +20,7 @@ import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.menuResturent.MainManuAdapter;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.menuResturent.MenuResponse;
 import com.askonlinesolutions.user.tabqyclient.R;
+import com.askonlinesolutions.user.tabqyclient.Utils.Utility;
 import com.askonlinesolutions.user.tabqyclient.WebServices.APIClient;
 import com.askonlinesolutions.user.tabqyclient.WebServices.OnResponseInterface;
 import com.askonlinesolutions.user.tabqyclient.WebServices.ResponseListner;
@@ -63,6 +64,7 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
     }
 
     private void menudetail() {
+       // new Utility().showProgressDialog(getActivity());
         Call<MenuResponse> menuResponseCall = APIClient.getInstance().getApiInterface().getMenuDetail(60);
         menuResponseCall.request().url();
         Log.d(TAG, "getMenu: " + menuResponseCall.request().url());
@@ -135,7 +137,7 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
 
         final Dialog dialog = new Dialog(getActivity());
         dialog.setContentView(R.layout.dialog_add_item);
-        dialog.setTitle("Loading...");
+
         dialog.show();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         crossTv = dialog.findViewById(R.id.dialog_add_more_item_cross);
@@ -159,7 +161,9 @@ public class MenuFragment extends Fragment implements MainManuAdapter.OnItemClic
 
     @Override
     public void onApiResponse(Object response) {
+
         if (response != null) {
+            //new Utility().hideDialog();
             MenuResponse menuResponse = (MenuResponse) response;
             if (menuResponse.getData() != null && menuResponse.getData().size() > 0) {
                 dataEntity.addAll(menuResponse.getData());

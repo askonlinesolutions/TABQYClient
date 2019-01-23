@@ -113,10 +113,10 @@ public class AdapterRestaurantList extends RecyclerView.Adapter<AdapterRestauran
         holder.time.setText(dataEntities.get(i).getResturantbrand_delivery_avgtime());
 
 
-        Picasso.with(context).
-                load("http://webdevelopmenttesting.com/tabqy1/upload/logoimages/"+dataEntities.get(i).
-                        getResturantbrand_file()) // URL or file
-                .into(holder.retro_image);
+//        Picasso.with(context).
+//                load("http://webdevelopmenttesting.com/tabqy1/upload/logoimages/"+dataEntities.get(i).
+//                        getResturantbrand_file()) // URL or file
+//                .into(holder.retro_image);
 
 
 

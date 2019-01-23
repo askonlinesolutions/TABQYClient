@@ -194,9 +194,9 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
                 avrage_time.setText(detailResponse.getData().getResturantbrand_delivery_avgtime());
 
 
-                Picasso.with( this.context).load("http://webdevelopmenttesting.com/tabqy1/upload/images"
-                        +detailResponse.getData().getResturantbrand_file()) // URL or file
-                .into(resturent_image);
+//                Picasso.with( this.context).load("http://webdevelopmenttesting.com/tabqy1/upload/images"
+//                        +detailResponse.getData().getResturantbrand_file()) // URL or file
+//                .into(resturent_image);
                // avrage_time.setText(detailResponse.getData().);
             }
         }

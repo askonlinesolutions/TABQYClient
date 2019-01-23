@@ -16,7 +16,7 @@ import android.widget.Toast;
 
 import com.askonlinesolutions.user.tabqyclient.Activities.MainActivity;
 import com.askonlinesolutions.user.tabqyclient.Activities.filter.FilterActivity;
-import com.askonlinesolutions.user.tabqyclient.Commons.Activity.SearchActivity;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.searchResturent.SearchActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.ChooseCuisine;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.detail_id.DetailActivity;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.restroFragment.ResturentList.ResturentResponse;
@@ -223,8 +223,7 @@ public class RestroFragment extends Fragment implements View.OnClickListener, On
             ResturentResponse resturentResponse = (ResturentResponse) response;
             if (resturentResponse.getData() != null && resturentResponse.getData().size() > 0) {
                 dataEntity = resturentResponse.getData();
-             //   latitude.
-            //    binding.activityItemDetailsText.setText(itemDetailResponse.getData().get(0).getItem_name());
+
                 setAdapter();
             }
 

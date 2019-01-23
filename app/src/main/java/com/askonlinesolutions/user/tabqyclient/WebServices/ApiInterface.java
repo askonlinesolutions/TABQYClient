@@ -7,6 +7,7 @@ import com.askonlinesolutions.user.tabqyclient.Commons.Activity.signUp.vo.SignUp
 import com.askonlinesolutions.user.tabqyclient.Commons.Activity.signUp.vo.SignupResponce;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.detail_id.DetailResponse;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.item_details.ItemDetailResponse;
+import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Activity.searchResturent.SearchResponse;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.infoFragment.InfoResponse;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.menuResturent.MenuResponse;
 import com.askonlinesolutions.user.tabqyclient.OnlineOrder.Fragments.restroFragment.RestroRequest;
@@ -54,6 +55,10 @@ public interface ApiInterface {
 
     @GET(" restaurant/view/{id}")
     Call<InfoResponse> getInfoResturentDetail(@Path("id") int id);
+
+
+    @GET(" restaurant/searchbyresturantnamenfood/{id}")
+    Call<SearchResponse> getSearchResturentDetail(@Path("id") String id);
 
 
 //    restaurant/view/id
